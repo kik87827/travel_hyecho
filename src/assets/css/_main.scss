@@ -1,0 +1,68 @@
+/* main */
+
+.swiper{
+    &.mv_container{
+        height:100vh;
+
+        .swiper-pagination-vertical.swiper-pagination-bullets, 
+        .swiper-vertical > .swiper-pagination-bullets{left:40px;right:auto;transform: translate(0,-50%);width:auto;}
+
+        .swiper-pagination-bullet{background:none;display:flex;height:10px;width:10px; align-items: center;justify-content: center; opacity:1 !important; margin:10px 0;
+            &:before{display:block; content:''; width:6px;height:6px; border-radius:100%; background:#fff; opacity:.5; transition:.5s;}
+
+            &.swiper-pagination-bullet-active{
+                &:before{width:10px;height:10px; opacity:1;}
+            }
+        }
+    }
+}
+
+.mv_item{background:url("../images/bg_mv01.jpg") no-repeat 50% 50%/cover; height:100%; display:flex; flex-direction: column;
+    &.scene_01{
+        &:before{display:block;content:'';width:100%;height:100%;position:absolute;top:0;left:0;background:#010205;opacity:.14;}
+    }
+    &.scene_02{background-image:url("../images/bg_mv02.jpg")}
+    &.scene_03{background-image:url("../images/bg_mv03.jpg")}
+    &.scene_04{background:#fff;}
+}
+.mv_item_inner{flex:1;min-height:0;display:flex; justify-content: center; align-items: center;height:100%;}
+
+.main_skin2{
+    .header_wrap{
+        .toplogo_link{background-position:0 100%;}
+        .header_nav_menu{color:#0f0f0f;}
+        .util_menu{
+            .ico{
+                background-position:0 100%;
+            }
+            .util_menu_text{color:#404040;}
+        }
+    }
+    .mv_container{
+        .swiper-pagination-bullet{
+            &:before{background:#e1e1e1;}
+    
+            &.swiper-pagination-bullet-active{
+                &:before{background:#484848;}
+            }
+        }
+    }
+
+    .btn_panel_menu{
+        &:before,
+        &:after{background:#484848;}
+    }
+    .btn_panel_menu_ico{background:#484848;}
+    
+}
+
+@media (max-width:1023px){
+    .swiper{
+        &.mv_container{
+            height:100vh;
+    
+            .swiper-pagination-vertical.swiper-pagination-bullets, 
+            .swiper-vertical > .swiper-pagination-bullets{left:20px;}
+        }
+    }
+}
