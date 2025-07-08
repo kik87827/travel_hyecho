@@ -118,7 +118,7 @@
 	</div>
 
 	<script type="text/javascript">
-		$(function () {
+		$(function() {
 			chkList();
 		});
 
@@ -143,7 +143,7 @@
 
 			today = yyyy + '-' + mm + '-' + dd;
 
-			$ctr.each(function (index) {
+			$ctr.each(function(index) {
 				var $this = $(this),
 					$td = $this.find("td.work");
 				if ($td.hasClass("end")) {
@@ -161,11 +161,11 @@
 					}
 				}
 			});
-			$(".codinglist tr").each(function () {
+			$(".codinglist tr").each(function() {
 				var index = $(".codinglist tr").not('.depth').index(this);
 				$(this).children(".codinglist td.no").text(index);
 			});
-			$("td.link > a").each(function () {
+			$("td.link > a").each(function() {
 				var $this = $(this),
 					$t_href = $this.attr("href");
 
