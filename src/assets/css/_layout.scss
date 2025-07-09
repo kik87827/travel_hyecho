@@ -185,7 +185,7 @@ input.input_search{flex:1;background:none;border:0;padding:0 20px;box-sizing: bo
 .rank_value_wrap{}
 .rank_value{font-size:15px;color:#2b2b2b;line-height:1;}
 
-.rank_all_item_wrap{position:absolute;top:100%;left:0;width:194px;box-sizing: border-box;border:1px solid #8c8c8c;border-radius:8px;background:#fff; display:none;}
+.rank_all_item_wrap{position:absolute;top:100%;left:0;width:194px;z-index:5;box-sizing: border-box;border:1px solid #8c8c8c;border-radius:8px;background:#fff; display:none;}
 .rank_all_item_list{padding:7px 0;}
 .rank_all_item_list > li{}
 .rank_all_item_list > li:last-of-type{}

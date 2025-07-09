@@ -2,9 +2,9 @@
 <html lang="ko">
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=1400" />
 	<link rel="stylesheet" href="./assets/css/style.css" />
 	<link rel="stylesheet" href="./assets/css/codinglist.css" />
@@ -18,18 +18,27 @@
 			sh = h; //띄울 창의 높이
 			ml = (cw - sw) / 2; //가운데 띄우기위한 창의 x위치
 			mt = (ch - sh) / 2; //가운데 띄우기위한 창의 y위치
-			test = window.open(url, 'tst', 'width=' + sw + ',height=' + sh + ',top=' + mt + ',left=' + ml + ',resizable=no,scrollbars=yes');
+			test = window.open(
+				url,
+				"tst",
+				"width=" + sw + ",height=" + sh + ",top=" + mt + ",left=" + ml + ",resizable=no,scrollbars=yes"
+			);
 		}
 	</script>
 </head>
 
 <body id="guide">
-
 	<!-- eniter wrap -->
 	<div id="guide_wrap">
 		<div class="header">
 			<h1>혜초여행사</h1>
-			<p>End page : <span class="curr_n"></span>page / Total page : <span class="total_n"></span>page</p>
+			<p>
+				End page :
+				<span class="curr_n"></span>
+				page / Total page :
+				<span class="total_n"></span>
+				page
+			</p>
 		</div>
 		<div class="list_w">
 			<table class="codinglist">
@@ -57,14 +66,14 @@
 						<td class="no"></td>
 						<td class="link"><a href="layout.html" target="_blank">레이아웃 샘플</a></td>
 						<td class="td_url"></td>
-						<td class="work ing"></td>
+						<td class="work end"></td>
 						<td class="bgo"></td>
 					</tr>
 					<tr>
 						<td class="no"></td>
 						<td class="link"><a href="popup.html" target="_blank">팝업 샘플</a></td>
 						<td class="td_url"></td>
-						<td class="work ing"></td>
+						<td class="work end"></td>
 						<td class="bgo"></td>
 					</tr>
 					<tr class="depth">
@@ -86,7 +95,14 @@
 					</tr>
 					<tr>
 						<td class="no"></td>
-						<td class="link"><a href="detail.html?popup2" target="_blank">0203_필요서류_팝업</a></td>
+						<td class="link"><a href="detail.html?popup2" target="_blank">0203_필요서류_팝업 - 필요서류</a></td>
+						<td class="td_url"></td>
+						<td class="work ing"></td>
+						<td class="bgo"></td>
+					</tr>
+					<tr>
+						<td class="no"></td>
+						<td class="link"><a href="detail.html?popup2_1" target="_blank">0203_필요서류_팝업 - 여행유의사항</a></td>
 						<td class="td_url"></td>
 						<td class="work ing"></td>
 						<td class="bgo"></td>
@@ -134,35 +150,35 @@
 			var yyyy = today.getFullYear();
 
 			if (dd < 10) {
-				dd = '0' + dd
+				dd = "0" + dd;
 			}
 
 			if (mm < 10) {
-				mm = '0' + mm
+				mm = "0" + mm;
 			}
 
-			today = yyyy + '-' + mm + '-' + dd;
+			today = yyyy + "-" + mm + "-" + dd;
 
 			$ctr.each(function(index) {
 				var $this = $(this),
 					$td = $this.find("td.work");
 				if ($td.hasClass("end")) {
-					curr_n++
+					curr_n++;
 					$td.text("완료");
 				} else {
 					if ($td.hasClass("ing")) {
-						$td.text(today + " 작업중").addClass('ing');
+						$td.text(today + " 작업중").addClass("ing");
 					} else if ($td.hasClass("else")) {
-						$td.text("보류").addClass('else');
+						$td.text("보류").addClass("else");
 					} else if ($td.hasClass("else2")) {
-						$td.text("예외").addClass('else2');
+						$td.text("예외").addClass("else2");
 					} else {
-						$td.text("대기중").addClass('stand_by');
+						$td.text("대기중").addClass("stand_by");
 					}
 				}
 			});
 			$(".codinglist tr").each(function() {
-				var index = $(".codinglist tr").not('.depth').index(this);
+				var index = $(".codinglist tr").not(".depth").index(this);
 				$(this).children(".codinglist td.no").text(index);
 			});
 			$("td.link > a").each(function() {
@@ -170,15 +186,20 @@
 					$t_href = $this.attr("href");
 
 				if ($this.parent(".link").hasClass("type2")) {
-					$this.parent("td").next(".td_url").append('<a href=' + $t_href + '>' + $t_href + '</a>');
+					$this
+						.parent("td")
+						.next(".td_url")
+						.append("<a href=" + $t_href + ">" + $t_href + "</a>");
 				} else {
-					$this.parent("td").next(".td_url").append('<a href=' + $t_href + ' target="_blank">' + $t_href + '</a>');
+					$this
+						.parent("td")
+						.next(".td_url")
+						.append("<a href=" + $t_href + ' target="_blank">' + $t_href + "</a>");
 				}
-
 			});
-			$('.total_n').text(tatal_n);
-			$('.curr_n').text(curr_n);
-			$('.per').text(Math.floor((curr_n / tatal_n) * 100) + '%');
+			$(".total_n").text(tatal_n);
+			$(".curr_n").text(curr_n);
+			$(".per").text(Math.floor((curr_n / tatal_n) * 100) + "%");
 		}
 	</script>
 </body>

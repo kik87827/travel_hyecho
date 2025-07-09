@@ -1,5 +1,5 @@
 /* popup */
-.btn_guide_box{border:1px solid #ddd;padding:20px;color:#000;display:inline-block;}
+.btn_guide_box{border:1px solid #ddd;padding:20px;color:#000;display:inline-block; font-size:16px;}
 /* 공통 popup */
 .popup_wrap{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100000;display:none;align-items: center;justify-content: center;min-width:280px;overflow:hidden;flex-wrap:wrap;
     &.active{display:flex;
@@ -10,11 +10,14 @@
     }
 }
 .popup_item{
-    box-sizing: border-box;z-index:20; max-width:742px;margin:30px auto; max-height:calc(100% - 60px); background:#fff; border-radius:8px; border:1px solid #BBBBBB; position:relative; display:flex; flex-direction: column;
+    box-sizing: border-box;z-index:20; max-width:680px;margin:30px auto; max-height:calc(100% - 60px); background:#fff; border-radius:8px; border:1px solid #BBBBBB; position:relative; display:flex; flex-direction: column;
     -webkit-box-shadow: 2px 2px 14px 2px rgba(64,64,64,0.3); box-shadow: 2px 2px 14px 2px rgba(64,64,64,0.3);width:100%;opacity:0;transition:.4s; transform: translateY(-20%);
     &.no_transition{transition:0s;opacity:1;transform:none;}
     &.size2{
-        max-width:636px;
+        max-width:472px;
+    }
+    &.size3{
+        max-width:600px;
     }
     &.xsmall{max-width:300px;}
     &.medium{max-width:1060px;}
@@ -26,14 +29,14 @@
 }
 
 .popup_title_row{flex:0;word-break: keep-all; text-align: center;
-    border-bottom:1px solid #e7e7e7;padding:25px 45px;text-align: center;
+    border-bottom:1px solid #e7e7e7;padding:25px 30px;text-align: center;
     &.define_text{
         text-align: left;
     }
     & + .popup_contents_row{padding-top:0;}
 }
 .popup_title{font-size:32px;color:#333333;font-weight:700;letter-spacing: -0.05em;line-height:1.3; font-weight:600;}
-.popup_contents_row{position:relative;overflow:hidden;overflow-y:auto;overflow-y:overlay;flex:1;font-size:16px;color:#333333;padding:30px 45px 45px;
+.popup_contents_row{position:relative;overflow:hidden;overflow-y:auto;overflow-y:overlay;flex:1;font-size:16px;color:#333333;padding:30px 30px 30px;
     &.scroll_mode{padding-right:35px;}
     & + .popup_btn_row{padding-top:0;}
     .section_brick_group{padding-top:25px;}
@@ -42,6 +45,9 @@
         > li{flex-basis: calc(50% - 20px);}
     }
     .ui-widget-content{position:absolute !important;}
+    &.nopadding{padding:0;
+        .popup_contents_inner{padding:0;}
+    }
 }
 .popup_contents_inner{
     &.ptype2{padding-top:30px;}
