@@ -155,7 +155,7 @@
 .btn_box_text{color:#fff; font-size:18px; font-weight:500; display:inline-block;}
 
 
-@media (max-width:1023px){
+@media (max-width:$mobile_large){
     .btn_box{
        min-width:120px;
        &.size2{
@@ -167,6 +167,15 @@
         }
     }
     .btn_box_text{font-size:16px;}
+    .btn_tin_list{
+        gap:5px;
+        > li{}
+    }
+    .btn_tin{
+        border-radius:5px;
+        .ico{width:14px;height:14px;flex-basis:14px;}
+         .text_node{font-size:12px;}
+    }
 }
 
 
