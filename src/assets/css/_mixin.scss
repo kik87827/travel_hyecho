@@ -69,3 +69,15 @@ $warn : #e84854;
 @mixin bgicon {
     background-repeat: no-repeat; background-position:0 0; background-size:100% auto;
 }
+
+@mixin font(
+  $size,
+  $weight: normal,
+  $lineHeight: normal,
+  $color: inherit
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  color: $color;
+}
