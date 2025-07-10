@@ -3127,7 +3127,7 @@ input.props_box_form{
 
 /* 여행후기 사진 */
 /*  */
-.gallery_main_swiper_wrap{padding:0 40px;margin:40px 0 0 0;position:relative;
+.gallery_main_swiper_wrap{padding:0 40px;margin:15px 0 0 0;position:relative;
    
 }
 .gallery_main_swiper_wrap img{vertical-align: top;}
@@ -3143,9 +3143,25 @@ input.props_box_form{
 .gfraction_current{font-size:17px;font-weight:500;}
 .gfraction_part{display:inline-block;padding:0 1px;}
 .gfraction_length{display: inline-block;position:relative;top:1px;}
-
+.data_slice_render{
+    display:flex; justify-content: space-between; gap:20px; align-items: center; margin:20px 0 0; padding:0 40px;
+    .slice_cols{}
+}
+.data_slice_para{@include font(17px,500,#333333);}
+.data_slice_else{@include font(14px,400,#6d6c6c);}
 @media (max-width:1023px){
-    .gallery_main_swiper_wrap{margin:20px -10px -10px;padding:0 25px;}
+    .gallery_main_swiper_wrap{margin:10px -10px -10px;padding:0 25px;}
+
+    .data_slice_render{
+        gap:10px; padding:0 15px; margin-top:15px;
+    }
+    .data_slice_para{font-size:14px;}
+    .data_slice_else{font-size:12px;}
+
+    .btn_gallery_ms_control{
+        &:after{width:10px;height:10px; top:9px; left:6px;}
+        &.next:after{left:0px;}
+    }
 }
 
 
