@@ -11648,6 +11648,14 @@ input.props_box_form:checked {
     padding: 0 25px;
   }
 }
+/* text render */
+.get_data_text_render {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5f5f5f;
+}
+
 .guide_contents_item {
   margin-bottom: 120px;
 }
