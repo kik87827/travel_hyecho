@@ -49,50 +49,6 @@
 
 
 
-/* detail- visual */
-.detail_grid_visual_wrap{display:flex;gap:10px;max-width:1200px;margin:0 auto;position:relative;
-    &.type2{
-        .dgrid_thum_item{padding:0;height:100%;}
-    }
-}
-.detail_grid_main_cols{flex:1;min-width:0;position:relative;overflow:hidden; border-radius:18px;
-    .detail_grid_main_swiper{height:100%;}
-}
-.detail_grid_sub_cols{flex:0 0 390px;
-    display:flex; flex-direction: column;
-}
-.dgrid_thum_list{display:flex;flex-wrap:wrap;gap:10px 0;height:100%;margin:0 -5px;
-     > li{flex:0 0 50%;box-sizing: border-box;width:50%;padding:0 5px;}
-}
-.dgrid_thum_item{display:flex;width:100%;height:0;padding-bottom:100%;position:relative;overflow:hidden; border-radius:18px;}
-.dgrid_thum_item img{display:block;vertical-align: top;position:absolute;top:0;left:0;width:100%;height:100%;object-fit: cover;object-position: 50% 50%;}
-.dgrid_more_item{z-index:2;position:absolute;top:0;left:0;display:flex;align-items: center;justify-content: center;width:100%;height:100%;color:#fff;font-size:18px;font-weight:500;background:rgba(0,0,0,0.4);}
-.detail_grid_imgitem{height:390px;
-    .swiper_img_caption{left:20px;}
-}
-.detail_grid_imgitem img{display:block;vertical-align: top;position:absolute;top:0;left:0;width:100%;height:100%;object-fit: cover;object-position: 50% 50%;}
-
-
-.visual_layer_zone{pointer-events: none;position:absolute;top:0;left:0;width:100%;height:100%;display:flex;justify-content: center; align-items: center; z-index:5; text-align: center;}
-.visual_layer_wrap{
-    &.size2{
-        .visual_key_row{margin-bottom:15px;}
-        .visual_copy_main{font-size:42px;}
-        .visual_copy_sub{font-size:26px;margin-top:10px;}
-    }
-}
-.visual_key_row{margin-bottom:10px;}
-.visual_keybox{font-size:17px;font-weight:500;background:#2b8bf2;border-radius:8px;padding:5px 10px; color:#fff;}
-.visual_copy_row{
-    
-}
-.visual_copy_main,
-.visual_copy_sub{font-size:47px; font-weight:700;text-shadow: 2px 1px 2px rgba(0,0,0,0.9);line-height:1.1;font-family: 'S-Core6'; @include clamp(2);}
-.visual_copy_main{color:#3aceff;}
-.visual_copy_sub{color:#fff;
-}
-.visual_text{color:#fff;font-family: 'S-Core6'; font-size:20px;margin-top:2px;@include clamp(2);}
-
 /*  */
 .gallery_main_swiper_wrap{padding:0 40px;margin:40px 0 0 0;position:relative;
    
@@ -213,7 +169,7 @@
     &.swiper-container{
         width:auto;
         .swiper-wrapper{width:auto;}
-        .swiper-slide{width:auto;flex:auto;text-align: center;}
+        .swiper-slide{width:auto;flex:auto;flex-shrink:0; text-align: center;}
     }
 }
 
