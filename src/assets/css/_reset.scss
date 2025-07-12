@@ -54,6 +54,7 @@ input:-webkit-autofill {
 
 /* common */
 .hidden{display:none !important;}
+.pc_item{display:block !important;}
 .pc_img{display:inline-block !important;}
 .mb_img{display:none !important;}
 .mb_item{display:none !important;}
@@ -69,6 +70,7 @@ i{display:flex;align-items: center;justify-content: center;font-size:0;line-heig
 img.ico_img{max-width:100%;}
 
 @media(max-width:1023px){
+	.pc_item{display:none !important;}
 	.pc_img{display:none !important;}
 	.mb_img{display:inline-block !important;}
     .mb_item{display:block !important;}

@@ -1040,7 +1040,7 @@
 									<div class="dtop_util_para">상품코드 202509-57</div>
 									<ul class="box_action_btn_list">
 										<li><a href="javascript:;" class="box_action_btn like"></a></li>
-										<li><a href="javascript:;" class="box_action_btn print"></a></li>
+										<li class="pc_item"><a href="javascript:;" class="box_action_btn print"></a></li>
 										<li><a href="javascript:;" class="box_action_btn share"></a></li>
 									</ul>
 								</div>
@@ -1131,7 +1131,7 @@
 							</div>
 						</div>
 					</div>
-					<div calss="note_info_cols">
+					<div class="note_info_cols">
 						<ul class="note_para_list">
 							<li>유류할증료 및 제세공과금은 유가와 환율에 따라 변동될 수 있습니다.</li>
 							<li>본 상품가는 기획 당시 적용한 환율 기준이며, 잔금 결제 시 환율 변동에 따라 상품가가 변동될 수 있습니다.</li>
@@ -1845,6 +1845,11 @@
 		</div>
 		<!-- // swiper gallery layer -->
 		<script>
+			$(function() {
+				$(".box_action_btn.like").on("click", function() {
+					$(this).toggleClass("active");
+				});
+			});
 			var mySwiper = new Swiper('.swiper-container.detail_top_img_swiper', {
 				loop: true, // 반복
 				speed: 500,
