@@ -184,6 +184,54 @@
     }
  }
 
+ .tape_block_container{}
+ .tape_block{
+    &:last-of-type{}
+ }
+ .tape_title_row{}
+ .tape_title{}
+ .tape_title_else{}
+ .btn_funcbox{}
+ .tape_contents{}
+ .keyword_indent_block_list{
+    > li{
+        &:last-of-type{}
+    }
+ }
+ .keyword_indent_bullet{}
+ .keyword_indent_liquid{}
+ .word_inflex_list{
+    > li{
+
+    }
+    .company_text_item{}
+ }
+ .word_text_obj{}
+ .airplane_mapline_list{
+    > li{
+        &:last-of-type{}
+    }
+ }
+ .airplane_flex_container{
+    .text_cols{}
+    .icon_cols{
+        .ico{}
+    }
+ }
+ .wordslice_list{
+    > li{}
+ }
+ .wordslice{
+    &.emp{}
+ }
+ .wordslice_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+ }
+ .wordslice_key{}
+ .mapline_guide_text{}
+
 @media (max-width:$mobile_large){
     .middle_wrap{
         &.detail_wrap{padding:20px 20px 84px; box-sizing: border-box;}
