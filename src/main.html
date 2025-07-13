@@ -98,11 +98,12 @@
                   <span class="text_node">출발일자</span>
                 </div>
                 <div class="baquette_value_cols">
-                  <select required class="form_select">
+                  <!-- <select required class="form_select">
                     <option value="" disabled selected hidden>선택하세요</option>
                     <option value="1">옵션1</option>
                     <option value="2">옵션2</option>
-                  </select>
+                  </select> -->
+                  <input type="text" class="form_boxinput calendar" />
                 </div>
               </div>
             </div>
@@ -114,7 +115,21 @@
       </div>
     </main>
     <script>
+
+      function datePicker() {
+        var $datepicker = $(".form_boxinput.calendar");
+        if ($datepicker.length) {
+          $datepicker.each(function () {
+            var $dateThis = $(this);
+            $dateThis.datepicker({
+              dateFormat: 'yy-mm-dd'
+            });
+          });
+        }
+      }
+
       $(function () {
+        datePicker();
         var mvSwiper = new Swiper('.swiper-container.mv_swiper', {
           loop: true, // 반복
           speed: 500,

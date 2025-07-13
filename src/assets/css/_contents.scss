@@ -1373,6 +1373,14 @@ input.field_input{border:0; outline:0; width:100%; height:48px; line-height:1; p
         background:url("../images/ico_calendar.png") no-repeat calc(100% - 10px) 50%/26px auto; padding-right:48px;
     }
 }
+
+
+input.form_boxinput{width:100%; height:46px; box-sizing: border-box; line-height:1; padding:0 15px; font-size:15px; color:#2d2d2d; appearance: none; border:1px solid #ccc; border-radius:5px;
+    &.calendar{
+        background:url("../images/ico_calendar_44x44.png") no-repeat calc(100% - 14px) 50%/22px auto; padding-right:50px;
+    }
+}
+
 .field_each_para{font-size:13px;color:#b5b5b5; margin-top:5px;}
 .field_calendar_group{
     /* position:relative; */
