@@ -528,3 +528,87 @@
         .text_node{font-size:13px;}
     }
 }
+
+/* 여행후기 */
+.total_count_box{
+    .main_cols{}
+    .sub_cols{}
+    .main_cols{}
+}
+.tc_dp_list{
+    > li{}
+}
+.eval_count_node{
+    .ico{}
+    .text_node{}
+}
+.tc_info_text{}
+.objcount_slice_list{
+    > li{
+        
+    }
+}
+.objcount_slice_item{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.objcount_slice_keyword{}
+.objcount_slice_number{}
+.viewer_lk_section_zone{}
+.viewer_lk_sort_row{
+    .form_word_select{}
+}
+.viewer_lk_render_container{
+
+}
+.viewer_lk_brick{
+    &:last-of-type{}
+    .top_row{
+        .main_cols{}
+        .sub_cols{}
+    }
+    .photo_row{}
+    .data_text_row{}
+    .btn_control_row{
+        .btn_cols{}
+        .btn_action_text{}
+    }
+}
+.lk_dp_list{
+    > li{}
+    .eval_count_node{}
+}
+.lk_info_text{}
+.objwho_slice_item{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.viewer_lkphoto_wrap{
+
+}
+.viewer_lkphoto_list{
+    > li{}
+}
+.viewer_lkphoto_item{
+    img{}
+}
+.section_review_lk_render{}
+.btn_action_text{}
+.btn_toggle_text{
+    .text_node{}
+    &:after{}
+    &.active{
+        &:after{}
+        .text_node{}
+    }
+}
+.reply_box_group{}
+.reply_box{
+    .top_row{}
+    .data_row{}
+}
+.reply_who{}
+.reply_who_sub{}
+/* // 여행후기 */
