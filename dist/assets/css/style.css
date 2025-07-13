@@ -4958,7 +4958,7 @@ select.form_word_select:disabled {
   margin: 0 auto;
 }
 .sticky_tabs_inner_wrap.fixed .sticky_tabs_swiper_wrap {
-  margin-right: 397px;
+  margin-right: 326px;
 }
 
 .sticky_tabs_swiper_wrap {
@@ -5015,9 +5015,9 @@ select.form_word_select:disabled {
 }
 
 .detail_calculation_zone {
-  flex: 0 0 357px;
+  flex: 0 0 286px;
   position: relative;
-  width: 357px;
+  width: 286px;
 }
 
 .detail_calculation_wrap.fixed {
@@ -5050,7 +5050,7 @@ select.form_word_select:disabled {
 }
 .detail_calculation_wrap.fixed .detail_calculation_inner_group {
   box-sizing: border-box;
-  width: 357px;
+  width: 286px;
   position: relative;
   overflow-y: overlay;
   height: 100vh;
@@ -5543,13 +5543,9 @@ select.form_word_select:disabled {
   border-radius: 8px;
   margin: 0 0 10px 0;
 }
-.dcalcul_box.dprops_box {
-  padding: 15px 20px;
+.dcalcul_box.define_start_end {
+  padding: 15px 15px;
 }
-.dcalcul_box.dcard_box {
-  padding: 15px 20px;
-}
-
 .dcalcul_flex_row {
   display: flex;
   align-items: center;
@@ -5688,6 +5684,90 @@ select.form_word_select:disabled {
   right: 0;
   transform: rotate(-45deg) translateY(-50%);
   margin-top: -1px;
+}
+
+.dcalcul_total_group {
+  margin-top: 23px;
+}
+
+.dcc_total_both {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dcc_total_label {
+  display: inline-block;
+  color: #6d6c6c;
+  font-size: 15px;
+  position: relative;
+  top: 0;
+}
+
+.dcc_total_value_g {
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.dcc_total_value_main {
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.dcc_total_value_unit {
+  font-size: 16px;
+  line-height: 1;
+  position: relative;
+  top: 2px;
+  margin-left: 4px;
+}
+
+.dcc_total_else_wrap {
+  text-align: right;
+  margin-top: 22px;
+}
+
+.dcc_total_else {
+  font-size: 13px;
+  color: #999999;
+  margin-bottom: 2px;
+}
+
+.dcc_total_else:last-of-type {
+  margin-bottom: 0;
+}
+
+.dcc_total_else.emp {
+  color: #333333;
+}
+
+.dcalcul_btn_group {
+  margin-top: 20px;
+}
+
+.dcalcul_btn_row {
+  margin-bottom: 8px;
+}
+
+.dcalcul_btn_row:last-of-type {
+  margin-bottom: 0;
+}
+
+.btn_dcalcul_main {
+  display: block;
+  text-align: center;
+  padding: 24px;
+  border-radius: 8px;
+  background: #176bdd;
+}
+
+.btn_dcalcul_main_text {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .dcalcul_other_group {
@@ -5863,6 +5943,137 @@ select.form_word_select:disabled {
   font-size: 13px;
   line-height: 1;
   display: inline-block;
+}
+
+.dcc_pro_control_wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 95px;
+}
+
+.inde_current {
+  font-size: 18px;
+  color: #2b2b2b;
+  min-width: 35px;
+  text-align: center;
+}
+
+.btn_inde_control {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  border: 1px solid #c6c6c6;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+
+.btn_inde_control:before,
+.btn_inde_control:after {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 12px;
+  background: #6d6c6c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -1px;
+}
+
+.btn_inde_control:before {
+  transform: rotate(90deg);
+}
+
+.btn_inde_control.dec_control:after {
+  display: none;
+}
+
+.dcc_pro_render_item {
+  display: flex;
+  align-items: center;
+}
+
+.dcc_pro_data_cols {
+  flex: 1;
+  min-width: 0;
+}
+
+.dcc_pro_control_cols {
+  flex: 0;
+}
+
+.dcc_pd_kind_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  align-items: center;
+}
+
+.dcc_pd_price_row {
+  margin-top: 6px;
+}
+
+.dcc_pd_else_row {
+  margin-top: 7px;
+}
+
+.dcc_pd_kind_emp {
+  font-size: 15px;
+  color: #333;
+}
+
+.dcc_pd_kind_sub {
+  font-size: 13px;
+  color: #6d6c6c;
+}
+
+.dcc_pd_else {
+  font-size: 13px;
+  color: #999;
+  letter-spacing: -0.5px;
+}
+
+.dcc_pd_price_g {
+  display: flex;
+  align-items: center;
+  color: #176bdd;
+  line-height: 0;
+}
+
+.dcc_price_value {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
+  color: #176bdd;
+}
+
+.dcc_price_unit {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.btn_qus_tooltip {
+  display: inline-flex;
+  border: 1px solid #cdcdcd;
+  position: relative;
+  top: 1px;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  color: #6d6c6c;
+  line-height: 1;
+}
+
+.dcc_pro_render_list > li {
+  margin-bottom: 35px;
+}
+
+.dcc_pro_render_list > li:last-of-type {
+  margin-bottom: 0;
 }
 
 .swiper-container.swiper-small-card {
