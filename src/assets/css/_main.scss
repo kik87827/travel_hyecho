@@ -41,6 +41,23 @@
     &.stop{}
     &.auto{background-position:0 100%; display:none;}
 }
+
+.mc_container{}
+.search_baquette_wrap{}
+.search_baquette_title{}
+.search_baquette_container{
+    .form_cols{}
+    .btn_cols{}
+}
+.baquette_form_item{}
+.baquette_label_cols{
+
+}
+.baquette_value_cols{
+    select.form_select{}
+}
+.btn_baquette_submit{}
+
 @media (max-width:1023px){
    .btn_mv_control{
        width:30px; height:30px;

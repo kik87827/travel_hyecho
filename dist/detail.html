@@ -1275,13 +1275,13 @@
 										</a>
 									</li>
 									<li>
-										<a href="#" class="guidebox_banner">
+										<a href="#" class="guidebox_banner" id="btn_ready_note">
 											<i class="ico ico_docu"></i>
 											<span class="text_node">필요서류</span>
 										</a>
 									</li>
 									<li>
-										<a href="#" class="guidebox_banner">
+										<a href="#" class="guidebox_banner" id="btn_ue_note">
 											<i class="ico ico_word"></i>
 											<span class="text_node">여행유의사항</span>
 										</a>
@@ -2541,6 +2541,21 @@
 				function slideSetting() {
 					gfraction_current.textContent = photo_mv_obj.realIndex + 1;
 				}
+			}
+
+			const btn_ue_note = document.querySelector("#btn_ue_note");
+			const btn_ready_note = document.querySelector("#btn_ready_note");
+			if (!!btn_ue_note) {
+				btn_ue_note.addEventListener("click", (e) => {
+					e.preventDefault();
+					popup_travel_note.popupShow();
+				});
+			}
+			if (!!btn_ready_note) {
+				btn_ready_note.addEventListener("click", (e) => {
+					e.preventDefault();
+					popup_docu_import.popupShow();
+				});
 			}
 
 			// 퍼블확인용
