@@ -208,7 +208,7 @@
 .btn_textonly{display:inline-block;font-size:15px; color:#6d6c6c;}
 
 @media (max-width:1260px){
-    .detail_contents_global_zone{margin-top:12px;}
+    .detail_contents_global_zone{margin-top:36px;}
     .sticky_tabs_container_zone{
         margin:0 -20px;
     }
@@ -239,7 +239,7 @@
         &.mtype2{margin-top:25px;}
     }
     .detail_calculation_zone{display:none;}
-    .detail_contents_zone{padding:0 20px;}
+    .detail_contents_zone{padding:0;}
     .sticky_tabs_inner_wrap{
         &.fixed{
             top:60px;
