@@ -177,21 +177,35 @@
       내용이 들어갑니다.
     </main>
     <script>
-      var mvSwiper = new Swiper('.swiper-container.mv_swiper', {
-        loop: true, // 반복
-        speed: 500,
-        effect: 'fade',
-        autoplay: {
-          delay: 3000, // 3초마다 자동
-          disableOnInteraction: false // 사용자 상호작용 후에도 계속 오토롤링
-        },
-        pagination: {
-          el: '.mv_container .swiper-pagination'
-        },
-        navigation: {
-          nextEl: '.mv_container .btn_mv_control.next',
-          prevEl: '.mv_container .btn_mv_control.prev',
-        },
+      $(function () {
+        var mvSwiper = new Swiper('.swiper-container.mv_swiper', {
+          loop: true, // 반복
+          speed: 500,
+          effect: 'fade',
+          autoplay: {
+            delay: 3000, // 3초마다 자동
+            disableOnInteraction: false // 사용자 상호작용 후에도 계속 오토롤링
+          },
+          pagination: {
+            el: '.mv_container .swiper-pagination'
+          },
+          navigation: {
+            nextEl: '.mv_container .btn_mv_control.next',
+            prevEl: '.mv_container .btn_mv_control.prev',
+          },
+        });
+        $(".btn_swiper_timer.stop").on("click", function (e) {
+          e.preventDefault();
+          $(".btn_swiper_timer").show();
+          mvSwiper.autoplay.stop();
+          $(this).hide();
+        });
+        $(".btn_swiper_timer.auto").on("click", function (e) {
+          e.preventDefault();
+          $(".btn_swiper_timer").show();
+          mvSwiper.autoplay.start();
+          $(this).hide();
+        });
       });
     </script>
     @@include('./include/_footer.html')

@@ -13912,4 +13912,184 @@ input.input_search_field {
   }
 }
 /* main */
+.mv_container {
+  position: relative;
+}
+
+.btn_mv_control {
+  display: block;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.btn_mv_control:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  transform: rotate(45deg);
+}
+.btn_mv_control.prev {
+  left: 0;
+}
+.btn_mv_control.next {
+  right: 0;
+}
+.btn_mv_control.next:after {
+  transform: rotate(225deg);
+  left: 17px;
+}
+
+.mv_item {
+  display: block;
+  position: relative;
+  height: 620px;
+}
+.mv_item .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.mv_copy_container {
+  max-width: 1200px;
+  padding: 70px 100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.mv_copy_group {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.mv_copy_01 {
+  margin-bottom: 10px;
+}
+
+.mv_flag {
+  display: inline-block;
+  background: rgba(23, 24, 24, 0.86);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.mv_copy_02 {
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+  word-break: keep-all;
+}
+
+.mv_copy_03 {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  margin-top: 15px;
+  word-break: keep-all;
+}
+
+.swiper_paging_zone {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper_paging_zone .swiper-pagination {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.swiper_paging_zone .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 2px;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background: #fff;
+}
+.swiper_paging_zone .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #000;
+}
+
+.swipertimer_cols {
+  display: flex;
+  align-items: center;
+  margin-left: 7px;
+}
+
+.btn_swiper_timer {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/ico_mv_play_auto.png") no-repeat 0 0/100% auto;
+}
+.btn_swiper_timer.auto {
+  background-position: 0 100%;
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .btn_mv_control {
+    width: 30px;
+    height: 30px;
+  }
+  .btn_mv_control:after {
+    width: 12px;
+    height: 12px;
+    top: 8px;
+    left: 12px;
+  }
+  .btn_mv_control.next:after {
+    transform: rotate(225deg);
+    left: 5px;
+  }
+  .mv_item {
+    height: 500px;
+  }
+  .mv_copy_container {
+    padding: 30px 30px;
+  }
+  .mv_flag {
+    padding: 7px 15px;
+    font-size: 12px;
+  }
+  .mv_copy_02 {
+    font-size: 20px;
+  }
+  .mv_copy_03 {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .swiper_paging_zone {
+    bottom: 10px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
