@@ -212,7 +212,7 @@ input.props_form{
 
 select.form_select{
     border:1px solid #ccc; border-radius:5px; width:100%; font-size:15px;height:46px;color:#2d2d2d;padding: 0 45px 0 15px;box-sizing:border-box;font-family: 'Noto Sans KR';cursor: pointer;
-    background: #fff url("../images/ico_select_44.png") no-repeat 100% 100%/auto 44px;line-height: 1;-webkit-appearance:none;-moz-appearance:none;appearance:none;
+    background: #fff url("../images/ico_select_44.png") no-repeat 100% 50%/auto 44px;line-height: 1;-webkit-appearance:none;-moz-appearance:none;appearance:none;
     &::-ms-value {background: none; color:#2d2d2d;}
     &::-ms-expand {display: none;}
     &::-ms-value {
