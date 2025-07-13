@@ -1,343 +1,341 @@
 <!DOCTYPE html>
 <html lang="ko">
-@@include('./include/_head.html')
+  @@include('./include/_head.html')
 
-<body class="front_body">
-  <div class="page_wrap">
-    @@include('./include/_header.html')
-    <main class="middle_wrap">
-      <div class="mv_container">
-        <a href="javascript:;" class="btn_mv_control prev"></a>
-        <div class="swiper-container mv_swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="mv_item">
-                <div class="bg" style="background-image:url('./assets/images/mv_01.jpg')"></div>
-                <div class="mv_copy_container">
-                  <div class="mv_copy_group">
-                    <div class="mv_copy_01"><span class="mv_flag">기다리던 여행</span></div>
-                    <div class="mv_copy_02">산티아고 여행의 시작 혜초여행사 <br>항공특가 프로모션</div>
-                    <div class="mv_copy_03">패턴 이용! & 기내서비스 혜택까지 빠짐없이! 부산출발도 가능!</div>
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/_header.html')
+      <main class="middle_wrap">
+        <div class="mv_container">
+          <a href="javascript:;" class="btn_mv_control prev"></a>
+          <div class="swiper-container mv_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="mv_item">
+                  <div class="bg" style="background-image: url('./assets/images/mv_01.jpg')"></div>
+                  <div class="mv_copy_container">
+                    <div class="mv_copy_group">
+                      <div class="mv_copy_01"><span class="mv_flag">기다리던 여행</span></div>
+                      <div class="mv_copy_02">
+                        산티아고 여행의 시작 혜초여행사
+                        <br />
+                        항공특가 프로모션
+                      </div>
+                      <div class="mv_copy_03">패턴 이용! & 기내서비스 혜택까지 빠짐없이! 부산출발도 가능!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mv_item">
+                  <div class="bg" style="background-image: url('./assets/images/mv_02.jpg')"></div>
+                  <div class="mv_copy_container">
+                    <div class="mv_copy_group">
+                      <div class="mv_copy_01"><span class="mv_flag">기다리던 여행2</span></div>
+                      <div class="mv_copy_02">
+                        산티아고 여행의 시작 혜초여행사
+                        <br />
+                        항공특가 프로모션
+                      </div>
+                      <div class="mv_copy_03">패턴 이용! & 기내서비스 혜택까지 빠짐없이! 부산출발도 가능!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mv_item">
+                  <div class="bg" style="background-image: url('./assets/images/mv_03.jpg')"></div>
+                  <div class="mv_copy_container">
+                    <div class="mv_copy_group">
+                      <div class="mv_copy_01"><span class="mv_flag">기다리던 여행3</span></div>
+                      <div class="mv_copy_02">
+                        산티아고 여행의 시작 혜초여행사
+                        <br />
+                        항공특가 프로모션
+                      </div>
+                      <div class="mv_copy_03">패턴 이용! & 기내서비스 혜택까지 빠짐없이! 부산출발도 가능!</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="mv_item">
-                <div class="bg" style="background-image:url('./assets/images/mv_02.jpg')"></div>
-                <div class="mv_copy_container">
-                  <div class="mv_copy_group">
-                    <div class="mv_copy_01"><span class="mv_flag">기다리던 여행2</span></div>
-                    <div class="mv_copy_02">산티아고 여행의 시작 혜초여행사 <br>항공특가 프로모션</div>
-                    <div class="mv_copy_03">패턴 이용! & 기내서비스 혜택까지 빠짐없이! 부산출발도 가능!</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="mv_item">
-                <div class="bg" style="background-image:url('./assets/images/mv_03.jpg')"></div>
-                <div class="mv_copy_container">
-                  <div class="mv_copy_group">
-                    <div class="mv_copy_01"><span class="mv_flag">기다리던 여행3</span></div>
-                    <div class="mv_copy_02">산티아고 여행의 시작 혜초여행사 <br>항공특가 프로모션</div>
-                    <div class="mv_copy_03">패턴 이용! & 기내서비스 혜택까지 빠짐없이! 부산출발도 가능!</div>
-                  </div>
-                </div>
+            <div class="swiper_paging_zone">
+              <div class="swiper-pagination"></div>
+              <div class="swipertimer_cols">
+                <a href="javascript:;" class="btn_swiper_timer stop"></a>
+                <a href="javascript:;" class="btn_swiper_timer auto"></a>
               </div>
             </div>
           </div>
-          <div class="swiper_paging_zone">
-            <div class="swiper-pagination"></div>
-            <div class="swipertimer_cols">
-              <a href="javascript:;" class="btn_swiper_timer stop"></a>
-              <a href="javascript:;" class="btn_swiper_timer auto"></a>
-            </div>
-          </div>
+          <a href="javascript:;" class="btn_mv_control next"></a>
         </div>
-        <a href="javascript:;" class="btn_mv_control next"></a>
-      </div>
-      <div class="mc_container">
-        <div class="search_baquette_wrap">
-          <h3 class="search_baquette_title">출발일별 여행찾기</h3>
-          <div class="search_baquette_container">
-            <div class="form_cols">
-              <div class="baquette_form_item">
-                <div class="baquette_label_cols">
-                  <i class="ico shape_map"></i>
-                  <span class="text_node">구분</span>
-                </div>
-                <div class="baquette_value_cols">
-                  <select required class="form_select">
-                    <option value="" disabled selected hidden>선택하세요</option>
-                    <option value="1">옵션1</option>
-                    <option value="2">옵션2</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="form_cols">
-              <div class="baquette_form_item">
-                <div class="baquette_label_cols">
-                  <i class="ico shape_earth"></i>
-                  <span class="text_node">지역</span>
-                </div>
-                <div class="baquette_value_cols">
-                  <select required class="form_select">
-                    <option value="" disabled selected hidden>선택하세요</option>
-                    <option value="1">옵션1</option>
-                    <option value="2">옵션2</option>
-                  </select>
+        <div class="mc_container">
+          <div class="search_baquette_wrap">
+            <h3 class="search_baquette_title">출발일별 여행찾기</h3>
+            <div class="search_baquette_container">
+              <div class="form_cols">
+                <div class="baquette_form_item">
+                  <div class="baquette_label_cols">
+                    <i class="ico shape_map"></i>
+                    <span class="text_node">구분</span>
+                  </div>
+                  <div class="baquette_value_cols">
+                    <select required class="form_select">
+                      <option value="" disabled selected hidden>선택하세요</option>
+                      <option value="1">옵션1</option>
+                      <option value="2">옵션2</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="form_cols">
-              <div class="baquette_form_item">
-                <div class="baquette_label_cols">
-                  <i class="ico shape_calendar"></i>
-                  <span class="text_node">출발일자</span>
-                </div>
-                <div class="baquette_value_cols">
-                  <input type="text" class="form_boxinput calendar" />
+              <div class="form_cols">
+                <div class="baquette_form_item">
+                  <div class="baquette_label_cols">
+                    <i class="ico shape_earth"></i>
+                    <span class="text_node">지역</span>
+                  </div>
+                  <div class="baquette_value_cols">
+                    <select required class="form_select">
+                      <option value="" disabled selected hidden>선택하세요</option>
+                      <option value="1">옵션1</option>
+                      <option value="2">옵션2</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="btn_cols">
-              <a href="javascript:;" class="btn_baquette_submit"><span class="text_node">검색</span></a>
-            </div>
-          </div>
-        </div>
-        <div class="mc_linkage_block_wrap">
-          <div class="mc_linkage_block">
-            <div class="mc_linkage_title_row">
-              <div class="title_cols">
-                <h3 class="mc_linkage_title">고객 감동 후기</h3>
-                <p class="mc_linkage_title_sub">사진과 함께 보는 생생한 여행후기</p>
+              <div class="form_cols">
+                <div class="baquette_form_item">
+                  <div class="baquette_label_cols">
+                    <i class="ico shape_calendar"></i>
+                    <span class="text_node">출발일자</span>
+                  </div>
+                  <div class="baquette_value_cols">
+                    <input type="text" class="form_boxinput calendar" />
+                  </div>
+                </div>
               </div>
               <div class="btn_cols">
-                <a href="#" class="btn_slicebox">더보기</a>
+                <a href="javascript:;" class="btn_baquette_submit"><span class="text_node">검색</span></a>
               </div>
             </div>
-            <div class="mc_linkage_contents">
-              <div class="vertical_cardbox_wrap">
-                <ul class="vertical_cardbox_list">
-                  <li>
-                    <a href="#" class="vertical_cardbox">
-                      <div class="thum_row">
-                        <img src="./assets/images/img_284x260_01.png" alt="">
-                      </div>
-                      <div class="spec_row">
-                        <div class="spec_main_row">
-                          <p class="spec_main_name">박*수</p>
-                          <div class="else_cols">
-                            <span class="eval_value">4.8</span>
-                            <div class="eval_star_wrap size2">
-                              <span class="eval_star active"></span>
-                              <span class="eval_star active"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="spec_sub_para">
-                          최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다.
-                          하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="vertical_cardbox">
-                      <div class="thum_row">
-                        <img src="./assets/images/img_284x260_02.png" alt="">
-                      </div>
-                      <div class="spec_row">
-                        <div class="spec_main_row">
-                          <p class="spec_main_name">박*수</p>
-                          <div class="else_cols">
-                            <span class="eval_value">4.8</span>
-                            <div class="eval_star_wrap size2">
-                              <span class="eval_star active"></span>
-                              <span class="eval_star active"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="spec_sub_para">
-                          최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다.
-                          하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="vertical_cardbox">
-                      <div class="thum_row">
-                        <img src="./assets/images/img_284x260_03.png" alt="">
-                      </div>
-                      <div class="spec_row">
-                        <div class="spec_main_row">
-                          <p class="spec_main_name">박*수</p>
-                          <div class="else_cols">
-                            <span class="eval_value">4.8</span>
-                            <div class="eval_star_wrap size2">
-                              <span class="eval_star active"></span>
-                              <span class="eval_star active"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="spec_sub_para">
-                          최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다.
-                          하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="vertical_cardbox">
-                      <div class="thum_row">
-                        <img src="./assets/images/img_284x260_04.png" alt="">
-                      </div>
-                      <div class="spec_row">
-                        <div class="spec_main_row">
-                          <p class="spec_main_name">박*수</p>
-                          <div class="else_cols">
-                            <span class="eval_value">4.8</span>
-                            <div class="eval_star_wrap size2">
-                              <span class="eval_star active"></span>
-                              <span class="eval_star active"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                              <span class="eval_star"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="spec_sub_para">
-                          최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다.
-                          하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="nodata_li">
-                    <p class="nodata_para">데이터가 없습니다.</p>
-                  </li>
-                </ul>
+          </div>
+          <div class="mc_linkage_block_wrap">
+            <div class="mc_linkage_block">
+              <div class="mc_linkage_title_row">
+                <div class="title_cols">
+                  <h3 class="mc_linkage_title">고객 감동 후기</h3>
+                  <p class="mc_linkage_title_sub">사진과 함께 보는 생생한 여행후기</p>
+                </div>
+                <div class="btn_cols">
+                  <a href="#" class="btn_slicebox">더보기</a>
+                </div>
               </div>
-              <div class="hor_quadbox_wrap">
-                <ul class="hor_quadbox_list">
-                  <li>
-                    <a href="#" class="hor_quadbox_item">
-                      <div class="img_cols">
-                        <span class="hor_quad_thum">
-                          <img src="./assets/images/img_78x78_01.png" alt="">
-                        </span>
-                      </div>
-                      <div class="spec_cols">
-                        <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hor_quadbox_item">
-                      <div class="img_cols">
-                        <span class="hor_quad_thum">
-                          <img src="./assets/images/img_78x78_02.png" alt="">
-                        </span>
-                      </div>
-                      <div class="spec_cols">
-                        <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hor_quadbox_item">
-                      <div class="img_cols">
-                        <span class="hor_quad_thum">
-                          <img src="./assets/images/img_78x78_03.png" alt="">
-                        </span>
-                      </div>
-                      <div class="spec_cols">
-                        <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hor_quadbox_item">
-                      <div class="img_cols">
-                        <span class="hor_quad_thum">
-                          <img src="./assets/images/img_78x78_04.png" alt="">
-                        </span>
-                      </div>
-                      <div class="spec_cols">
-                        <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="nodata_li">
-                    <p class="nodata_para">데이터가 없습니다.</p>
-                  </li>
-                </ul>
+              <div class="mc_linkage_contents">
+                <div class="vertical_cardbox_wrap">
+                  <ul class="vertical_cardbox_list">
+                    <li>
+                      <a href="#" class="vertical_cardbox">
+                        <div class="thum_row">
+                          <img src="./assets/images/img_284x260_01.png" alt="" />
+                        </div>
+                        <div class="spec_row">
+                          <div class="spec_main_row">
+                            <p class="spec_main_name">박*수</p>
+                            <div class="else_cols">
+                              <span class="eval_value">4.8</span>
+                              <div class="eval_star_wrap size3">
+                                <span class="eval_star active"></span>
+                                <span class="eval_star active"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="spec_sub_para">최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다. 하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="vertical_cardbox">
+                        <div class="thum_row">
+                          <img src="./assets/images/img_284x260_02.png" alt="" />
+                        </div>
+                        <div class="spec_row">
+                          <div class="spec_main_row">
+                            <p class="spec_main_name">박*수</p>
+                            <div class="else_cols">
+                              <span class="eval_value">4.8</span>
+                              <div class="eval_star_wrap size3">
+                                <span class="eval_star active"></span>
+                                <span class="eval_star active"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="spec_sub_para">최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다. 하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="vertical_cardbox">
+                        <div class="thum_row">
+                          <img src="./assets/images/img_284x260_03.png" alt="" />
+                        </div>
+                        <div class="spec_row">
+                          <div class="spec_main_row">
+                            <p class="spec_main_name">박*수</p>
+                            <div class="else_cols">
+                              <span class="eval_value">4.8</span>
+                              <div class="eval_star_wrap size3">
+                                <span class="eval_star active"></span>
+                                <span class="eval_star active"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="spec_sub_para">최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다. 하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="vertical_cardbox">
+                        <div class="thum_row">
+                          <img src="./assets/images/img_284x260_04.png" alt="" />
+                        </div>
+                        <div class="spec_row">
+                          <div class="spec_main_row">
+                            <p class="spec_main_name">박*수</p>
+                            <div class="else_cols">
+                              <span class="eval_value">4.8</span>
+                              <div class="eval_star_wrap size3">
+                                <span class="eval_star active"></span>
+                                <span class="eval_star active"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                                <span class="eval_star"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="spec_sub_para">최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다. 하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- <li class="nodata_li">
+                      <p class="nodata_para">데이터가 없습니다.</p>
+                    </li> -->
+                  </ul>
+                </div>
+                <div class="hor_quadbox_wrap">
+                  <ul class="hor_quadbox_list">
+                    <li>
+                      <a href="#" class="hor_quadbox_item">
+                        <div class="img_cols">
+                          <span class="hor_quad_thum">
+                            <img src="./assets/images/img_78x78_01.png" alt="" />
+                          </span>
+                        </div>
+                        <div class="spec_cols">
+                          <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hor_quadbox_item">
+                        <div class="img_cols">
+                          <span class="hor_quad_thum">
+                            <img src="./assets/images/img_78x78_02.png" alt="" />
+                          </span>
+                        </div>
+                        <div class="spec_cols">
+                          <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hor_quadbox_item">
+                        <div class="img_cols">
+                          <span class="hor_quad_thum">
+                            <img src="./assets/images/img_78x78_03.png" alt="" />
+                          </span>
+                        </div>
+                        <div class="spec_cols">
+                          <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hor_quadbox_item">
+                        <div class="img_cols">
+                          <span class="hor_quad_thum">
+                            <img src="./assets/images/img_78x78_04.png" alt="" />
+                          </span>
+                        </div>
+                        <div class="spec_cols">
+                          <p class="hor_quad_proname">상품명이 노출됩니다. 상품명이 노출됩니다상품명이 노출됩니다. 상품명이 노출됩니다</p>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- <li class="nodata_li">
+                      <p class="nodata_para">데이터가 없습니다.</p>
+                    </li> -->
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <script>
-
-      function datePicker() {
-        var $datepicker = $(".form_boxinput.calendar");
-        if ($datepicker.length) {
-          $datepicker.each(function () {
-            var $dateThis = $(this);
-            $dateThis.datepicker({
-              dateFormat: 'yy-mm-dd'
+      </main>
+      <script>
+        function datePicker() {
+          var $datepicker = $(".form_boxinput.calendar");
+          if ($datepicker.length) {
+            $datepicker.each(function () {
+              var $dateThis = $(this);
+              $dateThis.datepicker({
+                dateFormat: "yy-mm-dd",
+              });
             });
-          });
+          }
         }
-      }
 
-      $(function () {
-        datePicker();
-        var mvSwiper = new Swiper('.swiper-container.mv_swiper', {
-          loop: true, // 반복
-          speed: 500,
-          effect: 'fade',
-          autoplay: {
-            delay: 3000, // 3초마다 자동
-            disableOnInteraction: false // 사용자 상호작용 후에도 계속 오토롤링
-          },
-          pagination: {
-            el: '.mv_container .swiper-pagination'
-          },
-          navigation: {
-            nextEl: '.mv_container .btn_mv_control.next',
-            prevEl: '.mv_container .btn_mv_control.prev',
-          },
+        $(function () {
+          datePicker();
+          var mvSwiper = new Swiper(".swiper-container.mv_swiper", {
+            loop: true, // 반복
+            speed: 500,
+            effect: "fade",
+            autoplay: {
+              delay: 3000, // 3초마다 자동
+              disableOnInteraction: false, // 사용자 상호작용 후에도 계속 오토롤링
+            },
+            pagination: {
+              el: ".mv_container .swiper-pagination",
+            },
+            navigation: {
+              nextEl: ".mv_container .btn_mv_control.next",
+              prevEl: ".mv_container .btn_mv_control.prev",
+            },
+          });
+          $(".btn_swiper_timer.stop").on("click", function (e) {
+            e.preventDefault();
+            $(".btn_swiper_timer").show();
+            mvSwiper.autoplay.stop();
+            $(this).hide();
+          });
+          $(".btn_swiper_timer.auto").on("click", function (e) {
+            e.preventDefault();
+            $(".btn_swiper_timer").show();
+            mvSwiper.autoplay.start();
+            $(this).hide();
+          });
         });
-        $(".btn_swiper_timer.stop").on("click", function (e) {
-          e.preventDefault();
-          $(".btn_swiper_timer").show();
-          mvSwiper.autoplay.stop();
-          $(this).hide();
-        });
-        $(".btn_swiper_timer.auto").on("click", function (e) {
-          e.preventDefault();
-          $(".btn_swiper_timer").show();
-          mvSwiper.autoplay.start();
-          $(this).hide();
-        });
-      });
-    </script>
-    @@include('./include/_footer.html')
-  </div>
-</body>
-
+      </script>
+      @@include('./include/_footer.html')
+    </div>
+  </body>
 </html>

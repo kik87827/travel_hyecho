@@ -280,16 +280,22 @@ select.form_word_select{
 
 
 /* star */
+.eval_value{display:inline-block; @include font(16px,500,1,#2b2b2b);white-space: nowrap;}
 .eval_star_wrap{display:flex;align-items: center;
     &.size2{
          .eval_star{width:16px;height:16px;background-image:url("../images/ico_eval_star_16.png")}
+    }
+    &.size3{
+         .eval_star{width:14px;height:14px;background-image:url("../images/ico_eval_star_14.png")}
     }
 }
 .eval_star{display:block;width:23px;height:23px;background:url("../images/ico_eval_star_23.png") no-repeat 0 0/100% auto;
 
     &.active{background-position:0 100%;}
 }
-
+@media (max-width:1023px){
+    .eval_value{font-size:14px;}
+}
 
 
 /* paging */
