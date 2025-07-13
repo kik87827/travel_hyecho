@@ -72,6 +72,60 @@
     .text_node{display:none;}
 }
 
+.mc_linkage_block_wrap{}
+.mc_linkage_block{}
+.mc_linkage_title_row{
+    .title_cols{}
+    .btn_cols{
+        .btn_slicebox{}
+    }
+}
+.btn_slicebox{}
+.mc_linkage_title{}
+.mc_linkage_title_sub{}
+.mc_linkage_contents{
+
+}
+
+.vertical_cardbox_wrap{
+
+}
+.vertical_cardbox_list{
+    > li{
+        &.nodata_li{
+            .nodata_para{}
+        }
+    }
+}
+.vertical_cardbox{
+    .thum_row{
+        img{}
+    }   
+    .spec_row{}   
+    .spec_main_row{
+
+        .else_cols{}
+    }
+    .spec_main_name{}
+}
+
+.hor_quadbox_wrap{}
+.hor_quadbox_list{
+    > li{
+        &.nodata_li{
+            .nodata_para{}
+        }
+    }
+}
+.hor_quadbox_item{
+    .img_cols{}
+    .spec_cols{}
+}
+.hor_quad_thum{
+    img{}
+}
+.hor_quad_proname{}
+
 @media (max-width:$tablet){
     .search_baquette_container{
         .form_cols{

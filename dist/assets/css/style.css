@@ -4581,6 +4581,27 @@ select.form_word_select:disabled {
     top: 0;
   }
 }
+/* star */
+.eval_star_wrap {
+  display: flex;
+  align-items: center;
+}
+.eval_star_wrap.size2 .eval_star {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/ico_eval_star_16.png");
+}
+
+.eval_star {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url("../images/ico_eval_star_23.png") no-repeat 0 0/100% auto;
+}
+.eval_star.active {
+  background-position: 0 100%;
+}
+
 /* contents */
 /* swiper 공통 */
 .d_mv_bottom_control_zone {
