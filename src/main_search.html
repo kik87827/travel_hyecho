@@ -1,315 +1,357 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./include/_head.html')
+@@include('./include/_head.html')
 
-  <body class="front_body">
-    <div class="page_wrap">
-      @@include('./include/_header.html')
-      <main class="middle_wrap">
-        <div class="core_page_container">
-          <div class="core_title_row"><h2 class="core_title">출발일별 여행찾기</h2></div>
-          <div class="core_contents">
-            <div class="search_fieldbox_wrap">
-              <div class="search_fieldbox">
-                <div class="fieldbox_grid_wrap">
-                  <ul class="fieldbox_grid_list">
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">분류</span></dt>
-                        <dd>
-                          <select required class="form_select">
-                            <option value="" disabled selected hidden>선택하세요</option>
-                            <option value="1">옵션1</option>
-                            <option value="2">옵션2</option>
-                          </select>
-                        </dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">출발일</span></dt>
-                        <dd><input type="text" class="form_boxinput calendar" placeholder="0000-00-00" /></dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">지역</span></dt>
-                        <dd>
-                          <select required class="form_select">
-                            <option value="" disabled selected hidden>선택하세요</option>
-                            <option value="1">옵션1</option>
-                            <option value="2">옵션2</option>
-                          </select>
-                        </dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">기간</span></dt>
-                        <dd>
-                          <select required class="form_select">
-                            <option value="" disabled selected hidden>선택하세요</option>
-                            <option value="1">옵션1</option>
-                            <option value="2">옵션2</option>
-                          </select>
-                        </dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">테마</span></dt>
-                        <dd>
-                          <select required class="form_select">
-                            <option value="" disabled selected hidden>선택하세요</option>
-                            <option value="1">옵션1</option>
-                            <option value="2">옵션2</option>
-                          </select>
-                        </dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">난이도</span></dt>
-                        <dd>
-                          <select required class="form_select">
-                            <option value="" disabled selected hidden>선택하세요</option>
-                            <option value="1">옵션1</option>
-                            <option value="2">옵션2</option>
-                          </select>
-                        </dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">예약상태</span></dt>
-                        <dd>
-                          <select required class="form_select">
-                            <option value="" disabled selected hidden>선택하세요</option>
-                            <option value="1">옵션1</option>
-                            <option value="2">옵션2</option>
-                          </select>
-                        </dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <dl class="obj_form_item">
-                        <dt><span class="keylabel">키워드</span></dt>
-                        <dd><input type="text" class="form_boxinput" /></dd>
-                      </dl>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="btn_submitbox_wrap">
-                <a href="#" class="btn_submitbox">검색</a>
-              </div>
-            </div>
-            <div class="floor_data_render">
-              <div class="floor_sort_row">
-                <select class="form_word_select">
-                  <option>출발일순</option>
-                </select>
-              </div>
-              <div class="floor_data_wrap">
-                <ul class="floor_data_list">
+<body class="front_body">
+  <div class="page_wrap">
+    @@include('./include/_header.html')
+    <main class="middle_wrap">
+      <div class="core_page_container">
+        <div class="core_title_row">
+          <h2 class="core_title">출발일별 여행찾기</h2>
+        </div>
+        <div class="core_contents">
+          <div class="search_fieldbox_wrap">
+            <div class="search_fieldbox">
+              <div class="fieldbox_grid_wrap">
+                <ul class="fieldbox_grid_list">
                   <li>
-                    <div class="floor_data_item">
-                      <div class="floor_main_cols">
-                        <dl class="floor_current_obj">
-                          <dt><div class="floor_current_keyword">출발확정</div></dt>
-                          <dd><p class="floor_current_value">2025-08-23(월)</p></dd>
-                        </dl>
-                      </div>
-                      <div class="floor_summary_cols">
-                        <div class="summary_in_cols">
-                          <ul class="summary_linkage_list">
-                            <li><span class="summary_linkage_data">중국</span></li>
-                            <li><span class="summary_linkage_data">0박0일</span></li>
-                            <li><span class="summary_linkage_data">피크등반</span></li>
-                            <li><span class="summary_linkage_data">0단계</span></li>
-                          </ul>
-                          <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
-                        </div>
-                        <div class="summary_in_cols">
-                          <div class="summary_emp_row">
-                            <div class="company_text_item">
-                              <div class="company_logo_cols">
-                                <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
-                              </div>
-                              <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
-                            </div>
-                          </div>
-                          <div class="summary_emp_row">
-                            <div class="price_dom">
-                              <strong class="price_number">2,150,000</strong>
-                              <span class="price_unit">원</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">분류</span></dt>
+                      <dd>
+                        <select required class="form_select">
+                          <option value="" disabled selected hidden>선택하세요</option>
+                          <option value="1">옵션1</option>
+                          <option value="2">옵션2</option>
+                        </select>
+                      </dd>
+                    </dl>
                   </li>
                   <li>
-                    <div class="floor_data_item">
-                      <div class="floor_main_cols">
-                        <dl class="floor_current_obj">
-                          <dt><div class="floor_current_keyword">출발확정</div></dt>
-                          <dd><p class="floor_current_value">2025-08-23(월)</p></dd>
-                        </dl>
-                      </div>
-                      <div class="floor_summary_cols">
-                        <div class="summary_in_cols">
-                          <ul class="summary_linkage_list">
-                            <li><span class="summary_linkage_data">중국</span></li>
-                            <li><span class="summary_linkage_data">0박0일</span></li>
-                            <li><span class="summary_linkage_data">피크등반</span></li>
-                            <li><span class="summary_linkage_data">0단계</span></li>
-                          </ul>
-                          <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
-                        </div>
-                        <div class="summary_in_cols">
-                          <div class="summary_emp_row">
-                            <div class="company_text_item">
-                              <div class="company_logo_cols">
-                                <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
-                              </div>
-                              <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
-                            </div>
-                          </div>
-                          <div class="summary_emp_row">
-                            <div class="price_dom">
-                              <strong class="price_number">2,150,000</strong>
-                              <span class="price_unit">원</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">출발일</span></dt>
+                      <dd><input type="text" class="form_boxinput calendar" placeholder="0000-00-00" /></dd>
+                    </dl>
                   </li>
                   <li>
-                    <div class="floor_data_item">
-                      <div class="floor_main_cols">
-                        <dl class="floor_current_obj">
-                          <dt><div class="floor_current_keyword">출발확정</div></dt>
-                          <dd><p class="floor_current_value">2025-08-23(월)</p></dd>
-                        </dl>
-                      </div>
-                      <div class="floor_summary_cols">
-                        <div class="summary_in_cols">
-                          <ul class="summary_linkage_list">
-                            <li><span class="summary_linkage_data">중국</span></li>
-                            <li><span class="summary_linkage_data">0박0일</span></li>
-                            <li><span class="summary_linkage_data">피크등반</span></li>
-                            <li><span class="summary_linkage_data">0단계</span></li>
-                          </ul>
-                          <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
-                        </div>
-                        <div class="summary_in_cols">
-                          <div class="summary_emp_row">
-                            <div class="company_text_item">
-                              <div class="company_logo_cols">
-                                <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
-                              </div>
-                              <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
-                            </div>
-                          </div>
-                          <div class="summary_emp_row">
-                            <div class="price_dom">
-                              <strong class="price_number">2,150,000</strong>
-                              <span class="price_unit">원</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">지역</span></dt>
+                      <dd>
+                        <select required class="form_select">
+                          <option value="" disabled selected hidden>선택하세요</option>
+                          <option value="1">옵션1</option>
+                          <option value="2">옵션2</option>
+                        </select>
+                      </dd>
+                    </dl>
                   </li>
                   <li>
-                    <div class="floor_data_item">
-                      <div class="floor_main_cols">
-                        <dl class="floor_current_obj">
-                          <dt><div class="floor_current_keyword">출발확정</div></dt>
-                          <dd><p class="floor_current_value">2025-08-23(월)</p></dd>
-                        </dl>
-                      </div>
-                      <div class="floor_summary_cols">
-                        <div class="summary_in_cols">
-                          <ul class="summary_linkage_list">
-                            <li><span class="summary_linkage_data">중국</span></li>
-                            <li><span class="summary_linkage_data">0박0일</span></li>
-                            <li><span class="summary_linkage_data">피크등반</span></li>
-                            <li><span class="summary_linkage_data">0단계</span></li>
-                          </ul>
-                          <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
-                        </div>
-                        <div class="summary_in_cols">
-                          <div class="summary_emp_row">
-                            <div class="company_text_item">
-                              <div class="company_logo_cols">
-                                <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
-                              </div>
-                              <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
-                            </div>
-                          </div>
-                          <div class="summary_emp_row">
-                            <div class="price_dom">
-                              <strong class="price_number">2,150,000</strong>
-                              <span class="price_unit">원</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">기간</span></dt>
+                      <dd>
+                        <select required class="form_select">
+                          <option value="" disabled selected hidden>선택하세요</option>
+                          <option value="1">옵션1</option>
+                          <option value="2">옵션2</option>
+                        </select>
+                      </dd>
+                    </dl>
                   </li>
                   <li>
-                    <div class="floor_data_item">
-                      <div class="floor_main_cols">
-                        <dl class="floor_current_obj">
-                          <dt><div class="floor_current_keyword">출발확정</div></dt>
-                          <dd><p class="floor_current_value">2025-08-23(월)</p></dd>
-                        </dl>
-                      </div>
-                      <div class="floor_summary_cols">
-                        <div class="summary_in_cols">
-                          <ul class="summary_linkage_list">
-                            <li><span class="summary_linkage_data">중국</span></li>
-                            <li><span class="summary_linkage_data">0박0일</span></li>
-                            <li><span class="summary_linkage_data">피크등반</span></li>
-                            <li><span class="summary_linkage_data">0단계</span></li>
-                          </ul>
-                          <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
-                        </div>
-                        <div class="summary_in_cols">
-                          <div class="summary_emp_row">
-                            <div class="company_text_item">
-                              <div class="company_logo_cols">
-                                <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
-                              </div>
-                              <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
-                            </div>
-                          </div>
-                          <div class="summary_emp_row">
-                            <div class="price_dom">
-                              <strong class="price_number">2,150,000</strong>
-                              <span class="price_unit">원</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">테마</span></dt>
+                      <dd>
+                        <select required class="form_select">
+                          <option value="" disabled selected hidden>선택하세요</option>
+                          <option value="1">옵션1</option>
+                          <option value="2">옵션2</option>
+                        </select>
+                      </dd>
+                    </dl>
                   </li>
-                  <li class="nodata_li">
-                    <p class="nodata_para">데이터가 없습니다.</p>
+                  <li>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">난이도</span></dt>
+                      <dd>
+                        <select required class="form_select">
+                          <option value="" disabled selected hidden>선택하세요</option>
+                          <option value="1">옵션1</option>
+                          <option value="2">옵션2</option>
+                        </select>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">예약상태</span></dt>
+                      <dd>
+                        <select required class="form_select">
+                          <option value="" disabled selected hidden>선택하세요</option>
+                          <option value="1">옵션1</option>
+                          <option value="2">옵션2</option>
+                        </select>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl class="obj_form_item">
+                      <dt><span class="keylabel">키워드</span></dt>
+                      <dd><input type="text" class="form_boxinput" /></dd>
+                    </dl>
                   </li>
                 </ul>
               </div>
-              <div class="btn_morebox_wrap">
-                <a href="#" class="btn_morebox">더보기</a>
-              </div>
+            </div>
+            <div class="btn_ctabox_wrap">
+              <a href="#" class="btn_ctabox">검색</a>
+            </div>
+          </div>
+          <div class="floor_data_render">
+            <div class="floor_sort_row">
+              <select class="form_word_select">
+                <option>출발일순</option>
+              </select>
+            </div>
+            <div class="floor_data_wrap">
+              <ul class="floor_data_list">
+                <li>
+                  <div class="floor_data_item">
+                    <div class="floor_main_cols">
+                      <dl class="floor_current_obj">
+                        <dt>
+                          <div class="floor_current_keyword">출발확정</div>
+                        </dt>
+                        <dd>
+                          <p class="floor_current_value">2025-08-23(월)</p>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="floor_summary_cols">
+                      <div class="summary_tail_cols">
+                        <ul class="summary_linkage_list">
+                          <li><span class="summary_linkage_data">중국</span></li>
+                          <li><span class="summary_linkage_data">0박0일</span></li>
+                          <li><span class="summary_linkage_data">피크등반</span></li>
+                          <li><span class="summary_linkage_data">0단계</span></li>
+                        </ul>
+                        <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
+                      </div>
+                      <div class="summary_price_cols">
+                        <div class="summary_emp_row">
+                          <div class="company_text_item">
+                            <div class="company_logo_cols">
+                              <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
+                            </div>
+                            <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
+                          </div>
+                        </div>
+                        <div class="summary_emp_row">
+                          <div class="price_dom">
+                            <strong class="price_number">2,150,000</strong>
+                            <span class="price_unit">원</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="floor_data_item">
+                    <div class="floor_main_cols">
+                      <dl class="floor_current_obj">
+                        <dt>
+                          <div class="floor_current_keyword">출발확정</div>
+                        </dt>
+                        <dd>
+                          <p class="floor_current_value">2025-08-23(월)</p>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="floor_summary_cols">
+                      <div class="summary_tail_cols">
+                        <ul class="summary_linkage_list">
+                          <li><span class="summary_linkage_data">중국</span></li>
+                          <li><span class="summary_linkage_data">0박0일</span></li>
+                          <li><span class="summary_linkage_data">피크등반</span></li>
+                          <li><span class="summary_linkage_data">0단계</span></li>
+                        </ul>
+                        <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
+                      </div>
+                      <div class="summary_price_cols">
+                        <div class="summary_emp_row">
+                          <div class="company_text_item">
+                            <div class="company_logo_cols">
+                              <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
+                            </div>
+                            <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
+                          </div>
+                        </div>
+                        <div class="summary_emp_row">
+                          <div class="price_dom">
+                            <strong class="price_number">2,150,000</strong>
+                            <span class="price_unit">원</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="floor_data_item">
+                    <div class="floor_main_cols">
+                      <dl class="floor_current_obj">
+                        <dt>
+                          <div class="floor_current_keyword">출발확정</div>
+                        </dt>
+                        <dd>
+                          <p class="floor_current_value">2025-08-23(월)</p>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="floor_summary_cols">
+                      <div class="summary_tail_cols">
+                        <ul class="summary_linkage_list">
+                          <li><span class="summary_linkage_data">중국</span></li>
+                          <li><span class="summary_linkage_data">0박0일</span></li>
+                          <li><span class="summary_linkage_data">피크등반</span></li>
+                          <li><span class="summary_linkage_data">0단계</span></li>
+                        </ul>
+                        <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
+                      </div>
+                      <div class="summary_price_cols">
+                        <div class="summary_emp_row">
+                          <div class="company_text_item">
+                            <div class="company_logo_cols">
+                              <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
+                            </div>
+                            <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
+                          </div>
+                        </div>
+                        <div class="summary_emp_row">
+                          <div class="price_dom">
+                            <strong class="price_number">2,150,000</strong>
+                            <span class="price_unit">원</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="floor_data_item">
+                    <div class="floor_main_cols">
+                      <dl class="floor_current_obj">
+                        <dt>
+                          <div class="floor_current_keyword">출발확정</div>
+                        </dt>
+                        <dd>
+                          <p class="floor_current_value">2025-08-23(월)</p>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="floor_summary_cols">
+                      <div class="summary_tail_cols">
+                        <ul class="summary_linkage_list">
+                          <li><span class="summary_linkage_data">중국</span></li>
+                          <li><span class="summary_linkage_data">0박0일</span></li>
+                          <li><span class="summary_linkage_data">피크등반</span></li>
+                          <li><span class="summary_linkage_data">0단계</span></li>
+                        </ul>
+                        <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
+                      </div>
+                      <div class="summary_price_cols">
+                        <div class="summary_emp_row">
+                          <div class="company_text_item">
+                            <div class="company_logo_cols">
+                              <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
+                            </div>
+                            <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
+                          </div>
+                        </div>
+                        <div class="summary_emp_row">
+                          <div class="price_dom">
+                            <strong class="price_number">2,150,000</strong>
+                            <span class="price_unit">원</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="floor_data_item">
+                    <div class="floor_main_cols">
+                      <dl class="floor_current_obj">
+                        <dt>
+                          <div class="floor_current_keyword">출발확정</div>
+                        </dt>
+                        <dd>
+                          <p class="floor_current_value">2025-08-23(월)</p>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div class="floor_summary_cols">
+                      <div class="summary_tail_cols">
+                        <ul class="summary_linkage_list">
+                          <li><span class="summary_linkage_data">차이나</span></li>
+                          <li><span class="summary_linkage_data">0박0일</span></li>
+                          <li><span class="summary_linkage_data">피크등반</span></li>
+                          <li><span class="summary_linkage_data">0단계</span></li>
+                        </ul>
+                        <p class="summary_linkage_data emp">구채구/황룡/비평구 트레킹 6일</p>
+                      </div>
+                      <div class="summary_price_cols">
+                        <div class="summary_emp_row">
+                          <div class="company_text_item">
+                            <div class="company_logo_cols">
+                              <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
+                            </div>
+                            <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
+                          </div>
+                        </div>
+                        <div class="summary_emp_row">
+                          <div class="price_dom">
+                            <strong class="price_number">2,150,000</strong>
+                            <span class="price_unit">원</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- <li class="nodata_li">
+                  <p class="nodata_para">데이터가 없습니다.</p>
+                </li> -->
+              </ul>
+            </div>
+            <div class="btn_morebox_wrap">
+              <a href="#" class="btn_morebox">더보기</a>
             </div>
           </div>
         </div>
-      </main>
-      @@include('./include/_footer.html')
-    </div>
-  </body>
+      </div>
+    </main>
+    <script>
+      $(function () {
+        datePicker();
+      });
+      $(window).on("load", function () {
+        fieldboxGridFunc();
+      })
+      function datePicker() {
+        var $datepicker = $(".form_boxinput.calendar");
+        if ($datepicker.length) {
+          $datepicker.each(function () {
+            var $dateThis = $(this);
+            $dateThis.datepicker({
+              dateFormat: "yy-mm-dd",
+            });
+          });
+        }
+      }
+    </script>
+    @@include('./include/_footer.html')
+  </div>
+</body>
+
 </html>

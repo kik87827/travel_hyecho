@@ -894,3 +894,44 @@ function mobileBottomLayer() {
     }
   }
 }
+
+function fieldboxGridFunc() {
+  const search_fieldbox_wrap = $(".search_fieldbox_wrap");
+  const keylabel = search_fieldbox_wrap.find(".obj_form_item .keylabel");
+
+  action();
+  $(window).on("resize", function() {
+    action();
+  });
+
+  function action() {
+    keylabel.css("width", "");
+
+    if ($(window).width() > 1023) {
+      const columns = 3;
+      const columnGroups = Array.from({
+        length: columns
+      }, () => []);
+
+      keylabel.each(function(index) {
+        const columnIndex = index % columns;
+        columnGroups[columnIndex].push(this);
+      });
+
+      columnGroups.forEach((group, colIndex) => {
+        let maxWidth = 0;
+        group.forEach((el) => {
+          const width = $(el).outerWidth();
+          if (width > maxWidth) maxWidth = width;
+        });
+        $(group).css("width", maxWidth);
+      });
+    } else {
+      let maxWidthLabel = [];
+      keylabel.each(function(index) {
+        maxWidthLabel.push($(this).outerWidth());
+      });
+      keylabel.css("width", Math.max.apply(null, maxWidthLabel));
+    }
+  }
+}
