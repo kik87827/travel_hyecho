@@ -3485,3 +3485,71 @@ input.props_box_form{
     .roof_data_sub1,
     .roof_data_sub2{font-size:12px;}
 }
+
+/* sub layout */
+.core_page_container{}
+.core_title_row{}
+.core_title{}
+.core_contents{}
+
+/* 검색 */
+.search_fieldbox_wrap{}
+.search_fieldbox{}
+.fieldbox_grid_wrap{}
+.fieldbox_grid_list{
+    > li{}
+}
+.obj_form_item{
+    dt,dd{}
+    dt{}
+    dd{
+        .form_boxinput,
+        .form_select{}
+    }
+    .keylabel{}
+}
+.btn_submitbox_wrap{
+
+}
+.btn_submitbox{}
+
+.floor_data_render{}
+.floor_sort_row{
+    .form_word_select{}
+}
+.floor_data_list{
+    > li{}
+}
+.floor_data_item{
+
+}
+.floor_main_cols{}
+.floor_summary_cols{
+    .summary_in_cols{}
+    .company_text_item{}
+}
+.floor_current_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.floor_current_keyword{}
+.floor_current_value{}
+.summary_linkage_list{
+    > li{
+        &:last-of-type{}
+        &.nodata_li{
+            .nodata_para{}
+        }
+    }
+}
+.summary_linkage_data{
+    &.emp{}
+}
+.summary_emp_row{
+    &:last-of-type{}
+    .company_text_item{}
+    .price_dom{}
+}
+.btn_morebox_wrap{}
+.btn_morebox{}
