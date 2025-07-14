@@ -676,6 +676,9 @@ display:flex; align-items: center; gap:10px;
     }
     .tab_contents{
         &:first-of-type{
+            .tab_contents_inner{
+                padding-top:0;
+            }
             .tabc_item{padding-top:0;}
         }
     }

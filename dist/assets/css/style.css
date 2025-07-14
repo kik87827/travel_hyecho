@@ -6386,6 +6386,9 @@ select.form_word_select:disabled {
     padding-top: 0;
     margin-top: 25px;
   }
+  .tab_contents:first-of-type .tab_contents_inner {
+    padding-top: 0;
+  }
   .tab_contents:first-of-type .tabc_item {
     padding-top: 0;
   }
@@ -14433,6 +14436,48 @@ input.input_search_field {
   word-break: keep-all;
 }
 
+.btn_baguette_wrap {
+  position: relative;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.btn_baguette_wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.btn_baguette_list {
+  display: flex;
+  white-space: nowrap;
+  gap: 7px;
+}
+.btn_baguette {
+  border: 1px solid #dedede;
+  border-radius: 100px;
+  display: inline-block;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #5f5f5f;
+  padding: 0 20px;
+}
+.btn_baguette.active {
+  background: #333c4c;
+  color: #fff;
+  border-color: #333c4c;
+}
+
+.baq_cont_wrap {
+  margin-top: 30px;
+}
+
+.baq_cont {
+  display: none;
+}
+.baq_cont.active {
+  display: block;
+}
+
 @media (max-width: 1299px) {
   .keyword_indent_block_list > li {
     flex-direction: column;
@@ -14770,6 +14815,10 @@ input.input_search_field {
   }
   .tab_contents_inner {
     padding: 30px 20px;
+  }
+  .btn_baguette {
+    font-size: 13px;
+    padding: 0 15px;
   }
 }
 /* 여행후기 */
