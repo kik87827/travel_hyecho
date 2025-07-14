@@ -7,7 +7,12 @@
 					<span class="text_node">4.8</span>
 				</span>
 			</li>
-			<li><span class="tc_info_text">100개 여행후기</span></li>
+			<li>
+				<span class="tc_info_text">
+					<strong class="emp_text_node">100</strong>
+					<span class="text_node">개 여행후기</span>
+				</span>
+			</li>
 		</ul>
 	</div>
 	<div class="sub_cols">
@@ -239,10 +244,12 @@
 					</ul>
 				</div>
 			</div>
-			<div class="section_review_lk_render">
-				최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다.
-				<br />
-				하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.
+			<div class="data_text_row">
+				<div class="section_review_lk_render">
+					최고의 호텔이었습니다. 허니문으로도 최고였고 풀장도 멋있고 뷰가 멋졌습니다.
+					<br />
+					하와이의 바다, 산, 정글을 마음껏 볼 수 있었습니다.
+				</div>
 			</div>
 			<div class="btn_control_row">
 				<div class="btn_cols">
@@ -279,3 +286,15 @@
 	<a href="#" class="btn_paging_control next_last"><span class="hdtext">끝</span></a>
 </div>
 <!-- // paging -->
+<script>
+	$(function() {
+		$(document).on("click", ".viewer_lk_brick .btn_toggle_text", function(e) {
+			const $this = $(this);
+			const $this_parents = $this.closest(".viewer_lk_brick");
+			const $this_reply_box_group = $this_parents.find(".reply_box_group");
+			e.preventDefault();
+			$this.toggleClass("active");
+			$this_reply_box_group.toggle();
+		});
+	});
+</script>

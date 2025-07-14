@@ -210,9 +210,9 @@
 
 @media (max-width:1260px){
     .detail_contents_global_zone{margin-top:36px;}
-    .sticky_tabs_container_zone{
+    /* .sticky_tabs_container_zone{
         margin:0 -20px;
-    }
+    } */
     .sticky_tabs_inner_wrap{
         opacity:0; 
         &.fixed{
@@ -664,7 +664,7 @@ display:flex; align-items: center; gap:10px;
     }
     .detail_gate_quick_text{font-size:14px;}
 
-    .detail_anchor_gate_wrap{margin-bottom:0;
+    .detail_anchor_gate_wrap{margin-bottom:0; padding:0 20px;
         &.gap2{margin-bottom:25px;}
     }
     .tab_contents_wrap{
