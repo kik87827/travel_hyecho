@@ -3427,20 +3427,24 @@ input.props_box_form{
     .chip_para{@include font(14px,400,1.6,#333333); display:inline-block; position:relative;top:-3px;}
 }
 .bullet_note_list{
+    @include font(15px,300,1.4,#4e4e4e);
     > li{
-
+        position:relative; padding-left: 10px; word-break: keep-all; margin-bottom:15px;
+        &:last-of-type{margin-bottom:0;}
+        &:before{ width:2px;height:2px; background:#4e4e4e; position:absolute;top:11px;left:0; display:block;content:'';}
     }
 }
-.highlight{}
+.highlight{display:inline-block;background:#e1efff;padding:0 2px;}
 .indent_note_list{
+    @include font(15px,300,1.4,#4e4e4e);
     > li{
-        
+        display:flex; gap:5px;
     }
 }
-.indent_note_bullet{}
-.indent_note_liquid{}
-.qus_emp_text_wrap{}
-.qus_emp_text{}
+.indent_note_bullet{flex:0;white-space: nowrap;}
+.indent_note_liquid{flex:1;}
+.qus_emp_text_wrap{margin-top:30px;}
+.qus_emp_text{@include font(16px,400,1.5,#333333);}
 
 @media (max-width:1023px){
     .get_data_text_render{font-size:13px;}
@@ -3452,6 +3456,15 @@ input.props_box_form{
     .chip_item{
         .chip_para{font-size:13px;}
     }
+    .bullet_note_list{
+        font-size:13px;
+        > li{
+            margin-bottom:10px; padding-left:8px;
+            &:before{top:9px;}
+        }
+    }
+    .indent_note_list{font-size:13px;}
+    .qus_emp_text{font-size:14px;}
 }
 
 /* 항공여정보기기 */

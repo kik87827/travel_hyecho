@@ -19,6 +19,9 @@
     &.size3{
         max-width:600px;
     }
+    &.size4{
+        max-width:650px;
+    }
     &.xsmall{max-width:300px;}
     &.medium{max-width:1060px;}
     &.xmedium{max-width:900px;}
@@ -53,7 +56,10 @@
 }
 .popup_primary_title{font-size:21px; color:#1b1b1b; font-weight:500;}
 .popup_title_copy{font-size:13px; color:#999999;}
-
+.pc_tape_row{
+    padding:30px 20px;border-bottom:1px solid #e7e7e7;
+    &:last-of-type{border-bottom:0;}
+}
 
 .touchmode {
     .popup_contents_row{
@@ -100,9 +106,6 @@
 }
 .popup_confirm_copy{font-size:17px;color:#333333; word-break: keep-all;}
 
-.pc_tape_row{
-    &:last-of-type{}
-}
 
 @media (max-width:$mobile_large){
     .popup_item{width:calc(100% - 40px);}
@@ -128,6 +131,10 @@
     }
     .popup_contents_inner{
         &.ptype2{padding-top:20px;}
+    }
+
+    .pc_tape_row{
+        padding:20px 15px;
     }
 }
 /* // 공통 popup */

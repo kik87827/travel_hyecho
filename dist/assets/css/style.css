@@ -4135,6 +4135,9 @@ span.ui-datepicker-month {
 .popup_item.size3 {
   max-width: 600px;
 }
+.popup_item.size4 {
+  max-width: 650px;
+}
 .popup_item.xsmall {
   max-width: 300px;
 }
@@ -4236,6 +4239,14 @@ span.ui-datepicker-month {
 .popup_title_copy {
   font-size: 13px;
   color: #999999;
+}
+
+.pc_tape_row {
+  padding: 30px 20px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.pc_tape_row:last-of-type {
+  border-bottom: 0;
 }
 
 .touchmode .popup_contents_row.scroll_mode {
@@ -4377,6 +4388,9 @@ span.ui-datepicker-month {
   }
   .popup_contents_inner.ptype2 {
     padding-top: 20px;
+  }
+  .pc_tape_row {
+    padding: 20px 15px;
   }
 }
 /* // 공통 popup */
@@ -12580,6 +12594,69 @@ input.props_box_form:checked {
   top: -3px;
 }
 
+.bullet_note_list {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #4e4e4e;
+}
+.bullet_note_list > li {
+  position: relative;
+  padding-left: 10px;
+  word-break: keep-all;
+  margin-bottom: 15px;
+}
+.bullet_note_list > li:last-of-type {
+  margin-bottom: 0;
+}
+.bullet_note_list > li:before {
+  width: 2px;
+  height: 2px;
+  background: #4e4e4e;
+  position: absolute;
+  top: 11px;
+  left: 0;
+  display: block;
+  content: "";
+}
+
+.highlight {
+  display: inline-block;
+  background: #e1efff;
+  padding: 0 2px;
+}
+
+.indent_note_list {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #4e4e4e;
+}
+.indent_note_list > li {
+  display: flex;
+  gap: 5px;
+}
+
+.indent_note_bullet {
+  flex: 0;
+  white-space: nowrap;
+}
+
+.indent_note_liquid {
+  flex: 1;
+}
+
+.qus_emp_text_wrap {
+  margin-top: 30px;
+}
+
+.qus_emp_text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333333;
+}
+
 @media (max-width: 1023px) {
   .get_data_text_render {
     font-size: 13px;
@@ -12589,6 +12666,22 @@ input.props_box_form:checked {
   }
   .chip_item .chip_para {
     font-size: 13px;
+  }
+  .bullet_note_list {
+    font-size: 13px;
+  }
+  .bullet_note_list > li {
+    margin-bottom: 10px;
+    padding-left: 8px;
+  }
+  .bullet_note_list > li:before {
+    top: 9px;
+  }
+  .indent_note_list {
+    font-size: 13px;
+  }
+  .qus_emp_text {
+    font-size: 14px;
   }
 }
 /* 항공여정보기기 */
