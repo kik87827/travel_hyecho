@@ -1,67 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./include/_head.html')
+@@include('./include/_head.html')
 
-  <body class="front_body">
-    <div class="page_wrap">
-      @@include('./include/_header.html')
-      <main class="middle_wrap">
-        <div class="single_page">
-          <div class="single_message_row">
-            <div class="ico_row"><i class="ico docu"></i></div>
-            <div class="message_row">
-              <h2 class="single_main_message">예약이 접수되었습니다.</h2>
-              <p class="single_sub_message">
-                담당자 확인 후 최종 요금 및 예약 확정이 진행됩니다.
-                <br class="mb_br" />
-                빠른 확인 후 연락 드리겠습니다.
-              </p>
+<body class="front_body">
+  <div class="page_wrap">
+    @@include('./include/_header.html')
+    <main class="middle_wrap">
+      <div class="single_page">
+        <div class="single_message_row">
+          <div class="ico_row"><i class="ico docu"></i></div>
+          <div class="message_row">
+            <h2 class="single_main_message">예약이 접수되었습니다.</h2>
+            <p class="single_sub_message">
+              담당자 확인 후 최종 요금 및 예약 확정이 진행됩니다.
+              <br class="mb_br" />
+              빠른 확인 후 연락 드리겠습니다.
+            </p>
+          </div>
+        </div>
+        <div class="single_contents">내용이 들어갑니다.</div>
+      </div>
+    </main>
+    <!-- popup -->
+    <div class="popup_wrap" id="reserve_cancel_popup">
+      <div class="bg_dim"></div>
+      <div class="popup_item size3">
+        <div class="popup_title_row define_text">
+          <h2 class="popup_primary_title">취소수수료안내</h2>
+        </div>
+        <div class="popup_contents_row">
+          <div class="popup_contents_inner ptype2">
+            <div class="pc_tape_row">
+              <ul class="bullet_note_list">
+                <li>여행개시 <span class="highlight">30일전</span>(~30)까지 통보 시 (0000년 00월 00일 이전) : <span
+                    class="highlight">계약금환급</span></li>
+                <li>여행개시 <span class="highlight">20일전</span>(29~20)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의 <span
+                    class="highlight">10%</span> 배상</li>
+                <li>여행개시 <span class="highlight">10일전</span>(19~10)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의 <span
+                    class="highlight">15%</span> 배상</li>
+                <li>여행개시 <span class="highlight">8일전</span>(9~8)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의 <span
+                    class="highlight">20%</span> 배상</li>
+                <li>여행개시 <span class="highlight">1일전</span>(7~1)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의 <span
+                    class="highlight">30%</span> 배상</li>
+                <li>여행개시 <span class="highlight">당일</span> 통보 시 (0000년 00월 00일 이전) : 여행요금의 <span
+                    class="highlight">50%</span> 배상</li>
+              </ul>
+            </div>
+            <div class="pc_tape_row">
+              <ul class="indent_note_list">
+                <li>
+                  <span class="indent_note_bullet">1.</span>
+                  <span class="indent_note_liquid">약관에 따라 예약 취소 시 <span class="highlight">[0000000원]</span>의 취소수수료가 발생할
+                    예정입니다.</span>
+                </li>
+                <li>
+                  <span class="indent_note_bullet">2.</span>
+                  <span class="indent_note_liquid">항공권 선(先)발권 상품의 경우 별도의 항공 취소수수료가 발생합니다.</span>
+                </li>
+                <li>
+                  <span class="indent_note_bullet">3.</span>
+                  <span class="indent_note_liquid">취소수수료 발생일은 영업일 기준으로 산정됩니다.</span>
+                </li>
+                <li>
+                  <span class="indent_note_bullet">4.</span>
+                  <span class="indent_note_liquid">취소수수료 확정 금액은 여행매니저를 통해 안내드립니다.</span>
+                </li>
+              </ul>
+              <div class="qus_emp_text_wrap">
+                <p class="qus_emp_text">예약 취소를 신청 하시겠습니까?</p>
+              </div>
             </div>
           </div>
-          <div class="single_contents">내용이 들어갑니다.</div>
         </div>
-      </main>
-      <!-- popup -->
-      <div class="popup_wrap" id="reserve_cancel_popup">
-        <div class="bg_dim"></div>
-        <div class="popup_item size3">
-          <div class="popup_title_row define_text">
-            <h2 class="popup_primary_title">취소수수료안내</h2>
-          </div>
-          <div class="popup_contents_row">
-            <div class="popup_contents_inner ptype2">내용이 들어갑니다.</div>
-          </div>
-          <div class="popup_btn_row">
-            <a href="#" class="btn_square type2 close_trigger"><span class="text_node">취소</span></a>
-            <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
-          </div>
-          <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+        <div class="popup_btn_row">
+          <a href="#" class="btn_square type2 close_trigger"><span class="text_node">취소</span></a>
+          <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
         </div>
+        <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
       </div>
-      <!-- // popup -->
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          // 팝업 인스턴스
-          var reserve_cancel_popup = new DesignPopup({
-            selector: "#reserve_cancel_popup",
-            beforeCallback() {
-              console.log("beforeCallback");
-            },
-            callback() {},
-          });
-
-          // reserve_cancel_popup.popupShow(); // 호출
-          // reserve_cancel_popup.popupHide(); // 닫기
-
-          // 퍼블확인용
-          let url = window.location.href.split("?")[1];
-          let url_2 = url !== undefined ? url.split("#")[0] : null;
-          if (url_2 === "popup") {
-            reserve_cancel_popup.popupShow();
-          }
-        });
-      </script>
-      @@include('./include/_footer.html')
     </div>
-  </body>
+    <!-- // popup -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 팝업 인스턴스
+        var reserve_cancel_popup = new DesignPopup({
+          selector: "#reserve_cancel_popup",
+          beforeCallback() {
+            console.log("beforeCallback");
+          },
+          callback() { },
+        });
+
+        // reserve_cancel_popup.popupShow(); // 호출
+        // reserve_cancel_popup.popupHide(); // 닫기
+
+        // 퍼블확인용
+        let url = window.location.href.split("?")[1];
+        let url_2 = url !== undefined ? url.split("#")[0] : null;
+        if (url_2 === "popup") {
+          reserve_cancel_popup.popupShow();
+        }
+      });
+    </script>
+    @@include('./include/_footer.html')
+  </div>
+</body>
+
 </html>

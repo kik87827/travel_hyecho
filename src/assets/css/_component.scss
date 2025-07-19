@@ -100,6 +100,9 @@
 }
 .popup_confirm_copy{font-size:17px;color:#333333; word-break: keep-all;}
 
+.pc_tape_row{
+    &:last-of-type{}
+}
 
 @media (max-width:$mobile_large){
     .popup_item{width:calc(100% - 40px);}

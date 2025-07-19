@@ -3426,6 +3426,21 @@ input.props_box_form{
     }
     .chip_para{@include font(14px,400,1.6,#333333); display:inline-block; position:relative;top:-3px;}
 }
+.bullet_note_list{
+    > li{
+
+    }
+}
+.highlight{}
+.indent_note_list{
+    > li{
+        
+    }
+}
+.indent_note_bullet{}
+.indent_note_liquid{}
+.qus_emp_text_wrap{}
+.qus_emp_text{}
 
 @media (max-width:1023px){
     .get_data_text_render{font-size:13px;}
