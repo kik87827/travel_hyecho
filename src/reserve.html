@@ -1,58 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./include/_head.html')
+@@include('./include/_head.html')
 
-  <body class="front_body">
-    <div class="page_wrap">
-      @@include('./include/_header.html')
-      <main class="middle_wrap">
-        <div class="single_page">
-          <div class="single_title_row gap_type2">
-            <h2 class="single_title">예약하기</h2>
-          </div>
-          <div class="single_contents">내용이 들어갑니다.</div>
+<body class="front_body">
+  <div class="page_wrap">
+    @@include('./include/_header.html')
+    <main class="middle_wrap">
+      <div class="single_page">
+        <div class="single_title_row gap_type2">
+          <h2 class="single_title">예약하기</h2>
         </div>
-      </main>
-      <!-- popup -->
-      <div class="popup_wrap" id="global_raw_popup">
-        <div class="bg_dim"></div>
-        <div class="popup_item size3">
-          <div class="popup_title_row define_text">
-            <h2 class="popup_primary_title">국외여행표준약관</h2>
-          </div>
-          <div class="popup_contents_row">
-            <div class="popup_contents_inner ptype2">내용이 들어갑니다.</div>
-          </div>
-          <div class="popup_btn_row">
-            <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
-          </div>
-          <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
-        </div>
+        <div class="single_contents">내용이 들어갑니다.</div>
       </div>
-      <!-- // popup -->
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          // 팝업 인스턴스
-          var global_raw_popup = new DesignPopup({
-            selector: "#global_raw_popup",
-            beforeCallback() {
-              console.log("beforeCallback");
-            },
-            callback() {},
-          });
-
-          // global_raw_popup.popupShow(); // 호출
-          // global_raw_popup.popupHide(); // 닫기
-
-          // 퍼블확인용
-          let url = window.location.href.split("?")[1];
-          let url_2 = url !== undefined ? url.split("#")[0] : null;
-          if (url_2 === "global") {
-            global_raw_popup.popupShow();
-          }
-        });
-      </script>
-      @@include('./include/_footer.html')
+    </main>
+    <!-- popup -->
+    <div class="popup_wrap" id="global_raw_popup">
+      <div class="bg_dim"></div>
+      <div class="popup_item size3">
+        <div class="popup_title_row define_text">
+          <h2 class="popup_primary_title">국외여행표준약관</h2>
+        </div>
+        <div class="popup_contents_row">
+          <div class="popup_contents_inner ptype2">
+            <div class="terms_render">
+              <div class="terms_brick">
+                <p class="terms_brick_title">제 1조(목적)</p>
+                <div class="terms_brick_cont">
+                  약관 내용<br />
+                  약관 내용<br />
+                  약관 내용<br />
+                  약관 내용<br />
+                  약관 내용<br />
+                </div>
+              </div>
+              <div class="terms_brick">
+                <p class="terms_brick_title">제 2조(목적)</p>
+                <div class="terms_brick_cont">
+                  약관 내용<br />
+                  약관 내용<br />
+                  약관 내용<br />
+                  약관 내용<br />
+                  약관 내용<br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup_btn_row">
+          <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
+        </div>
+        <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+      </div>
     </div>
-  </body>
+    <!-- // popup -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 팝업 인스턴스
+        var global_raw_popup = new DesignPopup({
+          selector: "#global_raw_popup",
+          beforeCallback() {
+            console.log("beforeCallback");
+          },
+          callback() { },
+        });
+
+        // global_raw_popup.popupShow(); // 호출
+        // global_raw_popup.popupHide(); // 닫기
+
+        // 퍼블확인용
+        let url = window.location.href.split("?")[1];
+        let url_2 = url !== undefined ? url.split("#")[0] : null;
+        if (url_2 === "global") {
+          global_raw_popup.popupShow();
+        }
+      });
+    </script>
+    @@include('./include/_footer.html')
+  </div>
+</body>
+
 </html>

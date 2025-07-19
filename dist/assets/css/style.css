@@ -13076,6 +13076,38 @@ input.props_box_form:checked {
     font-size: 14px;
   }
 }
+/* 약관 */
+.terms_brick {
+  margin-bottom: 30px;
+}
+.terms_brick:last-of-type {
+  margin-bottom: 0;
+}
+
+.terms_brick_title,
+.terms_brick_cont {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #4e4e4e;
+}
+
+.terms_brick_title {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 1023px) {
+  .terms_brick {
+    margin-bottom: 20px;
+  }
+  .terms_brick_title,
+.terms_brick_cont {
+    font-size: 13px;
+  }
+  .terms_brick_title {
+    margin-bottom: 10px;
+  }
+}
 .guide_contents_item {
   margin-bottom: 120px;
 }
