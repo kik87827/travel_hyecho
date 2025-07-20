@@ -164,11 +164,12 @@
 .btn_box_text{color:#fff; font-size:18px; font-weight:500; display:inline-block;}
 
 .btn_rego_list{
+    display:flex; gap:5px;
     > li{
         &:last-of-type{}
     }
 }
-.btn_rego{}
+.btn_rego{display:inline-block; background:#fff; border:1px solid #4e4e4e; border-radius:100px; @include font(15px,400,1.3,#4e4e4e); padding:9px 20px 10px; white-space: nowrap;}
 
 .btn_vertex_wrap{
     margin-top:60px; display:flex; justify-content: center; gap:10px; align-items: center;
@@ -180,11 +181,15 @@
 }
 .btn_vertex{
     display:inline-flex;min-width:300px; min-height:56px; align-items: center; justify-content: center; box-sizing: border-box; border:1px solid #176bdd; border-radius:100px;
-    &.small{}
+    &.small{min-width:200px; min-height:46px;
+        .text_node{font-size:19px;}
+    }
     &.primary{background:#176bdd;
         .text_node{color:#fff;}
     }
-    &.skin2{}
+    &.skin2{background-color:#455267; border-color:#455267;
+        .text_node{color:#fff;}
+    }
     .text_node{@include font(19px,500,1,#176bdd);}
 }
 
@@ -324,6 +329,7 @@ select.cir_select{
          .word_key{ font-size:14px;}
          .word_count{font-size:16px;top:0;}
      }
+     select.cir_select{font-size:14px; height:18px;background-size:18px auto;padding:0 22px 0 0;}
 }
 
 
