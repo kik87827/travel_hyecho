@@ -12619,7 +12619,6 @@ input.props_box_form:checked {
   display: block;
   content: "";
 }
-
 .highlight {
   display: inline-block;
   background: #e1efff;

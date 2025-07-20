@@ -1,82 +1,584 @@
 <!DOCTYPE html>
 <html lang="ko">
-@@include('./include/_head.html')
+  @@include('./include/_head.html')
 
-<body class="front_body">
-  <div class="page_wrap">
-    @@include('./include/_header.html')
-    <main class="middle_wrap">
-      <div class="single_page">
-        <div class="single_title_row gap_type2">
-          <h2 class="single_title">예약하기</h2>
-        </div>
-        <div class="single_contents">내용이 들어갑니다.</div>
-      </div>
-    </main>
-    <!-- popup -->
-    <div class="popup_wrap" id="global_raw_popup">
-      <div class="bg_dim"></div>
-      <div class="popup_item size3">
-        <div class="popup_title_row define_text">
-          <h2 class="popup_primary_title">국외여행표준약관</h2>
-        </div>
-        <div class="popup_contents_row">
-          <div class="popup_contents_inner ptype2">
-            <div class="terms_render">
-              <div class="terms_brick">
-                <p class="terms_brick_title">제 1조(목적)</p>
-                <div class="terms_brick_cont">
-                  약관 내용<br />
-                  약관 내용<br />
-                  약관 내용<br />
-                  약관 내용<br />
-                  약관 내용<br />
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/_header.html')
+      <main class="middle_wrap">
+        <div class="single_page">
+          <div class="single_title_row gap_type2">
+            <h2 class="single_title">예약하기</h2>
+          </div>
+          <div class="single_contents type2">
+            <div class="product_slice_data_wrap">
+              <ul class="product_slice_data_list">
+                <li>
+                  <a href="#" class="product_slice_data">
+                    <div class="img_cols">
+                      <div class="img_wrap"><img src="./assets/images/img_200x140.png" alt="" /></div>
+                    </div>
+                    <div class="spec_cols">
+                      <p class="slice_name">안나푸르나 베이스캠프 트레킹 12일</p>
+                      <div class="slice_summary_01_row">
+                        <span class="slice_word">11박 12일</span>
+                        <div class="company_text_item">
+                          <div class="company_logo_cols">
+                            <img src="./assets/images/ico_company_logo_20x20.png" alt="" />
+                          </div>
+                          <div class="company_spec_cols"><span class="company_text_spec">아시아나항공</span></div>
+                        </div>
+                      </div>
+                      <div class="slice_summary_02_row">
+                        <ul class="word_brief_list">
+                          <li>
+                            <span class="word_brief">
+                              출발 : 2023.08.08 (화)
+                              <strong class="emp">11:50</strong>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="word_brief">
+                              도착 : 2023.08.08 (화)
+                              <strong class="emp">11:50</strong>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tile_form_wrap">
+              <ul class="tile_form_list">
+                <li>
+                  <div class="tile_form_item">
+                    <div class="label_row"><p class="tile_form_label">예약자 정보</p></div>
+                    <div class="form_row">
+                      <div class="formdom_linked_wrap">
+                        <ul class="formdom_linked_list">
+                          <li><input type="text" class="form_input" placeholder="한글성명(필수)" /></li>
+                          <li><input type="text" class="form_input" placeholder="휴대폰번호(필수)" /></li>
+                          <li><input type="text" class="form_input" placeholder="이메일(필수)" /></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="tile_form_item">
+                    <div class="label_row"><p class="tile_form_label">여행인원</p></div>
+                    <div class="form_row">
+                      <div class="formdom_linked_wrap">
+                        <ul class="formdom_linked_list">
+                          <li>
+                            <div class="form_count_box">
+                              <button class="btn_count_element minus"></button>
+                              <div class="count_fraction">성인 1</div>
+                              <button class="btn_count_element plus"></button>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form_count_box">
+                              <button class="btn_count_element minus"></button>
+                              <div class="count_fraction">아동 1</div>
+                              <button class="btn_count_element plus"></button>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="form_count_box">
+                              <button class="btn_count_element minus"></button>
+                              <div class="count_fraction">유아 1</div>
+                              <button class="btn_count_element plus"></button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="tile_form_item">
+                    <div class="label_row"><p class="tile_form_label">여행자정보</p></div>
+                    <div class="form_row">
+                      <ul class="form_contblock_list">
+                        <li>
+                          <div class="contblock_title_row">
+                            <div class="cb_cols"><p class="cb_title">성인1</p></div>
+                            <div class="cb_cols">
+                              <div class="props_item">
+                                <input type="checkbox" id="check_cbmen" class="props_dom" />
+                                <label for="check_cbmen" class="props_label">예약자와 동일</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="contblock_form_row">
+                            <div class="formdom_linked_wrap">
+                              <ul class="formdom_linked_list">
+                                <li><input type="text" class="form_input" placeholder="한글성명(필수)" /></li>
+                                <li><input type="text" class="form_input" placeholder="법정 생년월일" /></li>
+                                <li>
+                                  <div class="box_props_group">
+                                    <div class="box_props_cols">
+                                      <input type="radio" class="box_props_dom" name="gender" id="man" />
+                                      <label for="man" class="box_props_label">남</label>
+                                    </div>
+                                    <div class="box_props_cols">
+                                      <input type="radio" class="box_props_dom" name="gender" id="woman" />
+                                      <label for="woman" class="box_props_label">여</label>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li><input type="text" class="form_input" placeholder="영문성" /></li>
+                                <li><input type="text" class="form_input" placeholder="영문이름" /></li>
+                                <li><input type="text" class="form_input" placeholder="휴대폰번호" /></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="contblock_title_row">
+                            <div class="cb_cols"><p class="cb_title">아동1</p></div>
+                            <div class="cb_cols">
+                              <p class="cb_formcopy">만 14세 미만 여행자의 경우 약관교부 및 개인정보 이용 동의 확인을 위한 법정대리인(부모)의 연락처(휴대폰번호)로 입력 해주세요.</p>
+                            </div>
+                          </div>
+                          <div class="contblock_form_row">
+                            <div class="formdom_linked_wrap">
+                              <ul class="formdom_linked_list">
+                                <li><input type="text" class="form_input" placeholder="한글성명(필수)" /></li>
+                                <li><input type="text" class="form_input" placeholder="법정 생년월일" /></li>
+                                <li>
+                                  <div class="box_props_group">
+                                    <div class="box_props_cols">
+                                      <input type="radio" class="box_props_dom" name="gender2" id="man2" />
+                                      <label for="man2" class="box_props_label">남</label>
+                                    </div>
+                                    <div class="box_props_cols">
+                                      <input type="radio" class="box_props_dom" name="gender2" id="woman2" />
+                                      <label for="woman2" class="box_props_label">여</label>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li><input type="text" class="form_input" placeholder="영문성" /></li>
+                                <li><input type="text" class="form_input" placeholder="영문이름" /></li>
+                                <li><input type="text" class="form_input" placeholder="휴대폰번호" /></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="tile_form_item">
+                    <div class="label_row"><p class="tile_form_label">요청사항</p></div>
+                    <div class="form_row">
+                      <div class="box_textarea_wrap">
+                        <textarea rows="10" cols="10" class="textarea_dom long_ph" placeholder="채식여부/싱글룸/항공권 변경 요청 (EX.비즈니스 좌석) 등 예약 관련 문의 사항을 입력해 주세요."></textarea>
+                        <p class="long_place_replace">채식여부/싱글룸/항공권 변경 요청 (EX.비즈니스 좌석) 등 예약 관련 문의 사항을 입력해 주세요.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="tile_form_item">
+                    <div class="label_row"><p class="tile_form_label">약관 및 개인정보 동의</p></div>
+                    <div class="form_row">
+                      <div class="agree_container">
+                        <div class="total_row">
+                          <div class="props_item">
+                            <input type="checkbox" class="props_dom" id="total_agree" />
+                            <label for="total_agree" class="props_label">전체 약관동의</label>
+                          </div>
+                        </div>
+                        <div class="detail_row">
+                          <ul class="agree_detail_list">
+                            <li>
+                              <div class="agree_dp_item">
+                                <div class="dp_inline_dom">
+                                  <div class="props_item">
+                                    <input type="checkbox" class="props_dom" id="detail_agree_01" />
+                                    <label for="detail_agree_01" class="props_label">(필수)국외여행표준약관</label>
+                                  </div>
+                                </div>
+                                <div class="dp_inline_dom">
+                                  <a href="#" class="btn_text_node" id="btn_clause_01">보기</a>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="agree_dp_item">
+                                <div class="dp_inline_dom">
+                                  <div class="props_item">
+                                    <input type="checkbox" class="props_dom" id="detail_agree_02" />
+                                    <label for="detail_agree_02" class="props_label">(필수)개인정보 수집 및 활용동의</label>
+                                  </div>
+                                </div>
+                                <div class="dp_inline_dom">
+                                  <a href="#" class="btn_text_node" id="btn_clause_02">보기</a>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="agree_dp_item">
+                                <div class="dp_inline_dom">
+                                  <div class="props_item">
+                                    <input type="checkbox" class="props_dom" id="detail_agree_03" />
+                                    <label for="detail_agree_03" class="props_label">(필수)취소수수료 및 특별약관</label>
+                                  </div>
+                                </div>
+                                <div class="dp_inline_dom">
+                                  <a href="#" class="btn_text_node" id="btn_clause_03">보기</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="sheetbox_wrap">
+                          <div class="sheetbox_item">
+                            <div class="title_row">
+                              <p class="sheetbox_title">특별약관 적용상품</p>
+                            </div>
+                            <div class="contents_row">
+                              <ul class="bullet_note_list">
+                                <li>
+                                  여행개시
+                                  <span class="highlight">30일전</span>
+                                  (~30)까지 통보 시 (0000년 00월 00일 이전) :
+                                  <span class="highlight">계약금환급</span>
+                                </li>
+                                <li>
+                                  여행개시
+                                  <span class="highlight">20일전</span>
+                                  (29~20)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의
+                                  <span class="highlight">10%</span>
+                                  배상
+                                </li>
+                                <li>
+                                  여행개시
+                                  <span class="highlight">10일전</span>
+                                  (19~10)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의
+                                  <span class="highlight">15%</span>
+                                  배상
+                                </li>
+                                <li>
+                                  여행개시
+                                  <span class="highlight">8일전</span>
+                                  (9~8)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의
+                                  <span class="highlight">20%</span>
+                                  배상
+                                </li>
+                                <li>
+                                  여행개시
+                                  <span class="highlight">1일전</span>
+                                  (7~1)까지 통보 시 (0000년 00월 00일 이전) : 여행요금의
+                                  <span class="highlight">30%</span>
+                                  배상
+                                </li>
+                                <li>
+                                  여행개시
+                                  <span class="highlight">당일</span>
+                                  통보 시 (0000년 00월 00일 이전) : 여행요금의
+                                  <span class="highlight">50%</span>
+                                  배상
+                                </li>
+                              </ul>
+                              <ul class="bullet_note_list type2">
+                                <li>본 상품은 항공권, 호텔, 입장권, 전용차량 등 사전 확정·지급이 필요한 구성으로 인해, 국외여행표준약관이 아닌 [여행사 특별약관]이 적용되는 상품입니다. 예약확정 이후 취소 시, 표준약관 대비 더 높은 수수료가 발생할 수 있으니, 반드시 아래 내용을 확인 부탁드립니다.</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="tile_form_item">
+                    <div class="label_row"><p class="tile_form_label">결제예정금액</p></div>
+                    <div class="form_row">
+                      <div class="revision_spec_wrap">
+                        <div class="revision_total_row">
+                          <div class="revision_total_item">
+                            <div class="key_cols"><span class="revision_keyword">총 상품금액</span></div>
+                            <div class="value_cols">
+                              <span class="revision_price_dom">
+                                <span class="value_number">105,000</span>
+                                <span class="value_unit">원</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="revision_detail_row">
+                          <ul class="revision_detail_list">
+                            <li>
+                              <div class="revision_detail_item">
+                                <div class="key_cols"><span class="revision_keytext">성인</span></div>
+                                <div class="value_cols">
+                                  <span class="revision_price_dom">
+                                    <span class="value_number">105,000</span>
+                                    <span class="value_unit">원</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="revision_detail_item">
+                                <div class="key_cols"><span class="revision_keytext">아동</span></div>
+                                <div class="value_cols"><p class="revision_value_node">별도안내</p></div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="revision_detail_item">
+                                <div class="key_cols"><span class="revision_keytext">유아</span></div>
+                                <div class="value_cols"><p class="revision_value_node">별도안내</p></div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="revision_detail_item">
+                                <div class="key_cols"><span class="revision_keytext">프로모션할인</span></div>
+                                <div class="value_cols">
+                                  <span class="revision_price_dom">
+                                    <span class="value_number">-2,000,000</span>
+                                    <span class="value_unit">원</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sheetbox_wrap">
+              <div class="sheetbox_item">
+                <div class="title_row">
+                  <p class="notebox_title">예약 유의사항</p>
+                </div>
+                <div class="contents_row">
+                  <div class="note_messge_wrap">
+                    <i class="ico"></i>
+                    <div class="note_message_group">
+                      <ul class="note_message_list">
+                        <li>홈페이지를 통한 예약은 확정이 아닌 접수 상태이며, 담당자 확인 후 최종 요금 및 예약 확정이 진행됩니다.</li>
+                        <li>예약금은 예약 확정 후 담당자를 통해 안내되며, 지정 시간 내 예약금을 결제하지 않으신 경우 예약이 임의 취소될 수 있습니다.</li>
+                        <li>항공권이 포함된 상품의 경우 세금 및 예상 유류할증료가 포함된 가격이며, 유류할증료는 유가 및 환율에 따라 변동될 수 있습니다.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="terms_brick">
-                <p class="terms_brick_title">제 2조(목적)</p>
-                <div class="terms_brick_cont">
-                  약관 내용<br />
-                  약관 내용<br />
-                  약관 내용<br />
-                  약관 내용<br />
-                  약관 내용<br />
+            </div>
+            <div class="btn_square_wrap">
+              <a href="#" class="btn_square"><span class="text_node">취소</span></a>
+              <a href="#" class="btn_square primary"><span class="text_node">예약하기</span></a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- popup -->
+      <div class="popup_wrap" id="global_raw01_popup">
+        <div class="bg_dim"></div>
+        <div class="popup_item size3">
+          <div class="popup_title_row define_text">
+            <h2 class="popup_primary_title">국외여행표준약관</h2>
+          </div>
+          <div class="popup_contents_row">
+            <div class="popup_contents_inner ptype2">
+              <div class="terms_render">
+                <div class="terms_brick">
+                  <p class="terms_brick_title">제 1조(목적)</p>
+                  <div class="terms_brick_cont">
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                  </div>
+                </div>
+                <div class="terms_brick">
+                  <p class="terms_brick_title">제 2조(목적)</p>
+                  <div class="terms_brick_cont">
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="popup_btn_row">
+            <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
+          </div>
+          <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
         </div>
-        <div class="popup_btn_row">
-          <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
-        </div>
-        <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
       </div>
-    </div>
-    <!-- // popup -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // 팝업 인스턴스
-        var global_raw_popup = new DesignPopup({
-          selector: "#global_raw_popup",
-          beforeCallback() {
-            console.log("beforeCallback");
-          },
-          callback() { },
+      <div class="popup_wrap" id="global_raw02_popup">
+        <div class="bg_dim"></div>
+        <div class="popup_item size3">
+          <div class="popup_title_row define_text">
+            <h2 class="popup_primary_title">개인정보 수집 및 활용동의</h2>
+          </div>
+          <div class="popup_contents_row">
+            <div class="popup_contents_inner ptype2">
+              <div class="terms_render">
+                <div class="terms_brick">
+                  <p class="terms_brick_title">제 1조(목적)</p>
+                  <div class="terms_brick_cont">
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                  </div>
+                </div>
+                <div class="terms_brick">
+                  <p class="terms_brick_title">제 2조(목적)</p>
+                  <div class="terms_brick_cont">
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup_btn_row">
+            <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
+          </div>
+          <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+        </div>
+      </div>
+      <div class="popup_wrap" id="global_raw03_popup">
+        <div class="bg_dim"></div>
+        <div class="popup_item size3">
+          <div class="popup_title_row define_text">
+            <h2 class="popup_primary_title">취소수수료 및 특별약관</h2>
+          </div>
+          <div class="popup_contents_row">
+            <div class="popup_contents_inner ptype2">
+              <div class="terms_render">
+                <div class="terms_brick">
+                  <p class="terms_brick_title">제 1조(목적)</p>
+                  <div class="terms_brick_cont">
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                  </div>
+                </div>
+                <div class="terms_brick">
+                  <p class="terms_brick_title">제 2조(목적)</p>
+                  <div class="terms_brick_cont">
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                    약관 내용
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup_btn_row">
+            <a href="#" class="btn_square close_trigger"><span class="text_node">확인</span></a>
+          </div>
+          <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+        </div>
+      </div>
+      <!-- // popup -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          // 팝업 인스턴스
+          var global_raw01_popup = new DesignPopup({
+            selector: "#global_raw01_popup",
+            beforeCallback() {
+              console.log("beforeCallback");
+            },
+            callback() {},
+          });
+          var global_raw02_popup = new DesignPopup({
+            selector: "#global_raw02_popup",
+            beforeCallback() {
+              console.log("beforeCallback");
+            },
+            callback() {},
+          });
+          var global_raw03_popup = new DesignPopup({
+            selector: "#global_raw03_popup",
+            beforeCallback() {
+              console.log("beforeCallback");
+            },
+            callback() {},
+          });
+
+          // event
+          document.querySelector("#btn_clause_01").addEventListener("click", (e) => {
+            e.preventDefault();
+            global_raw01_popup.popupShow();
+          });
+          document.querySelector("#btn_clause_02").addEventListener("click", (e) => {
+            e.preventDefault();
+            global_raw02_popup.popupShow();
+          });
+          document.querySelector("#btn_clause_03").addEventListener("click", (e) => {
+            e.preventDefault();
+            global_raw03_popup.popupShow();
+          });
+
+          // global_raw_popup.popupShow(); // 호출
+          // global_raw_popup.popupHide(); // 닫기
+
+          // 퍼블확인용
+          let url = window.location.href.split("?")[1];
+          let url_2 = url !== undefined ? url.split("#")[0] : null;
+          if (url_2 === "global") {
+            global_raw01_popup.popupShow();
+          }
         });
-
-        // global_raw_popup.popupShow(); // 호출
-        // global_raw_popup.popupHide(); // 닫기
-
-        // 퍼블확인용
-        let url = window.location.href.split("?")[1];
-        let url_2 = url !== undefined ? url.split("#")[0] : null;
-        if (url_2 === "global") {
-          global_raw_popup.popupShow();
-        }
-      });
-    </script>
-    @@include('./include/_footer.html')
-  </div>
-</body>
-
+      </script>
+      @@include('./include/_footer.html')
+    </div>
+  </body>
 </html>

@@ -1,0 +1,156 @@
+.brick_cont_wrap{}
+.brick_cont{
+    &:last-of-type{}
+}
+.breadcrumb_row{
+
+}
+.breadcrumb_list{
+    > li{
+         &:last-of-type{
+            &:after{}
+         }
+         &:after{}
+    }
+}
+.breadcrumb_item{
+
+}
+select.cir_select{}
+.hortape_wrap{
+
+}
+.hortape_list{
+    > li{
+        &:last-of-type{}
+        &.nodata_li{
+            .nodata_para{}
+        }
+    }
+}
+.hortape_item{
+    .product_cols{
+
+    }
+    .price_cols{
+
+    }
+    .product_slice_obj{
+        .thumnail_cols{}
+        .thumnail_img{
+            img{}
+        }
+        .spec_cols{}
+        .caption_spec_row{}
+        .caption_slice_word{}
+        .company_text_item{}
+        .name_title_para{}
+    }
+}
+.product_slice_util_list{
+    > li{}
+    .flag_box{}
+    .flag_box_para{}
+}
+.with_unit_obj{
+    .number_value{}
+    .unit_text_node{}
+}
+.slice_sm_data{}
+
+.list_fraction_row{
+    .count_cols{}
+    .sort_cols{}
+}
+.fraction_count_para{
+    .emp{}
+}
+.sort_barquad_wrap{}
+.sort_barquad_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.sort_barquad{
+    &.active{}
+}
+
+.imagethumnail_wrap{
+
+}
+.imagethumnail_list{
+    > li{
+        .nodata_li{
+            .nodata_para{}
+        }
+        &:last-of-type{}
+    }
+}
+
+.imagethumnail_item{
+    .img_cols{}
+    .spec_cols{
+        .flag_row{
+            .dflag_box_list{}
+            .dflag_box{}
+        }
+    }
+    .title_row{
+        .name_cols{
+        }
+        .name_title_para{}
+        .name_sub_para{}
+        .price_cols{}
+    }
+    .caption_row{
+
+    }
+    .keyword_subtag_wrap{
+
+    }
+    .eval_tag_row{
+        .star_eval_text{}
+        .keyword_tag_wrap{}
+    }
+}
+.it_caption_para{}
+.before_current_dom{
+    .before_price{}
+    .current_dom{}
+}
+.current_dom{
+    .current_number{}
+    .current_unit{}
+}
+.imagethumnail_box{
+    > img{}
+}
+
+.product_slice_data_wrap{}
+.product_slice_data_list{
+    > li{
+
+    }
+}
+.product_slice_data{
+    .img_cols{
+        .img_wrap{
+            > img{}
+        }
+    }
+    .spec_cols{}
+    .slice_name{}
+    .slice_summary_01_row{}
+    .slice_summary_02_row{}
+    .slice_word{}
+    .company_text_item{}
+    .word_brief_list{}
+}
+.word_brief_list{
+    > li{
+
+    }
+}
+.word_brief{
+    .emp{}
+}

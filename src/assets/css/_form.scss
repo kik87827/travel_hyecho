@@ -1,0 +1,190 @@
+.tile_form_wrap{}
+.tile_form_list{
+     > li{
+        &:last-of-type{}
+     }
+}
+.tile_form_item{
+    .label_row{
+        .label_else_cols{}
+    }
+    .form_row{}
+}
+.label_form_notice{}
+.tile_form_label{}
+.formdom_linked_wrap{}
+.formdom_linked_list{
+    > li{}
+}
+input.form_input{
+    &::placeholder{}
+}
+.form_count_box{
+
+}
+.form_stack_box{
+
+}
+.stack_current_node{}
+.btn_count_element{
+    &:before{}
+    &:after{}
+    &.minus{
+        &:before{}
+        &:after{}
+    }
+    &.plus{
+        &:before{}
+        &:after{}
+    }
+}
+.count_fraction{}
+
+.box_props_group{
+
+}
+.box_props_cols{
+
+}
+input.box_props_dom{
+    &:checked + .box_props_label{}
+}
+.box_props_label{
+
+}
+.box_textarea_wrap{
+
+}
+.textarea_dom{
+
+}
+.long_ph{
+    &::placeholder{}
+}
+.long_place_replace{}
+
+.agree_container{
+    .total_row{
+        .props_item{}
+    }
+    .detail_row{}
+}
+.agree_detail_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.agree_dp_item{
+
+}
+.dp_inline_dom{
+    .props_item{}   
+}
+.btn_text_node{}
+
+.sheetbox_wrap{}
+.sheetbox_item{
+    .title_row{}
+    .contents_row{
+        .bullet_note_list{}
+    }
+}
+.sheetbox_title{}
+
+
+.revision_spec_wrap{}
+.revision_total_row{}
+.revision_total_item{
+    .key_cols{}
+    .value_cols{}
+    .revision_price_dom{
+        .value_number{}
+        .value_unit{}
+    }
+}
+.revision_keyword{}
+.revision_price_dom{
+    .value_number{}
+    .value_unit{}
+}
+.revision_detail_item{
+    .key_cols{}
+    .value_cols{}
+}
+.revision_keytext{}
+.revision_value_node{}
+
+.revision_btn_row{}
+.btn_folding_box{
+    .text_node{}
+    .ico{
+        &:before{}
+    }
+    &.active{
+        .ico{
+            &:before{}
+        }
+    }
+}
+.revision_detail_row{}
+.revision_detail_list{
+    > li{}
+}
+.revision_detail_item{
+    .key_cols{
+
+    }
+    .value_cols{}
+}
+.revision_keytext{}
+.revision_price_dom{
+    .value_number{}
+    .value_unit{}
+}
+
+.revision_tfoot_row{
+   .revision_price_dom{
+    .value_number{}
+    .value_unit{}
+}
+}
+.revision_tfoot_item{
+    .key_cols{}
+    .value_cols{}
+}
+.revision_tfoot_keytext{}
+
+.note_messge_wrap{
+    .ico{}
+}
+.note_message_group{
+    > li{
+        &:last-of-type{}
+    }
+}
+
+.btn_square_wrap{
+    .btn_square{
+        &:only-of-type{}
+        &:only-child{}
+    }
+}
+.btn_square{
+    &.primary{}
+    .text_node{}
+}
+
+.box_stack_wrap{}
+.box_stack_list{
+    > li{}
+}
+.box_stack_item{
+    .stack_key{}
+    .stack_value{}
+}
+.stack_message_row{
+
+}
+.stack_message_para{
+    .highlight{}
+}

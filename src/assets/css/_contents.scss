@@ -3433,6 +3433,9 @@ input.props_box_form{
         &:last-of-type{margin-bottom:0;}
         &:before{ width:2px;height:2px; background:#4e4e4e; position:absolute;top:11px;left:0; display:block;content:'';}
     }
+    &.type2{
+        > li{}
+    }
 }
 .highlight{display:inline-block;background:#e1efff;padding:0 2px;}
 .indent_note_list{
