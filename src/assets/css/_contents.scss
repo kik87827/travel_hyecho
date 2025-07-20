@@ -3434,7 +3434,9 @@ input.props_box_form{
         &:before{ width:2px;height:2px; background:#4e4e4e; position:absolute;top:11px;left:0; display:block;content:'';}
     }
     &.type2{
-        > li{}
+        > li{
+            &:before{opacity:0;}
+        }
     }
 }
 .highlight{display:inline-block;background:#e1efff;padding:0 2px;}

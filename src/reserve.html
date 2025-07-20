@@ -76,23 +76,32 @@
                         <ul class="formdom_linked_list">
                           <li>
                             <div class="form_count_box">
-                              <button class="btn_count_element minus"></button>
-                              <div class="count_fraction">성인 1</div>
-                              <button class="btn_count_element plus"></button>
+                              <button class="btn_inde_control dec_control"></button>
+                              <div class="count_fraction_node">
+                                성인
+                                <span class="count_number">1</span>
+                              </div>
+                              <button class="btn_inde_control inc_control"></button>
                             </div>
                           </li>
                           <li>
                             <div class="form_count_box">
-                              <button class="btn_count_element minus"></button>
-                              <div class="count_fraction">아동 1</div>
-                              <button class="btn_count_element plus"></button>
+                              <button class="btn_inde_control dec_control"></button>
+                              <div class="count_fraction_node">
+                                아동
+                                <span class="count_number">1</span>
+                              </div>
+                              <button class="btn_inde_control inc_control"></button>
                             </div>
                           </li>
                           <li>
                             <div class="form_count_box">
-                              <button class="btn_count_element minus"></button>
-                              <div class="count_fraction">유아 1</div>
-                              <button class="btn_count_element plus"></button>
+                              <button class="btn_inde_control dec_control"></button>
+                              <div class="count_fraction_node">
+                                유아
+                                <span class="count_number">1</span>
+                              </div>
+                              <button class="btn_inde_control inc_control"></button>
                             </div>
                           </li>
                         </ul>
@@ -109,8 +118,8 @@
                           <div class="contblock_title_row">
                             <div class="cb_cols"><p class="cb_title">성인1</p></div>
                             <div class="cb_cols">
-                              <div class="props_item">
-                                <input type="checkbox" id="check_cbmen" class="props_dom" />
+                              <div class="props_item gap2">
+                                <input type="checkbox" id="check_cbmen" class="props_form circle" />
                                 <label for="check_cbmen" class="props_label">예약자와 동일</label>
                               </div>
                             </div>
@@ -123,11 +132,11 @@
                                 <li>
                                   <div class="box_props_group">
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_dom" name="gender" id="man" />
+                                      <input type="radio" class="box_props_form" name="gender" id="man" />
                                       <label for="man" class="box_props_label">남</label>
                                     </div>
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_dom" name="gender" id="woman" />
+                                      <input type="radio" class="box_props_form" name="gender" id="woman" />
                                       <label for="woman" class="box_props_label">여</label>
                                     </div>
                                   </div>
@@ -154,11 +163,11 @@
                                 <li>
                                   <div class="box_props_group">
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_dom" name="gender2" id="man2" />
+                                      <input type="radio" class="box_props_form" name="gender2" id="man2" />
                                       <label for="man2" class="box_props_label">남</label>
                                     </div>
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_dom" name="gender2" id="woman2" />
+                                      <input type="radio" class="box_props_form" name="gender2" id="woman2" />
                                       <label for="woman2" class="box_props_label">여</label>
                                     </div>
                                   </div>
@@ -192,7 +201,7 @@
                       <div class="agree_container">
                         <div class="total_row">
                           <div class="props_item">
-                            <input type="checkbox" class="props_dom" id="total_agree" />
+                            <input type="checkbox" class="props_form" id="total_agree" />
                             <label for="total_agree" class="props_label">전체 약관동의</label>
                           </div>
                         </div>
@@ -202,7 +211,7 @@
                               <div class="agree_dp_item">
                                 <div class="dp_inline_dom">
                                   <div class="props_item">
-                                    <input type="checkbox" class="props_dom" id="detail_agree_01" />
+                                    <input type="checkbox" class="props_form" id="detail_agree_01" />
                                     <label for="detail_agree_01" class="props_label">(필수)국외여행표준약관</label>
                                   </div>
                                 </div>
@@ -215,7 +224,7 @@
                               <div class="agree_dp_item">
                                 <div class="dp_inline_dom">
                                   <div class="props_item">
-                                    <input type="checkbox" class="props_dom" id="detail_agree_02" />
+                                    <input type="checkbox" class="props_form" id="detail_agree_02" />
                                     <label for="detail_agree_02" class="props_label">(필수)개인정보 수집 및 활용동의</label>
                                   </div>
                                 </div>
@@ -228,7 +237,7 @@
                               <div class="agree_dp_item">
                                 <div class="dp_inline_dom">
                                   <div class="props_item">
-                                    <input type="checkbox" class="props_dom" id="detail_agree_03" />
+                                    <input type="checkbox" class="props_form" id="detail_agree_03" />
                                     <label for="detail_agree_03" class="props_label">(필수)취소수수료 및 특별약관</label>
                                   </div>
                                 </div>
@@ -289,7 +298,11 @@
                                 </li>
                               </ul>
                               <ul class="bullet_note_list type2">
-                                <li>본 상품은 항공권, 호텔, 입장권, 전용차량 등 사전 확정·지급이 필요한 구성으로 인해, 국외여행표준약관이 아닌 [여행사 특별약관]이 적용되는 상품입니다. 예약확정 이후 취소 시, 표준약관 대비 더 높은 수수료가 발생할 수 있으니, 반드시 아래 내용을 확인 부탁드립니다.</li>
+                                <li>
+                                  본 상품은 항공권, 호텔, 입장권, 전용차량 등 사전 확정·지급이 필요한 구성으로 인해, 국외여행표준약관이 아닌 [여행사 특별약관]이 적용되는 상품입니다.
+                                  <br />
+                                  예약확정 이후 취소 시, 표준약관 대비 더 높은 수수료가 발생할 수 있으니, 반드시 아래 내용을 확인 부탁드립니다.
+                                </li>
                               </ul>
                             </div>
                           </div>
@@ -358,10 +371,10 @@
                 </li>
               </ul>
             </div>
-            <div class="sheetbox_wrap">
+            <div class="sheetbox_wrap mtype2">
               <div class="sheetbox_item">
                 <div class="title_row">
-                  <p class="notebox_title">예약 유의사항</p>
+                  <p class="sheetbox_title">예약 유의사항</p>
                 </div>
                 <div class="contents_row">
                   <div class="note_messge_wrap">
@@ -377,9 +390,9 @@
                 </div>
               </div>
             </div>
-            <div class="btn_square_wrap">
-              <a href="#" class="btn_square"><span class="text_node">취소</span></a>
-              <a href="#" class="btn_square primary"><span class="text_node">예약하기</span></a>
+            <div class="btn_vertex_wrap">
+              <a href="#" class="btn_vertex"><span class="text_node">취소</span></a>
+              <a href="#" class="btn_vertex primary"><span class="text_node">예약하기</span></a>
             </div>
           </div>
         </div>
@@ -578,6 +591,30 @@
           if (url_2 === "global") {
             global_raw01_popup.popupShow();
           }
+        });
+
+        $(function () {
+          $("#total_agree").on("click", function () {
+            const $this = $(this);
+            const $thisParents = $this.closest(".agree_container");
+
+            $thisParents.find(".props_form").prop("checked", $this.prop("checked"));
+          });
+
+          var $length = $(".agree_container .props_form").length - 1;
+          var $length_checked = $(".agree_container .props_form:checked").length - 1;
+          $(".agree_container .props_form").on("click", function () {
+            const $this = $(this);
+            const $thisParents = $this.closest(".agree_container");
+
+            setTimeout(() => {
+              if ($length === $(".agree_container .props_form:checked").length) {
+                $("#total_agree").prop("checked", true);
+              } else {
+                $("#total_agree").prop("checked", false);
+              }
+            }, 30);
+          });
         });
       </script>
       @@include('./include/_footer.html')

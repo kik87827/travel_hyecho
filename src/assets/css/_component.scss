@@ -170,17 +170,22 @@
 }
 .btn_rego{}
 
-.btn_square_wrap{
-    .btn_square{
+.btn_vertex_wrap{
+    margin-top:60px; display:flex; justify-content: center; gap:10px; align-items: center;
+    .btn_vertex{
+       
         &:only-of-type{}
         &:only-child{}
     }
 }
-.btn_square{
+.btn_vertex{
+    display:inline-flex;min-width:300px; min-height:56px; align-items: center; justify-content: center; box-sizing: border-box; border:1px solid #176bdd; border-radius:100px;
     &.small{}
-    &.primary{}
+    &.primary{background:#176bdd;
+        .text_node{color:#fff;}
+    }
     &.skin2{}
-    .text_node{}
+    .text_node{@include font(19px,500,1,#176bdd);}
 }
 
 @media (max-width:$mobile_large){
@@ -215,6 +220,7 @@
 /* form */
 .props_item{
     display:inline-flex; gap:10px; align-items: flex-start;
+    &.gap2{gap:8px;}
 }
 input.props_form{
     appearance: none; cursor: pointer;  box-sizing: content-box;
@@ -223,6 +229,7 @@ input.props_form{
             background-position:0 100%; background-color:#3791f3; border-color:#3791f3;
             & + .props_label{}
         }
+        &.circle{border-radius:100%;}
     }
     &[type="radio"]{
         background:url("../images/ico_radio.png") no-repeat 0 0/100% auto;width:22px;height:22px;border:1px solid #bfbfbf; border-radius:100%;
@@ -252,6 +259,19 @@ select.form_select{
 select.form_word_select{
     font-size:15px;color:#333;padding: 3px 25px 3px 0;box-sizing:border-box;font-family: 'Noto Sans KR';cursor: pointer; border:0; display:inline-block;
     background: url("../images/ico_single_select.png") no-repeat 100% 50%/17px auto;line-height: 1;-webkit-appearance:none;-moz-appearance:none;appearance:none;
+    &::-ms-value {background: none; color:#333333;}
+    &::-ms-expand {display: none;}
+    &::-ms-value {
+        background: none; 
+        color:#333333;
+    }
+    &.placeholder{color:#b5b5b5;}
+    &:disabled{background-color:#f7f7f7;color:#333333;opacity:1;}
+    &.size2{}
+}
+select.cir_select{
+    font-size:16px;color:#333;padding: 3px 32px 3px 0;box-sizing:border-box;font-family: 'Noto Sans KR';cursor: pointer; border:0; display:inline-block; min-height:25px;
+    background: url("../images/ico_select_cir.png") no-repeat 100% 50%/25px auto;line-height: 1;-webkit-appearance:none;-moz-appearance:none;appearance:none;
     &::-ms-value {background: none; color:#333333;}
     &::-ms-expand {display: none;}
     &::-ms-value {
