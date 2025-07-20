@@ -240,7 +240,7 @@
     &.emp{color:#000; font-weight:400;}
  }
  .wordslice_obj{
-    display:flex; align-items: center; gap:5px 10px; line-height:0; position:relative;top:-2.5px;
+    display:flex; align-items: center; gap:5px 10px; line-height:0; position:relative;top:-2px;
     dt,dd{}
     dt{}
     dd{}
@@ -554,6 +554,8 @@
 
     .tab_contents_inner{padding:30px 20px;}
     .btn_baguette{font-size:13px; padding:0 15px;}
+
+    .wordslice_obj{top:2px}
 }
 
 /* 여행후기 */

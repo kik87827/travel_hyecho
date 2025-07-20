@@ -6,9 +6,12 @@
 }
 .tile_form_item{
     .label_row{
-        .label_else_cols{}
+        .label_else_cols{
+            .btn_rego_list{}
+        }
     }
     .form_row{}
+    .btn_square_wrap{}
 }
 .label_form_notice{}
 .tile_form_label{}
@@ -17,6 +20,7 @@
     > li{}
 }
 input.form_input{
+    &:disabled{}
     &::placeholder{}
 }
 .form_count_box{
@@ -24,6 +28,14 @@ input.form_input{
 }
 .form_stack_box{
 
+}
+.inline_ring_wrap{}
+.inline_ring_list{ 
+    > li{
+        &.short{
+            .box_props_group{}
+        }
+    }
 }
 .stack_current_node{}
 .btn_count_element{
@@ -163,16 +175,7 @@ input.box_props_dom{
     }
 }
 
-.btn_square_wrap{
-    .btn_square{
-        &:only-of-type{}
-        &:only-child{}
-    }
-}
-.btn_square{
-    &.primary{}
-    .text_node{}
-}
+
 
 .box_stack_wrap{}
 .box_stack_list{
@@ -188,3 +191,37 @@ input.box_props_dom{
 .stack_message_para{
     .highlight{}
 }
+
+
+.note_card_box{}
+.note_card_title{}
+.note_card_cont{
+    .indent_node_list{}
+}
+
+.tile_sub_block_wrap{}
+.tile_sub_block{
+    &:last-of-type{}
+}
+.tile_sub_title_row{}
+.tile_sub_title{}
+.tile_sub_else_wrap{
+    .btn_rego_list{}
+}
+.tile_sub_contents{}
+
+.field_grid_wrap{}
+.field_grid_list{
+    > li{}
+}
+.field_grid_slice{
+    .key_cols{}
+    .value_cols{}
+}
+.grid_keyword{}
+.amount_price_dom{
+    .value_number{}
+    .value_unit{}
+}
+.amount_input_cols{}
+input.amount_input{}

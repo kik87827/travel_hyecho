@@ -163,6 +163,25 @@
 }
 .btn_box_text{color:#fff; font-size:18px; font-weight:500; display:inline-block;}
 
+.btn_rego_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.btn_rego{}
+
+.btn_square_wrap{
+    .btn_square{
+        &:only-of-type{}
+        &:only-child{}
+    }
+}
+.btn_square{
+    &.small{}
+    &.primary{}
+    &.skin2{}
+    .text_node{}
+}
 
 @media (max-width:$mobile_large){
     .btn_box{
@@ -241,6 +260,7 @@ select.form_word_select{
     }
     &.placeholder{color:#b5b5b5;}
     &:disabled{background-color:#f7f7f7;color:#333333;opacity:1;}
+    &.size2{}
 }
 
 .form_word_combo{

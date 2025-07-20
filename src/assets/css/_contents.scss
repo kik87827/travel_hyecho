@@ -3449,6 +3449,12 @@ input.props_box_form{
 .qus_emp_text_wrap{margin-top:30px;}
 .qus_emp_text{@include font(16px,400,1.5,#333333);}
 
+.indent_node_list{
+    > li{}
+}
+.bullet_node{}
+.liquid_node{}
+
 @media (max-width:1023px){
     .get_data_text_render{font-size:13px;}
     .chip_list{

@@ -140,6 +140,10 @@ select.cir_select{}
     }
     .spec_cols{}
     .slice_name{}
+    .slice_name_row{}
+    .slice_else_cols{
+        .btn_rego_list{}
+    }
     .slice_summary_01_row{}
     .slice_summary_02_row{}
     .slice_word{}
@@ -153,4 +157,25 @@ select.cir_select{}
 }
 .word_brief{
     .emp{}
+}
+.respond_tb_wrap{}
+.respond_tb{
+    thead{
+        tr{
+            th{}
+        }
+    }
+    tbody{
+        tr{
+            td{}
+        }
+    }
+}
+.respond_thtext{}
+.respond_td_obj{
+    dt,dd{}
+    dt{}
+    dd{}
+    .td_key{}
+    .td_value{}
 }
