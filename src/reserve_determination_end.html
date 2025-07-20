@@ -18,7 +18,7 @@
             </div>
           </div>
           <div class="single_contents">
-            <div class="box_stack_wrap">
+            <div class="box_stack_wrap mbtype4">
               <ul class="box_stack_list">
                 <li>
                   <a href="#" class="box_stack_item">
@@ -49,7 +49,7 @@
             <div class="product_slice_data_wrap">
               <ul class="product_slice_data_list">
                 <li>
-                  <a href="#" class="product_slice_data">
+                  <div class="product_slice_data">
                     <div class="img_cols">
                       <div class="img_wrap"><img src="./assets/images/img_200x140.png" alt="" /></div>
                     </div>
@@ -90,12 +90,12 @@
                         </ul>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </li>
               </ul>
             </div>
             <div class="tile_form_wrap">
-              <ul class="tile_form_list">
+              <ul class="tile_form_list type2">
                 <li>
                   <div class="tile_form_item">
                     <div class="label_row">
@@ -205,9 +205,9 @@
                           <div class="contblock_form_row">
                             <div class="formdom_linked_wrap">
                               <ul class="formdom_linked_list">
-                                <li><input type="text" class="form_input" placeholder="한글성명(필수)" value="김동수(수정불가)" /></li>
+                                <li><input type="text" class="form_input" placeholder="한글성명(필수)" value="김동수(수정불가)" disabled /></li>
                                 <li>
-                                  <input type="text" class="form_input" placeholder="법정 생년월일" value="1984.03.09(수정불가)" />
+                                  <input type="text" class="form_input" placeholder="법정 생년월일" value="1984.03.09(수정불가)" disabled />
                                 </li>
                                 <li>
                                   <div class="inline_ring_wrap">
@@ -215,11 +215,11 @@
                                       <li class="short">
                                         <div class="box_props_group">
                                           <div class="box_props_cols">
-                                            <input type="radio" class="box_props_dom" name="gender" id="man" checked />
+                                            <input type="radio" class="box_props_form" name="gender" id="man" checked />
                                             <label for="man" class="box_props_label">남</label>
                                           </div>
                                           <div class="box_props_cols">
-                                            <input type="radio" class="box_props_dom" name="gender" id="woman" />
+                                            <input type="radio" class="box_props_form" name="gender" id="woman" />
                                             <label for="woman" class="box_props_label">여</label>
                                           </div>
                                         </div>
@@ -248,9 +248,9 @@
                           <div class="contblock_form_row">
                             <div class="formdom_linked_wrap">
                               <ul class="formdom_linked_list">
-                                <li><input type="text" class="form_input" placeholder="한글성명(필수)" value="김동수" /></li>
+                                <li><input type="text" class="form_input" placeholder="한글성명(필수)" /></li>
                                 <li>
-                                  <input type="text" class="form_input" placeholder="법정 생년월일" value="1984.03.09" />
+                                  <input type="text" class="form_input" placeholder="법정 생년월일" />
                                 </li>
                                 <li>
                                   <div class="inline_ring_wrap">
@@ -258,11 +258,11 @@
                                       <li class="short">
                                         <div class="box_props_group">
                                           <div class="box_props_cols">
-                                            <input type="radio" class="box_props_dom" name="gender2" id="man2" />
+                                            <input type="radio" class="box_props_form" name="gender2" id="man2" />
                                             <label for="man2" class="box_props_label">남</label>
                                           </div>
                                           <div class="box_props_cols">
-                                            <input type="radio" class="box_props_dom" name="gender2" id="woman2" />
+                                            <input type="radio" class="box_props_form" name="gender2" id="woman2" />
                                             <label for="woman2" class="box_props_label">여</label>
                                           </div>
                                         </div>
@@ -280,9 +280,6 @@
                           </div>
                         </li>
                       </ul>
-                      <div class="btn_vertex_wrap">
-                        <a href="#" class="btn_vertex small skin2"><span class="text_node">저장하기</span></a>
-                      </div>
                     </div>
                   </div>
                 </li>
@@ -305,12 +302,12 @@
                           </div>
                         </div>
                         <div class="revision_btn_row">
-                          <a href="#" class="btn_folding_box">
+                          <a href="#" class="btn_folding_box" data-target="#folding_target">
                             <span class="text_node">펼치기</span>
                             <i class="ico"></i>
                           </a>
                         </div>
-                        <div class="revision_detail_row">
+                        <div class="revision_detail_row type3" id="folding_target" style="display: none">
                           <ul class="revision_detail_list">
                             <li>
                               <div class="revision_detail_item type2">
@@ -347,7 +344,7 @@
                               <option>전체보기</option>
                             </select>
                             <ul class="btn_rego_list">
-                              <li><a href="#" class="btn_rego">환불규정보기</a></li>
+                              <li><a href="#" class="btn_rego size2 skin2">환불규정보기</a></li>
                             </ul>
                           </div>
                         </div>
@@ -477,6 +474,29 @@
           </div>
         </div>
       </main>
+      <script>
+        $(function () {
+          $(".btn_folding_box").each(function () {
+            var $thisBtn = $(this);
+            var $toggleBoolean = false;
+            $thisBtn.on("click", function (e) {
+              e.preventDefault();
+              var $thisEvent = $(this);
+              var $thisTarget = $($thisEvent.attr("data-target"));
+              $thisEvent.toggleClass("active");
+              if (!!$thisTarget) {
+                $thisTarget.toggle();
+              }
+              if ($toggleBoolean) {
+                $thisEvent.find(".text_node").text("펼치기");
+              } else {
+                $thisEvent.find(".text_node").text("접기");
+              }
+              $toggleBoolean = !$toggleBoolean;
+            });
+          });
+        });
+      </script>
       @@include('./include/_footer.html')
     </div>
   </body>

@@ -3452,10 +3452,14 @@ input.props_box_form{
 .qus_emp_text{@include font(16px,400,1.5,#333333);}
 
 .indent_node_list{
-    > li{}
+    @include font(14px,400,#4e4e4e);
+    > li{display:flex;
+        margin-bottom:5px;
+        &:last-of-type{margin-bottom:0;}
+    }
 }
-.bullet_node{}
-.liquid_node{}
+.bullet_node{flex:0;white-space: nowrap;}
+.liquid_node{flex:1;min-width:0;}
 
 @media (max-width:1023px){
     .get_data_text_render{font-size:13px;}
