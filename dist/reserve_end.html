@@ -1016,7 +1016,7 @@
 					</div>
 				</div>
 				<div class="single_contents">
-					<div class="box_stack_wrap">
+					<div class="box_stack_wrap mbtype2">
 						<ul class="box_stack_list">
 							<li>
 								<a href="#" class="box_stack_item">
@@ -1095,17 +1095,26 @@
 											<ul class="formdom_linked_list">
 												<li>
 													<div class="form_stack_box">
-														<div class="stack_current_node">성인 1</div>
+														<div class="stack_current_node">
+															성인
+															<strong class="emp">1</strong>
+														</div>
 													</div>
 												</li>
 												<li>
 													<div class="form_stack_box">
-														<div class="stack_current_node">아동 1</div>
+														<div class="stack_current_node">
+															아동
+															<strong class="emp">1</strong>
+														</div>
 													</div>
 												</li>
 												<li>
 													<div class="form_stack_box">
-														<div class="stack_current_node">유아 1</div>
+														<div class="stack_current_node">
+															유아
+															<strong class="emp">1</strong>
+														</div>
 													</div>
 												</li>
 											</ul>
@@ -1136,12 +1145,12 @@
 												</div>
 											</div>
 											<div class="revision_btn_row">
-												<a href="#" class="btn_folding_box">
+												<a href="javascript:;" class="btn_folding_box" data-target="#folding_target">
 													<span class="text_node">펼치기</span>
 													<i class="ico"></i>
 												</a>
 											</div>
-											<div class="revision_detail_row">
+											<div class="revision_detail_row type2" id="folding_target" style="display: none">
 												<ul class="revision_detail_list">
 													<li>
 														<div class="revision_detail_item">
@@ -1207,6 +1216,29 @@
 				</div>
 			</div>
 		</main>
+		<script>
+			$(function() {
+				$(".btn_folding_box").each(function() {
+					var $thisBtn = $(this);
+					var $toggleBoolean = false;
+					$thisBtn.on("click", function(e) {
+						e.preventDefault();
+						var $thisEvent = $(this);
+						var $thisTarget = $($thisEvent.attr("data-target"));
+						$thisEvent.toggleClass("active");
+						if (!!$thisTarget) {
+							$thisTarget.toggle();
+						}
+						if ($toggleBoolean) {
+							$thisEvent.find(".text_node").text("펼치기");
+						} else {
+							$thisEvent.find(".text_node").text("접기");
+						}
+						$toggleBoolean = !$toggleBoolean;
+					});
+				});
+			});
+		</script>
 		<footer class="footer_wrap">
 			<div class="btn_pagetop_wrap">
 				<a href="#" class="btn_pagetop"><span class="hdtext">페이지 상단으로</span></a>

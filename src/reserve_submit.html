@@ -307,18 +307,18 @@
                           </div>
                         </div>
                         <div class="revision_btn_row">
-                          <a href="#" class="btn_folding_box">
+                          <a href="javascript:;" class="btn_folding_box" data-target="#folding_target">
                             <span class="text_node">펼치기</span>
                             <i class="ico"></i>
                           </a>
                         </div>
-                        <div class="revision_detail_row" style="display: none">
+                        <div class="revision_detail_row type2" id="folding_target" style="display: none">
                           <ul class="revision_detail_list">
                             <li>
                               <div class="revision_detail_item">
                                 <div class="key_cols"><span class="revision_keytext">성인</span></div>
                                 <div class="value_cols">
-                                  <span class="revision_price_dom">
+                                  <span class="revision_price_dom sm_type2">
                                     <span class="value_number">105,000</span>
                                     <span class="value_unit">원</span>
                                   </span>
@@ -341,7 +341,7 @@
                               <div class="revision_detail_item">
                                 <div class="key_cols"><span class="revision_keytext">프로모션할인</span></div>
                                 <div class="value_cols">
-                                  <span class="revision_price_dom">
+                                  <span class="revision_price_dom sm_type2">
                                     <span class="value_number">-2,000,000</span>
                                     <span class="value_unit">원</span>
                                   </span>
@@ -485,6 +485,28 @@
           if (url_2 === "popup") {
             reserve_cancel_popup.popupShow();
           }
+        });
+
+        $(function () {
+          $(".btn_folding_box").each(function () {
+            var $thisBtn = $(this);
+            var $toggleBoolean = false;
+            $thisBtn.on("click", function (e) {
+              e.preventDefault();
+              var $thisEvent = $(this);
+              var $thisTarget = $($thisEvent.attr("data-target"));
+              $thisEvent.toggleClass("active");
+              if (!!$thisTarget) {
+                $thisTarget.toggle();
+              }
+              if ($toggleBoolean) {
+                $thisEvent.find(".text_node").text("펼치기");
+              } else {
+                $thisEvent.find(".text_node").text("접기");
+              }
+              $toggleBoolean = !$toggleBoolean;
+            });
+          });
         });
       </script>
       @@include('./include/_footer.html')
