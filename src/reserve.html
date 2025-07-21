@@ -149,7 +149,7 @@
                           </div>
                         </li>
                         <li>
-                          <div class="contblock_title_row">
+                          <div class="contblock_title_row mb_break_type">
                             <div class="cb_cols"><p class="cb_title">아동1</p></div>
                             <div class="cb_cols">
                               <p class="cb_formcopy">만 14세 미만 여행자의 경우 약관교부 및 개인정보 이용 동의 확인을 위한 법정대리인(부모)의 연락처(휴대폰번호)로 입력 해주세요.</p>
@@ -189,7 +189,7 @@
                     <div class="form_row">
                       <div class="box_textarea_wrap">
                         <textarea rows="10" cols="10" class="textarea_dom long_ph" placeholder="채식여부/싱글룸/항공권 변경 요청 (EX.비즈니스 좌석) 등 예약 관련 문의 사항을 입력해 주세요."></textarea>
-                        <p class="long_place_replace">채식여부/싱글룸/항공권 변경 요청 (EX.비즈니스 좌석) 등 예약 관련 문의 사항을 입력해 주세요.</p>
+                        <!-- <p class="long_place_replace">채식여부/싱글룸/항공권 변경 요청 (EX.비즈니스 좌석) 등 예약 관련 문의 사항을 입력해 주세요.</p> -->
                       </div>
                     </div>
                   </div>
@@ -601,19 +601,18 @@
             $thisParents.find(".props_form").prop("checked", $this.prop("checked"));
           });
 
-          var $length = $(".agree_container .props_form").length - 1;
-          var $length_checked = $(".agree_container .props_form:checked").length - 1;
+          var $length = $(".agree_container .props_form").not("#total_agree").length;
           $(".agree_container .props_form").on("click", function () {
             const $this = $(this);
             const $thisParents = $this.closest(".agree_container");
+            const $length = $(".agree_container .props_form").not("#total_agree").length;
+            const $checked_length = $(".agree_container .props_form:checked").not("#total_agree").length;
 
-            setTimeout(() => {
-              if ($length === $(".agree_container .props_form:checked").length) {
-                $("#total_agree").prop("checked", true);
-              } else {
-                $("#total_agree").prop("checked", false);
-              }
-            }, 30);
+            if ($length === $checked_length) {
+              $("#total_agree").prop("checked", true);
+            } else {
+              $("#total_agree").prop("checked", false);
+            }
           });
         });
       </script>

@@ -196,6 +196,18 @@
     .text_node{@include font(19px,500,1,#176bdd);}
 }
 
+@media (max-width:$tablet){
+    .btn_vertex_wrap{
+        margin-top:30px;
+    }
+    .btn_vertex{
+        min-width:200px;
+        &.small{min-width:100px;
+        }
+    }
+
+}
+
 @media (max-width:$mobile_large){
     .btn_box{
        min-width:120px;
@@ -221,6 +233,23 @@
     .btn_square{
         min-width:100px;
         .text_node{font-size:14px;}
+    }
+
+
+}
+
+@media (max-width:$mobile){
+    .btn_vertex{
+        min-width:0; min-height:45px; gap:5px;
+        flex:1;
+        &.small{min-width:0;}
+        .text_node{font-size:16px}
+    }
+}
+
+@media (max-width:$mobile_size3){
+    .btn_vertex_wrap{
+        flex-direction: column; align-items: normal;
     }
 }
 

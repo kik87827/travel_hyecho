@@ -287,4 +287,28 @@
         }
     }
     .imagethumnail_box{width:100%;}
+
+    .product_slice_data{
+         .img_cols{
+            flex-basis : 120px;
+             .img_wrap{width:120px;min-height:40px; border-radius:5px;}
+         }
+    }
+    .product_slice_data{
+        gap:5px;
+         .spec_cols{padding:10px 15px; border-radius:5px;}
+         .slice_name_row{gap:5px;margin-bottom:5px;}
+         .company_text_item{top:0;}
+         .company_logo_cols{
+            flex-basis:16px;
+            img{width:16px;height:16px;}
+         }
+         .slice_summary_01_row{gap:5px;}
+         .slice_summary_02_row{margin-top:5px;}
+         .slice_name{font-size:14px;}
+         .company_text_spec,
+        .slice_word{font-size:12px;}
+    }
+    .word_brief_list{gap:5px;}
+    .word_brief{font-size:13px;}
 }

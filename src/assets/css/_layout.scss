@@ -577,6 +577,9 @@ input.input_search{flex:1;background:none;border:0;padding:0 20px;box-sizing: bo
     .red_emp{color:#f84242;}
 }
 @media (max-width:$mobile_large){
+    .single_contents{
+        &.type2{padding-top:20px;}
+    }
     .single_page{padding:35px 20px 70px;}
     .single_title{font-size:20px;}
     .single_title_copy{font-size:13px;}
