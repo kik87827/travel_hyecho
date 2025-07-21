@@ -5557,6 +5557,9 @@ select.cir_select:disabled {
 .tile_form_list {
   /* border-bottom:1px solid #e7e7e7; */
 }
+.tile_form_list.has_line {
+  border-bottom: 1px solid #e7e7e7;
+}
 .tile_form_list.type2 {
   border-bottom: 0;
 }
@@ -6015,7 +6018,7 @@ input.box_props_form:checked + .box_props_label {
 .revision_tfoot_keytext {
   display: inline-block;
   font-size: 19px;
-  font-weight: 5 0;
+  font-weight: 500;
   line-height: 1;
   color: #2b2b2b;
 }
@@ -6108,6 +6111,7 @@ input.box_props_form:checked + .box_props_label {
   font-weight: 400;
   line-height: 1.4;
   color: #4e4e4e;
+  word-break: keep-all;
 }
 .note_card_box {
   border: 1px solid #dcdcdc;
@@ -6243,6 +6247,11 @@ input.amount_input {
   .tile_form_item .label_row {
     margin-bottom: 10px;
   }
+  .tile_form_item .label_row.mb_break {
+    flex-direction: column;
+    align-items: normal;
+    gap: 10px;
+  }
   .tile_form_item .label_row .tile_form_label {
     font-size: 14px;
   }
@@ -6365,6 +6374,45 @@ input.amount_input {
   }
   .note_messge_wrap .ico {
     margin: 0 auto;
+  }
+  .form_stack_box {
+    min-height: 40px;
+  }
+  .stack_current_node {
+    font-size: 14px;
+  }
+  .stack_current_node .emp {
+    font-size: 16px;
+  }
+  .label_form_notice {
+    font-size: 13px;
+  }
+  .box_stack_list {
+    gap: 10px;
+    margin: 0 -5px;
+  }
+  .box_stack_list > li {
+    flex: 0 0 calc(50% - 10px);
+  }
+  .box_stack_item {
+    gap: 5px;
+    padding: 10px;
+    min-height: 45px;
+  }
+  .box_stack_item .stack_key,
+.box_stack_item .stack_value {
+    font-size: 14px;
+  }
+  .stack_message_row {
+    margin-bottom: 30px;
+  }
+  .revision_tfoot_keytext,
+.stack_message_para {
+    font-size: 14px;
+  }
+  .revision_tfoot_item,
+.revision_btn_row {
+    padding: 0 15px;
   }
 }
 /* contents */

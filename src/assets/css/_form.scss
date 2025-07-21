@@ -2,6 +2,7 @@
 .tile_form_wrap{}
 .tile_form_list{
     /* border-bottom:1px solid #e7e7e7; */
+    &.has_line{border-bottom:1px solid #e7e7e7;}
     &.type2{border-bottom:0;
         > li {
             &:last-of-type{padding-bottom:0;}
@@ -227,7 +228,7 @@ input.box_props_form{
     .key_cols{}
     .value_cols{}
 }
-.revision_tfoot_keytext{display:inline-block; @include font(19px,5 00,1,#2b2b2b);}
+.revision_tfoot_keytext{display:inline-block; @include font(19px,500,1,#2b2b2b);}
 .revision_value_node{ @include font(16px,400,1,#333);}
 
 .note_messge_wrap{
@@ -261,7 +262,7 @@ input.box_props_form{
  text-align: center; margin-bottom:65px;
 }
 .stack_message_para{
-    @include font(16px,400,1.4,#4e4e4e);
+    @include font(16px,400,1.4,#4e4e4e); word-break:keep-all;
     .highlight{}
 }
 
@@ -316,6 +317,8 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
     }
     .tile_form_item{
          .label_row{margin-bottom:10px;
+            
+            &.mb_break{flex-direction: column; align-items:normal; gap:10px;}
             .tile_form_label{font-size:14px;}
         }
     }
@@ -366,4 +369,28 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
     .note_messge_wrap{flex-direction: column; align-items: normal; gap:15px;
         .ico{margin:0 auto;}
     }
+
+    .form_stack_box{min-height:40px;}
+    .stack_current_node{font-size:14px;
+        .emp{font-size:16px;}
+    }
+    .label_form_notice{font-size:13px;}
+    .box_stack_list{
+        gap:10px; margin:0 -5px;
+        > li{ flex:0 0 calc(50% - 10px);}
+    }
+    .box_stack_item{
+       gap:5px; padding:10px; min-height:45px;
+        .stack_key,
+        .stack_value{font-size:14px;}
+    }
+    .stack_message_row{
+        margin-bottom:30px;
+    }
+    .revision_tfoot_keytext,
+    .stack_message_para{
+        font-size:14px;
+    }
+    .revision_tfoot_item,
+    .revision_btn_row{padding:0 15px;}
 }
