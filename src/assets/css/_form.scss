@@ -82,7 +82,7 @@ border:1px solid #ccc; border-radius:5px; display:flex; justify-content: center;
 .count_number{font-size:18px;}
 
 .box_props_group{
-    display:flex; gap:5px; height:50px; max-width:125px;
+    display:flex; gap:5px; height:50px; max-width:125px; box-sizing: border-box;
 }
 .box_props_cols{
     flex:1; position:relative; display:flex; align-items: center; justify-content: center;
@@ -92,7 +92,7 @@ input.box_props_form{
     &:checked + .box_props_label{background:#455267; border-color:#455267; color:#fff;}
 }
 .box_props_label{
-    border:1px solid #ccc; cursor: pointer; border-radius:5px; display:block; min-height:100%; position:absolute;top:0;left:0;width:100%;display:flex; justify-content: center; align-items: center; @include font(16px,400,1,#4e4e4e);
+    border:1px solid #ccc; cursor: pointer; border-radius:5px; display:block; min-height:100%; position:absolute;top:0;left:0;width:100%;display:flex; justify-content: center; align-items: center; box-sizing:border-box; @include font(16px,400,1,#4e4e4e);
 }
 .box_textarea_wrap{
     font-size:0;line-height:0;
@@ -250,7 +250,7 @@ input.box_props_form{
     &.mbtype4{margin-bottom:50px;}
 }
 .box_stack_list{
-    display:flex; gap:15px; justify-content: center; margin:0 -7.5px;
+    display:flex; gap:15px; justify-content: center; margin:0 -7.5px; flex-wrap:wrap;
     > li{ flex:0 0 calc(25% - 15px);}
 }
 .box_stack_item{
@@ -393,4 +393,48 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
     }
     .revision_tfoot_item,
     .revision_btn_row{padding:0 15px;}
+
+    .box_stack_wrap{margin-bottom:30px;}
+    .cb_current_notice{font-size:14px;}
+
+    
+    .tile_form_list{
+         .btn_vertex_wrap{margin-top:20px;}
+    }
+
+
+
+        
+    .note_card_box{padding:15px; margin-bottom:20px;}
+    .note_card_title{font-size:14px;}
+    .note_card_cont{
+        .indent_node_list{font-size:14px;}
+    }
+
+    .tile_sub_block_wrap{margin-top:30px;}
+    .tile_sub_block{
+        margin-bottom:20px;
+    }
+    .tile_sub_title{font-size:14px;}
+    .tile_sub_else_wrap{
+         gap:5px;
+    }
+
+    .field_grid_wrap{}
+    .field_grid_list{
+        display:flex; flex-wrap:wrap; gap:5px 0; margin-right:0;
+        > li{
+            flex:0 0 100%; display:flex; flex-direction: column;
+        }
+    }
+    .field_grid_slice{
+        gap:10px; padding:15px 15px;
+    }
+    .grid_keyword{font-size:14px;}
+    .amount_price_dom{
+        .value_number{font-size:16px;}
+        .value_unit{font-size:14px;}
+    }
+    input.amount_input{ font-size:14px; } 
+
 }

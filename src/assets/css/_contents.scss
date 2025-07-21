@@ -3453,7 +3453,7 @@ input.props_box_form{
 
 .indent_node_list{
     @include font(14px,400,#4e4e4e);
-    > li{display:flex;
+    > li{display:flex; gap:5px;
         margin-bottom:5px;
         &:last-of-type{margin-bottom:0;}
     }

@@ -4468,6 +4468,7 @@ span.ui-datepicker-month {
 .btn_rego_list {
   display: flex;
   gap: 5px;
+  flex-wrap: wrap;
 }
 .btn_rego {
   display: inline-block;
@@ -4539,9 +4540,10 @@ span.ui-datepicker-month {
   }
   .btn_vertex {
     min-width: 200px;
+    max-width: calc(50% - 5px);
   }
-  .btn_vertex.small {
-    min-width: 100px;
+  .btn_vertex.small .text_node {
+    font-size: 16px;
   }
 }
 @media (max-width: 1023px) {
@@ -4583,6 +4585,17 @@ span.ui-datepicker-month {
   .btn_square .text_node {
     font-size: 14px;
   }
+  .btn_rego {
+    font-size: 11px;
+    padding: 3px 10px 4px;
+  }
+  .btn_rego.size2 {
+    padding: 2px 10px 3px;
+    font-size: 12px;
+  }
+  .form_contblock_list > li {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 767px) {
   .btn_vertex {
@@ -4590,9 +4603,14 @@ span.ui-datepicker-month {
     min-height: 45px;
     gap: 5px;
     flex: 1;
+    max-width: 100%;
+  }
+  .btn_vertex:only-of-type {
+    max-width: calc(50% - 5px) !important;
   }
   .btn_vertex.small {
     min-width: 0;
+    max-width: 100%;
   }
   .btn_vertex .text_node {
     font-size: 16px;
@@ -5550,6 +5568,61 @@ select.cir_select:disabled {
     font-size: 13px;
   }
 }
+@media (max-width: 767px) {
+  .product_slice_data .slice_name_row {
+    gap: 5px;
+    margin-bottom: 5px;
+    flex-direction: column;
+    align-items: normal;
+  }
+  .respond_tb {
+    display: block;
+  }
+  .respond_tb thead {
+    display: none;
+  }
+  .respond_tb tbody {
+    display: block;
+    border-top: 1px solid #e7e7e7;
+  }
+  .respond_tb tbody tr {
+    display: block;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 15px 10px 5px;
+  }
+  .respond_tb tbody tr:first-of-type td {
+    padding-top: 0;
+  }
+  .respond_tb tbody tr:last-of-type {
+    border-bottom: 0;
+  }
+  .respond_tb tbody tr:last-of-type td {
+    padding-bottom: 10px;
+  }
+  .respond_tb tbody tr td {
+    display: block;
+    padding: 0 0 10px;
+  }
+  .respond_td_obj {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+  .respond_td_obj dt {
+    display: block;
+  }
+  .respond_td_obj .td_key {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #2b2b2b;
+  }
+  .respond_td_obj .td_value {
+    font-size: 14px;
+  }
+}
 .product_slice_data_wrap + .tile_form_wrap {
   margin-top: 60px;
 }
@@ -5733,6 +5806,7 @@ input.form_input::placeholder {
   gap: 5px;
   height: 50px;
   max-width: 125px;
+  box-sizing: border-box;
 }
 
 .box_props_cols {
@@ -5770,6 +5844,7 @@ input.box_props_form:checked + .box_props_label {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
@@ -6072,6 +6147,7 @@ input.box_props_form:checked + .box_props_label {
   gap: 15px;
   justify-content: center;
   margin: 0 -7.5px;
+  flex-wrap: wrap;
 }
 .box_stack_list > li {
   flex: 0 0 calc(25% - 15px);
@@ -6413,6 +6489,64 @@ input.amount_input {
   .revision_tfoot_item,
 .revision_btn_row {
     padding: 0 15px;
+  }
+  .box_stack_wrap {
+    margin-bottom: 30px;
+  }
+  .cb_current_notice {
+    font-size: 14px;
+  }
+  .tile_form_list .btn_vertex_wrap {
+    margin-top: 20px;
+  }
+  .note_card_box {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .note_card_title {
+    font-size: 14px;
+  }
+  .note_card_cont .indent_node_list {
+    font-size: 14px;
+  }
+  .tile_sub_block_wrap {
+    margin-top: 30px;
+  }
+  .tile_sub_block {
+    margin-bottom: 20px;
+  }
+  .tile_sub_title {
+    font-size: 14px;
+  }
+  .tile_sub_else_wrap {
+    gap: 5px;
+  }
+  .field_grid_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 0;
+    margin-right: 0;
+  }
+  .field_grid_list > li {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .field_grid_slice {
+    gap: 10px;
+    padding: 15px 15px;
+  }
+  .grid_keyword {
+    font-size: 14px;
+  }
+  .amount_price_dom .value_number {
+    font-size: 16px;
+  }
+  .amount_price_dom .value_unit {
+    font-size: 14px;
+  }
+  input.amount_input {
+    font-size: 14px;
   }
 }
 /* contents */
@@ -14307,6 +14441,7 @@ input.props_box_form:checked {
 }
 .indent_node_list > li {
   display: flex;
+  gap: 5px;
   margin-bottom: 5px;
 }
 .indent_node_list > li:last-of-type {
