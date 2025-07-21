@@ -6376,7 +6376,7 @@ input.amount_input {
   }
   .box_props_group {
     height: 40px;
-    max-width: 100%;
+    max-width: 108.34px;
   }
   input.box_props_form {
     height: 40px;
@@ -6491,7 +6491,7 @@ input.amount_input {
     padding: 0 15px;
   }
   .box_stack_wrap {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
   .cb_current_notice {
     font-size: 14px;
@@ -6519,7 +6519,7 @@ input.amount_input {
     font-size: 14px;
   }
   .tile_sub_else_wrap {
-    gap: 5px;
+    gap: 10px;
   }
   .field_grid_list {
     display: flex;
