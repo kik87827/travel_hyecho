@@ -922,3 +922,33 @@ function fieldboxGridFunc() {
     }
   }
 }
+
+function responThFunc(targets) {
+  // 문자열이면 배열로 변환
+  const targetArray = typeof targets === "string" ? [targets] : targets;
+
+  const $elements = targetArray.map((selector) => $(selector)).filter(Boolean);
+
+  action(); // 초기 실행
+  $(window).on("resize", action); // 리사이즈 대응
+
+  function action() {
+    $elements.forEach(($fieldset) => {
+      $fieldset.each(function () {
+        const $thisTb = $(this);
+        const $thisThText = $thisTb.find(".d_label_text");
+        const $thisThCols = $thisTb.find(".d_label_cols");
+        console.log($thisThText, $thisThCols);
+        let $thisMaxArray = [];
+        $thisThCols.css("flex-basis", "");
+
+        if ($(window).width() <= 1023) {
+          $thisThText.each(function () {
+            $thisMaxArray.push($(this).outerWidth());
+          });
+          $thisThCols.css("flex-basis", Math.max.apply(null, $thisMaxArray));
+        }
+      });
+    });
+  }
+}

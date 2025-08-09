@@ -3647,17 +3647,20 @@ input.props_box_form{
 
     .floor_data_item{padding:10px 15px;display:block;}
     .floor_main_cols{border:0;padding:0 0 10px 0; border-bottom:1px solid #d8e9ff;}
-    .floor_summary_cols{padding:10px 0 0; gap:20px;}
+    .floor_summary_cols{padding:10px 0 0; gap:5px;flex-direction: column; align-items: normal;
+    
+        .summary_price_cols{
+            justify-content: flex-start; align-items: center; flex-direction: row; gap:5px 10px; flex-wrap: wrap;
+            .company_text_spec{white-space:nowrap;}
+        }
+    }
     .summary_linkage_list{
         max-width:100%;gap:5px 0; flex-wrap:wrap;
-        > li{flex:0 0 50%; box-sizing: border-box; padding:0 5px;}
+        > li{flex:0 0 25%; box-sizing: border-box; padding:0 5px;}
     }
     .summary_linkage_data{line-height:1.4;font-size:14px;}
     .floor_current_obj{gap:15px;}
     .floor_current_keyword{width:auto;height:auto; border-radius:5px;padding:10px;text-align: center; white-space: nowrap;}
-    .summary_price_cols{
-        .company_text_spec{white-space:nowrap;}
-    }
     .summary_emp_row{
         .price_number{font-size:18px;}
         .price_unit{font-size:14px;}
