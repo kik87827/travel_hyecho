@@ -194,6 +194,14 @@
 										<span class="hgroup_util_text">고객센터</span>
 									</a>
 								</li>
+								<!-- 20250811 추가 -->
+								<li>
+									<a href="#" class="hgroup_util">
+										<i class="ico_hgutil ico_calendar"></i>
+										<span class="hgroup_util_text">실시간 예약현황</span>
+									</a>
+								</li>
+								<!-- // 20250811 추가 -->
 							</ul>
 						</div>
 					</div>
@@ -1180,7 +1188,7 @@
 							<!-- // paging -->
 						</div>
 						<div class="brick_cont">
-							<div class="list_fraction_row">
+							<div class="list_fraction_row align2">
 								<div class="count_cols">
 									<!-- prettier-ignore -->
 									<p class="fraction_count_para">
@@ -1188,15 +1196,22 @@
 									</p>
 								</div>
 								<div class="sort_cols">
-									<div class="sort_barquad_wrap">
-										<ul class="sort_barquad_list">
-											<li><a href="javascript:;" class="sort_barquad active">추천순</a></li>
-											<li><a href="javascript:;" class="sort_barquad">인기순</a></li>
-											<li><a href="javascript:;" class="sort_barquad">평점순</a></li>
-											<li><a href="javascript:;" class="sort_barquad">난이도순</a></li>
-											<li><a href="javascript:;" class="sort_barquad">가격순</a></li>
-										</ul>
-									</div>
+									<!-- 20250811 변경 -->
+									<select required class="form_select" data-pcwid="200px" style="width: 200px">
+										<option value="" disabled selected hidden>선택하세요</option>
+										<option value="1">옵션1</option>
+										<option value="2">옵션2</option>
+									</select>
+									<!-- // 20250811 변경 -->
+									<!-- <div class="sort_barquad_wrap">
+                      <ul class="sort_barquad_list">
+                        <li><a href="javascript:;" class="sort_barquad active">추천순</a></li>
+                        <li><a href="javascript:;" class="sort_barquad">인기순</a></li>
+                        <li><a href="javascript:;" class="sort_barquad">평점순</a></li>
+                        <li><a href="javascript:;" class="sort_barquad">난이도순</a></li>
+                        <li><a href="javascript:;" class="sort_barquad">가격순</a></li>
+                      </ul>
+                    </div> -->
 								</div>
 							</div>
 							<div class="imagethumnail_wrap">
@@ -1232,16 +1247,18 @@
 												<div class="caption_row">
 													<p class="it_caption_para">‘풍요의 여신’ 안나푸르나를 가장 빨리 만나는 방법! 히말라야의 감동을 한번에 느끼는 코스입니다. ‘풍요의 여신’ 안나푸르나를 가장 빨리 만나는 방법! 히말라야의 감동을 한번에 느끼는 코스입니다..</p>
 												</div>
+												<!-- 20250811 pc/mb 나눔 -->
 												<div class="keyword_subtag_wrap">
 													<ul class="keyword_subtag_list">
 														<li><span class="subtagbox">클래식루트</span></li>
 														<li><span class="subtagbox">보통/아주어려움</span></li>
-														<li><span class="subtagbox">5 ~ 20 km/일</span></li>
-														<li><span class="subtagbox">4시간소요/일</span></li>
-														<li><span class="subtagbox">전용버스</span></li>
+														<li class="mb_hidden"><span class="subtagbox">5 ~ 20 km/일</span></li>
+														<li class="mb_hidden"><span class="subtagbox">4시간소요/일</span></li>
+														<li class="mb_hidden"><span class="subtagbox">전용버스</span></li>
 														<li><span class="subtagbox">롯지</span></li>
 													</ul>
 												</div>
+												<!-- // 20250811 pc/mb 나눔 -->
 												<div class="eval_tag_row">
 													<span class="star_eval_text">
 														<i class="ico"></i>
@@ -1304,16 +1321,18 @@
 												<div class="caption_row">
 													<p class="it_caption_para">‘풍요의 여신’ 안나푸르나를 가장 빨리 만나는 방법! 히말라야의 감동을 한번에 느끼는 코스입니다. ‘풍요의 여신’ 안나푸르나를 가장 빨리 만나는 방법! 히말라야의 감동을 한번에 느끼는 코스입니다..</p>
 												</div>
+												<!-- 20250811 pc/mb 나눔 -->
 												<div class="keyword_subtag_wrap">
 													<ul class="keyword_subtag_list">
 														<li><span class="subtagbox">클래식루트</span></li>
 														<li><span class="subtagbox">보통/아주어려움</span></li>
-														<li><span class="subtagbox">5 ~ 20 km/일</span></li>
-														<li><span class="subtagbox">4시간소요/일</span></li>
-														<li><span class="subtagbox">전용버스</span></li>
+														<li class="mb_hidden"><span class="subtagbox">5 ~ 20 km/일</span></li>
+														<li class="mb_hidden"><span class="subtagbox">4시간소요/일</span></li>
+														<li class="mb_hidden"><span class="subtagbox">전용버스</span></li>
 														<li><span class="subtagbox">롯지</span></li>
 													</ul>
 												</div>
+												<!-- // 20250811 pc/mb 나눔 -->
 												<div class="eval_tag_row">
 													<span class="star_eval_text">
 														<i class="ico"></i>
@@ -1420,6 +1439,21 @@
 									<!-- <li class="nodata_li"><p class="nodata_para">데이터가 없습니다.</p></li> -->
 								</ul>
 							</div>
+							<!-- paging -->
+							<div class="paging_wrap">
+								<a href="#" class="btn_paging_control prev_first"><span class="hdtext">처음</span></a>
+								<a href="#" class="btn_paging_control prev_go"><span class="hdtext">이전</span></a>
+								<ul class="paging_num_list">
+									<li><a href="#" class="paging_num active">1</a></li>
+									<li><a href="#" class="paging_num">2</a></li>
+									<li><a href="#" class="paging_num">3</a></li>
+									<li><a href="#" class="paging_num">4</a></li>
+									<li><a href="#" class="paging_num">5</a></li>
+								</ul>
+								<a href="#" class="btn_paging_control next_go"><span class="hdtext">다음</span></a>
+								<a href="#" class="btn_paging_control next_last"><span class="hdtext">끝</span></a>
+							</div>
+							<!-- // paging -->
 						</div>
 					</div>
 				</div>
@@ -1663,6 +1697,10 @@
 					});
 				}
 			}
+
+			$(function() {
+				responWidFunc();
+			});
 		</script>
 		<footer class="footer_wrap">
 			<div class="btn_pagetop_wrap">
@@ -1742,11 +1780,28 @@
 							</p>
 						</div>
 						<div class="foot_info_block">
+							<!-- 20250811 아이콘 추가 -->
 							<ul class="foot_info_slice_list">
-								<li>문화·역사탐방 : 02.733.3900</li>
-								<li>트레킹 : 02.6263.2000</li>
-								<li>항공권 : 02.6263.3900</li>
+								<li>
+									<p class="foot_info_sitem">
+										<span class="text_node">문화·역사탐방 : 02.733.3900</span>
+										<i class="ico kakao"></i>
+									</p>
+								</li>
+								<li>
+									<p class="foot_info_sitem">
+										<span class="text_node">트레킹 : 02.6263.2000</span>
+										<i class="ico kakao"></i>
+									</p>
+								</li>
+								<li>
+									<p class="foot_info_sitem">
+										<span class="text_node">항공권 : 02.6263.3900</span>
+										<i class="ico kakao"></i>
+									</p>
+								</li>
 							</ul>
+							<!-- // 20250811 아이콘 추가 -->
 						</div>
 						<div class="foot_info_block">
 							<ul class="btn_tin_list">
