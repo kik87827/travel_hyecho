@@ -441,7 +441,7 @@ input.input_search{flex:1;background:none;border:0;padding:0 20px;box-sizing: bo
     .text_node{@include font(14px,400,1,#4e4e4e);}
 }
 .foot_vertical_menu_wrap{white-space:nowrap;}
-.footer_vmenu_title{@include font(17px,500,1,#4e4e4e); margin-bottom:15px;}
+.footer_vmenu_title{@include font(17px,500,1,#4e4e4e); margin-bottom:30px;}
 .footer_vmenu_list{
     >li{
          margin-bottom:12px;
