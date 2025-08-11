@@ -2220,7 +2220,7 @@ input.input_search {
   margin-bottom: 35px;
   text-align: center;
 }
-.single_message_row .ico_row .ico {
+.single_message_row .ico {
   width: 45px;
   height: 45px;
   background-repeat: no-repeat;
@@ -2230,14 +2230,17 @@ input.input_search {
   border-radius: 100%;
   margin: 0 auto 10px;
 }
-.single_message_row .ico_row .ico.check {
+.single_message_row .ico.check {
   background-image: url("../images/ico_finish_check_45.png");
 }
-.single_message_row .ico_row .ico.docu {
+.single_message_row .ico.docu {
   background-image: url("../images/ico_top_docu_45.png");
 }
-.single_message_row .ico_row .ico.bg_red {
+.single_message_row .ico.bg_red {
   background-color: #f84242;
+}
+.single_message_row .ico.ico_mb {
+  display: none;
 }
 .single_main_message {
   font-size: 24px;
@@ -2274,6 +2277,25 @@ input.input_search {
   }
   .single_message_row {
     margin-bottom: 25px;
+  }
+  .single_message_row .ico {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+  }
+  .single_message_row .ico.ico_mb {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    top: -1px;
+  }
+  .single_message_row .ico_row {
+    display: none;
+  }
+  .single_main_mes_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
   .single_title_row {
     margin-bottom: 25px;
