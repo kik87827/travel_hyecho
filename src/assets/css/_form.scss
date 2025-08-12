@@ -217,7 +217,7 @@ input.box_props_form{
 }
 .revision_keytext{display:inline-block; @include font(16px,400,1,#2b2b2b);}
 .revision_tfoot_row{
-    border-top:1px solid #e7e7e7; padding-top:20px;
+    border-top:1px solid #e7e7e7; padding-top:20px; margin-top:15px;
    .revision_price_dom{
         .value_number{}
         .value_unit{}
