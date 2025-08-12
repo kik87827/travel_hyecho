@@ -47,7 +47,7 @@ input.form_input{
     height:50px; flex:1; width:100%; line-height:1; appearance: none; border:1px solid #ccc; border-radius:5px; @include font(15px,400,1,#2b2b2b); padding:0 20px; box-sizing: border-box;
     &.ptype2{padding:0 10px;}
     &.align_center{text-align: center;}
-    &:disabled{}
+    &:disabled{background:#FAFAFA;}
     &::placeholder{color:#b5b5b5;}
 }
 .form_count_box{

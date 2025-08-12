@@ -5782,6 +5782,9 @@ input.form_input.ptype2 {
 input.form_input.align_center {
   text-align: center;
 }
+input.form_input:disabled {
+  background: #FAFAFA;
+}
 input.form_input::-moz-placeholder {
   color: #b5b5b5;
 }
