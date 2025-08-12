@@ -6145,8 +6145,6 @@ input.box_props_form:checked + .box_props_label {
 }
 
 .revision_tfoot_row {
-  border-top: 1px solid #e7e7e7;
-  padding-top: 20px;
   margin-top: 15px;
 }
 .revision_tfoot_item {
