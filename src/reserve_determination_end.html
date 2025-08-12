@@ -311,12 +311,12 @@
                           </div>
                         </div>
                         <div class="revision_btn_row">
-                          <a href="#" class="btn_folding_box" data-target="#folding_target">
-                            <span class="text_node">상세보기</span>
+                          <a href="#" class="btn_folding_box active" data-target="#folding_target">
+                            <span class="text_node">접기</span>
                             <i class="ico"></i>
                           </a>
                         </div>
-                        <div class="revision_detail_row type3" id="folding_target" style="display: none">
+                        <div class="revision_detail_row type3" id="folding_target" style="display: block">
                           <ul class="revision_detail_list">
                             <li>
                               <div class="revision_detail_item type2">
@@ -487,7 +487,7 @@
         $(function () {
           $(".btn_folding_box").each(function () {
             var $thisBtn = $(this);
-            var $toggleBoolean = false;
+            var $toggleBoolean = true;
             $thisBtn.on("click", function (e) {
               e.preventDefault();
               var $thisEvent = $(this);
