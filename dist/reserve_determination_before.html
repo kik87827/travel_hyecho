@@ -1044,11 +1044,11 @@
 								되었습니다.
 							</h2>
 						</div>
-						<p class="single_sub_message">
-							<span class="red_emp">2025.08.23일</span>
-							까지 중도금을 입금해주세요
-						</p>
 					</div>
+					<p class="single_sub_message">
+						<span class="red_emp">2025.08.23일</span>
+						까지 잔금을 입금해주세요
+					</p>
 				</div>
 				<!-- // 250811 디자인 이슈 구조변경 -->
 				<div class="single_contents">
@@ -1347,6 +1347,12 @@
 								<div class="tile_form_item">
 									<div class="label_row">
 										<p class="tile_form_label">결제정보</p>
+
+										<div class="tile_sub_else_wrap">
+											<ul class="btn_rego_list">
+												<li><a href="#" class="btn_rego size2 skin2">환불규정보기</a></li>
+											</ul>
+										</div>
 									</div>
 									<div class="form_row">
 										<div class="revision_spec_wrap">
@@ -1362,12 +1368,54 @@
 												</div>
 											</div>
 											<div class="revision_btn_row">
-												<a href="#" class="btn_folding_box active" data-target="#folding_target">
-													<span class="text_node">접기</span>
+												<a href="#" class="btn_folding_box" data-target="#folding_target">
+													<span class="text_node">상세보기</span>
 													<i class="ico"></i>
 												</a>
 											</div>
-											<div class="revision_detail_row type3" id="folding_target" style="display: block">
+											<div class="revision_detail_row type3" id="folding_target" style="display: none">
+												<ul class="revision_detail_list">
+													<li>
+														<div class="revision_detail_item">
+															<div class="key_cols"><span class="revision_keytext">성인</span></div>
+															<div class="value_cols">
+																<span class="revision_price_dom sm_type2">
+																	<span class="value_number">105,000</span>
+																	<span class="value_unit">원</span>
+																</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="revision_detail_item">
+															<div class="key_cols"><span class="revision_keytext">아동</span></div>
+															<div class="value_cols">
+																<p class="revision_value_node">별도안내</p>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="revision_detail_item">
+															<div class="key_cols"><span class="revision_keytext">유아</span></div>
+															<div class="value_cols">
+																<p class="revision_value_node">별도안내</p>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="revision_detail_item">
+															<div class="key_cols"><span class="revision_keytext">프로모션할인</span></div>
+															<div class="value_cols">
+																<span class="revision_price_dom sm_type2">
+																	<span class="value_number">-2,000,000</span>
+																	<span class="value_unit">원</span>
+																</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="revision_detail_row type4">
 												<ul class="revision_detail_list">
 													<li>
 														<div class="revision_detail_item type2">
@@ -1522,11 +1570,6 @@
 										<div class="tile_sub_block">
 											<div class="tile_sub_title_row">
 												<p class="tile_sub_title">결제하기</p>
-												<div class="tile_sub_else_wrap">
-													<ul class="btn_rego_list">
-														<li><a href="#" class="btn_rego size2 skin2">환불규정보기</a></li>
-													</ul>
-												</div>
 											</div>
 											<div class="tile_sub_contents">
 												<div class="field_grid_wrap">
@@ -1588,7 +1631,7 @@
 			$(function() {
 				$(".btn_folding_box").each(function() {
 					var $thisBtn = $(this);
-					var $toggleBoolean = true;
+					var $toggleBoolean = false;
 					$thisBtn.on("click", function(e) {
 						e.preventDefault();
 						var $thisEvent = $(this);

@@ -440,11 +440,11 @@
     .se_map_text{}
 }
 .dcalcul_btnbox{
-    margin-top:20px; display:block; background:#fbfbfb;
-    border:1px solid #d7d7d7; border-radius:8px; padding:13px 20px;
+    margin-top:20px; display:block; background:#fbfbfb; 
+    border:1px solid #d7d7d7; border-radius:8px; padding:8px 20px;
 }
 .dcalcul_img_item{
-display:flex; align-items: center; gap:10px;
+display:flex; align-items: center; gap:10px; justify-content: center;
 }
 .dcalcul_img{
     flex:0 0 24px; width:24px; height:24px;
@@ -570,7 +570,7 @@ display:flex; align-items: center; gap:10px;
 .dcc_pd_else{font-size:13px;color:#999;letter-spacing: -0.8px;}
 
 .dcc_pd_price_g{display:flex;align-items: center;color:#176bdd;line-height:0;}
-.dcc_price_value{font-size:19px;font-weight:700;line-height:1; color:#176bdd;}
+.dcc_price_value{font-size:22px;font-weight:700;line-height:1; color:#176bdd;}
 .dcc_price_unit{font-size:16px;line-height:1;}
 
 .btn_qus_tooltip{display:inline-flex;border:1px solid #cdcdcd;position:relative;top:1px;border-radius:100%;align-items: center;justify-content: center;width:14px;height:14px;font-size:12px;color:#6d6c6c;line-height:1;}
@@ -869,7 +869,7 @@ select.system_calendar_select{
 .system_calendar_month{font-size:18px;font-weight:500;line-height:1;display:inline-block;letter-spacing: -0.25px;}
 .system_calendar_content_row{}
 .system_calendar_table_wrap{margin-top:20px;}
-.system_calendar_table{width:100%;
+.system_calendar_table{width:100%; table-layout: fixed;
     tbody td{height:60px;}
     .sun,
     .sun .system_calendar_day,
@@ -888,7 +888,7 @@ select.system_calendar_select{
     .flag_dot_layer{width:6px;height:6px;border-radius:100%;position:absolute;top:6px;right:12px;display:inline-block;}
 }
 .system_calendar_day{font-size:18px;color:#333333;line-height:1;font-weight:500;}
-.system_calendar_value{font-size:13px;color:#5f5f5f;margin-top:0;}
+.system_calendar_value{font-size:12px;color:#5f5f5f;margin-top:0;}
 .system_calendar_value.type2{color:#176bdd;}
 .system_calendar_thtext{font-size:18px;color:#333;}
 
@@ -994,10 +994,11 @@ select.system_calendar_select{
     .system_calendar_tditem{max-width:40px;height:40px;}
     .system_calendar_tditem.active{border-radius:5px;}
     .system_calendar_day{font-size:14px;}
-    .system_calendar_value{font-size:11px;}
+    .system_calendar_value{font-size:9px;}
 
     .system_calendar_thtext{font-size:14px;}
 
+    .popup_calendar_render_wrap{padding:20px 10px;}
         
     .btn_system_control{
         display:block;width:20px;height:20px;top:-40px;

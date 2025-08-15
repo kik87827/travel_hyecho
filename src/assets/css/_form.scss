@@ -14,7 +14,7 @@
      }
      
     .btn_vertex_wrap{
-        margin-top:30px;
+        margin-top:30px; text-align: center; justify-content: center;
     }
 }
 .tile_form_item{
@@ -197,6 +197,15 @@ input.box_props_form{
         .revision_detail_list{padding:10px 20px;
             > li{
                 margin-bottom:12px;
+            }
+        }
+    }
+    &.type4{
+        margin-top:0; border-top:0;
+        .revision_detail_list{padding:15px 20px;
+            > li{
+                margin-bottom:12px;
+                &:last-of-type{margin-bottom:0;}
             }
         }
     }
@@ -399,7 +408,9 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
 
     
     .tile_form_list{
-         .btn_vertex_wrap{margin-top:20px;}
+         .btn_vertex_wrap{margin-top:20px; align-items: center; justify-content: center;
+            .btn_vertex:only-of-type{max-width: fit-content !important; padding:0 30px;}
+        }
     }
 
 
