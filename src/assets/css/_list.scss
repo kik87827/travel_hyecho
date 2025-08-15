@@ -191,7 +191,7 @@
         .btn_rego_list{}
     }
     .slice_summary_01_row{display:flex; flex-wrap:wrap; gap:15px; align-items: center}
-    .slice_summary_02_row{margin-top:10px;}
+    .slice_summary_02_row{margin-top:0; display:flex; flex-wrap:wrap; gap:15px; justify-content: space-between ; align-items: center}
     .slice_word{@include font(14px,400,1,#333); display:inline-block;}
     .company_text_item{position:relative;top:1px;}
     .word_brief_list{}
@@ -307,12 +307,12 @@
             img{width:16px;height:16px;}
          }
          .slice_summary_01_row{gap:5px;}
-         .slice_summary_02_row{margin-top:5px;}
+         .slice_summary_02_row{margin-top:8px; flex-direction: column; gap:5px 0; justify-content: flex-start; align-items: flex-start;}
          .slice_name{font-size:14px;}
          .company_text_spec,
         .slice_word{font-size:12px;}
     }
-    .word_brief_list{gap:5px;}
+    .word_brief_list{gap:5px; flex-direction: column;}
     .word_brief{font-size:13px;}
 }
 

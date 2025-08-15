@@ -5424,7 +5424,12 @@ select.cir_select:disabled {
   align-items: center;
 }
 .product_slice_data .slice_summary_02_row {
-  margin-top: 10px;
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
 }
 .product_slice_data .slice_word {
   font-size: 14px;
@@ -5629,7 +5634,11 @@ select.cir_select:disabled {
     gap: 5px;
   }
   .product_slice_data .slice_summary_02_row {
-    margin-top: 5px;
+    margin-top: 8px;
+    flex-direction: column;
+    gap: 5px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .product_slice_data .slice_name {
     font-size: 14px;
@@ -5640,6 +5649,7 @@ select.cir_select:disabled {
   }
   .word_brief_list {
     gap: 5px;
+    flex-direction: column;
   }
   .word_brief {
     font-size: 13px;
