@@ -632,6 +632,10 @@
 .viewer_lk_brick{
     background:#fff; border-radius:10px; margin-bottom:17px;
     &:last-of-type{margin-bottom:0;}
+    > .flag_row{
+        display:flex; justify-content: space-between; align-items: center; padding:25px 30px 0;
+        & + .top_row{padding-top:10px;}
+    }
     > .top_row{
         display:flex; justify-content: space-between; align-items: center; gap:20px; padding:25px 30px 0;
         .main_cols{}
@@ -645,6 +649,7 @@
         .btn_action_text{}
     }
 }
+.card_flag_item{display:inline-block; white-space: nowrap; height:28px; line-height:28px;background:#006de1;padding:0 15px; border-radius: 5px; color:#fff;}
 .lk_dp_list{
     display:flex; gap:5px 10px; align-items:center; flex-wrap:wrap;
     > li{}
@@ -667,6 +672,9 @@
 .viewer_lkphoto_item{
     height:0;padding-bottom:100%; position:relative; display:block;
     > img{@include dataImage2}
+}
+.section_review_lk_util{
+    margin-bottom:5px;
 }
 .section_review_lk_render{
     @include font(15px,350,1.5,#4e4e4e);
@@ -726,6 +734,12 @@
     }
     .viewer_lk_brick{
         margin-bottom:10px;
+        
+
+        .main_cols{display:flex; justify-content: space-between; align-items: center;}
+        > .flag_row{padding:15px 15px 0;
+            & + .top_row{padding:10px 15px 0;}
+        }
         > .top_row{
             display:block;padding:15px 15px 0;
             .main_cols{}
@@ -739,9 +753,14 @@
             .btn_action_text{}
         }
     }
+    .card_flag_item{line-height:20px;height:20px;padding:0 10px; font-size:12px;}
     .lk_dp_list{
         display:flex; gap:5px 10px; align-items:center; flex-wrap:wrap;
-        > li{}
+        > li{
+            &.mb_item{
+                .objwho_slice_item{top:0;}
+            }
+        }
         .eval_count_node{}
     }
     .lk_info_text{font-size:13px;}
@@ -752,11 +771,12 @@
         dd{font-size:13px;}
     }
     .viewer_lkphoto_wrap{
-
+        overflow:hidden; overflow-x:auto;
+        &::-webkit-scrollbar{width:0;display:none;}
     }
     .viewer_lkphoto_list{
-        gap:5px; flex-wrap:wrap;margin:0 -5px 0 0;
-        > li{flex:0 0 calc(25% - 5px);}
+        gap:5px;margin:0 -5px 0 0; flex-wrap:nowrap;
+        > li{flex:0 0 25vw}
     }
     .viewer_lkphoto_item{
         height:0;padding-bottom:100%; position:relative; display:block;
@@ -775,12 +795,17 @@
             .text_node{}
         }
     }
-    .reply_box_group{padding:10px;}
+    .reply_box_group{padding:0 10px 10px;}
     .reply_box{
         padding:10px;
         .data_row{font-size:13px;}
     }
     .reply_who{font-size:13px;}
     .reply_who_sub{font-size:12px;}
+}
+@media (max-width:$mobile){
+    .viewer_lkphoto_list{
+        > li{flex:0 0 20vw}
+    }
 }
 /* // 여행후기 */

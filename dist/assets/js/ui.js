@@ -998,3 +998,53 @@ function responWidFunc() {
     }
   }
 }
+
+function dragScrollX(selector) {
+  var isTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  if (isTouch) return; // 터치모드는 기본 스크롤
+  if ($(window).width() > 1023) {
+    return;
+  }
+  $(selector).each(function() {
+    var $el = $(this);
+    var isDown = false;
+    var startX, scrollLeft;
+    var moved = false;
+
+    $el.css("cursor", "grab");
+
+    $el.on("mousedown.dragScroll", function(e) {
+      if (e.button !== 0) return;
+      isDown = true;
+      moved = false;
+      $el.css("cursor", "grabbing");
+      startX = e.pageX;
+      scrollLeft = $el.scrollLeft();
+      e.preventDefault();
+    });
+
+    $(document).on("mousemove.dragScroll", function(e) {
+      if (!isDown) return;
+      var dx = e.pageX - startX;
+      if (Math.abs(dx) > 5) moved = true;
+      $el.scrollLeft(scrollLeft - dx);
+    });
+
+    $(document).on("mouseup.dragScroll mouseleave.dragScroll", function() {
+      if (isDown) {
+        isDown = false;
+        $el.css("cursor", "grab");
+      }
+    });
+
+    // a태그 처리
+    $el.find("a").on("click", function(e) {
+      if ($(this).attr("href") === "#") {
+        e.preventDefault();
+      }
+      if (moved) {
+        e.preventDefault(); // 드래그 후 클릭 방지
+      }
+    });
+  });
+}
