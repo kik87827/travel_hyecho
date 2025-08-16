@@ -191,7 +191,9 @@
         .btn_rego_list{}
     }
     .slice_summary_01_row{display:flex; flex-wrap:wrap; gap:15px; align-items: center}
-    .slice_summary_02_row{margin-top:0; display:flex; flex-wrap:wrap; gap:15px; justify-content: space-between ; align-items: center}
+    .slice_summary_02_row{margin-top:0; display:flex; flex-wrap:wrap; gap:15px; justify-content: space-between ; align-items: center;
+        &.mt_type2{margin-top:10px;}
+    }
     .slice_word{@include font(14px,400,1,#333); display:inline-block;}
     .company_text_item{position:relative;top:1px;}
     .word_brief_list{}

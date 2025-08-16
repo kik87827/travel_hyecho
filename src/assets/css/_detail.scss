@@ -208,6 +208,10 @@
  }
  .keyword_indent_bullet{flex:0; white-space: nowrap; @include font(16px,500,1,#2b2b2b);}
  .keyword_indent_liquid{}
+ .word_inflex_inline_wrap{
+    display:flex; gap:10px;
+    .keyword_indent_bullet{position:relative;top:-2px;}
+ }
  .word_inflex_list{
     display:flex; gap:15px; align-items: center; line-height:0; position:relative; top:-2px;
     > li{
@@ -226,11 +230,11 @@
         &:last-of-type{}
     }
  }
+ .airplane_flex_keyword{display:none;}
  .airplane_flex_container{
     display:flex; flex-wrap:wrap;
     .text_cols{}
     .icon_cols{
-        padding:0 8px;
         .ico{width:20px;height:20px; background:url("../images/ico_map_airplane.png") no-repeat 0 0/100% auto;}
     }
  }
@@ -335,24 +339,24 @@
 }
 
 @media (max-width:$tablet){
-    .keyword_indent_block_list{
+    /* .keyword_indent_block_list{
         > li{
             flex-direction: column;
             .keyword_indent_bullet,
             .keyword_indent_liquid{flex:0;}
         }
-    }
+    } */
     .airplane_flex_container{
         .icon_cols{
             .ico{position:relative;top:-2px;}
         }
-        .text_cols{
+        /* .text_cols{
             &.mb_text_long{flex:0 0 100%;}
-        }
+        } */
     }
     .airplane_mapline_list{
         > li{
-            margin-bottom:20px;
+            margin-bottom:10px;
             &:last-of-type{margin-bottom:0;}
         }
     }
@@ -510,7 +514,15 @@
              img{width:14px;height:14px;}
         }
     }
+    .wordslice_list{
+        > li{ margin-bottom:0;}
+    }
+    .airplane_flex_zone{
+        display:flex; gap:5px;
+    }
+    .airplane_flex_keyword{display:inline-block; @include font(12px,350,1,#5f5f5f); position:relative; top:2px; white-space: nowrap;}
     .airplane_flex_container{
+        gap:5px 10px;
          .icon_cols{
              .ico{top:1px; width:16px;height:16px;}
          }
@@ -566,7 +578,11 @@
     .tab_contents_inner{padding:30px 20px;}
     .btn_baguette{font-size:13px; padding:0 15px;}
 
-    .wordslice_obj{top:2px}
+    .wordslice_obj{top:1px; gap:3px;
+        &.type2{
+            top:0;
+        }
+    }
 }
 
 /* 여행후기 */
