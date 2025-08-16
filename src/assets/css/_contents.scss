@@ -214,7 +214,6 @@
         margin:0 -20px;
     } */
     .sticky_tabs_inner_wrap{
-        opacity:0; 
         &.fixed{
             opacity:1;
             .sticky_tabs_inner{margin:0 30px;display:block;}
@@ -232,7 +231,7 @@
 }
 
 @media (max-width:1023px){
-    .sticky_tabs_container_zone{min-height:0px !important;height:30px !important;
+    .sticky_tabs_container_zone{
         &.mb_show_type{
             min-height: 50px !important; height:50px !important;
             .sticky_tabs_inner_wrap{opacity:1;}
@@ -684,8 +683,27 @@ display:flex; align-items: center; gap:10px; justify-content: center;
     }
     .tabc_item{padding:30px 0;}
     .btn_action_box{font-size:13px;min-height:25px;padding:5px 10px 6px;}
-}
 
+    .count_fraction_node{font-size:13px; padding:0 8px;  text-align: center; white-space: nowrap;}
+    .count_number{font-size:14px;}
+    .form_count_box{
+        min-height:40px;border-radius:3px; padding:0 4px;
+        .btn_inde_control{width:20px;height:20px;flex:0 0 20px;}
+    }
+    .btn_inde_control{
+        &:before, &:after{height:10px; margin-top:-5px;}
+    }
+}
+@media (max-width:374px){
+    .form_count_box{
+        .btn_inde_control{width:18px;height:18px;flex:0 0 18px;}
+    }
+    .btn_inde_control{
+        &:before, &:after{height:8px; margin-top:-4px;}
+    }
+    .count_fraction_node{font-size:12px;padding:0 7px;}
+    .count_number{font-size:12px;}
+}
 
 /* 모바일 하단 */
 .mb_bottom_layer{position:fixed;bottom:0;left:0;width:100%;z-index:50;display:none;}

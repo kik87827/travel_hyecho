@@ -43,6 +43,11 @@
     display:flex; gap:10px 15px; flex-wrap:wrap; margin:0 -15px 0 0;
     > li{flex:0 0 calc(33.333333333% - 15px);}
 }
+.formdom_inner_wrap{
+    display:flex; align-items: center; gap:5px;
+    .long_type{flex:1;gap:5px;}
+    .box_props_group.mb_group{display:none; min-width:108px;}
+}
 input.form_input{
     height:50px; flex:1; width:100%; line-height:1; appearance: none; border:1px solid #ccc; border-radius:5px; @include font(15px,400,1,#2b2b2b); padding:0 20px; box-sizing: border-box;
     &.ptype2{padding:0 10px;}
@@ -83,6 +88,9 @@ border:1px solid #ccc; border-radius:5px; display:flex; justify-content: center;
 
 .box_props_group{
     display:flex; gap:5px; height:50px; max-width:125px; box-sizing: border-box;
+    &.pc_group{
+        display:flex;
+    }
 }
 .box_props_cols{
     flex:1; position:relative; display:flex; align-items: center; justify-content: center;
@@ -335,18 +343,24 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
     .formdom_linked_list{
         flex-direction: column; align-items: normal; justify-content: flex-start; margin:0;
         gap:5px;
+        &.no_break{
+            flex-direction: row; align-items: center;
+            > li{
+                flex:1;
+            }
+        }
         > li{ flex:none;}
     }
-    .form_count_box{min-height:40px;border-radius:3px;
-        .btn_inde_control{width:24px;height:24px;}
-    }
-    .count_fraction_node{font-size:14px;padding:0 10px;}
-    .count_number{font-size:16px;}
+    
+    
     .contblock_title_row{gap:10px;margin-bottom:10px;
         &.mb_break_type{flex-direction:column; align-items:normal;}
     }
     .cb_title{font-size:14px; white-space:nowrap;}
-    .box_props_group{height:40px;max-width:108.34px;}
+    .box_props_group{height:40px;max-width:108.34px;
+        &.pc_group{display:none !important;}
+        &.mb_group{display:flex !important;}
+    }
     input.box_props_form{height:40px;}
     .box_props_label{border-radius:3px;font-size:13px;}
     .textarea_dom{border-radius:3px; font-size:13px;padding:10px;}

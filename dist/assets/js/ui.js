@@ -74,6 +74,15 @@ const uiBase = {
       allowTouchMove: false, // 터치/드래그 비활성화
       speed: 500, // 전환 애니메이션 속도 (ms)
     });
+
+    const foot_copy_toggle = document.querySelector(".foot_copy_toggle");
+    const foot_copy_toggle_contents = document.querySelector(".foot_copy_toggle_contents");
+
+    foot_copy_toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.currentTarget.classList.toggle("active");
+      foot_copy_toggle_contents.classList.toggle("active");
+    });
   },
 };
 

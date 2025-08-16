@@ -1107,15 +1107,6 @@
 									<div class="spec_cols">
 										<div class="slice_name_row">
 											<p class="slice_name">안나푸르나 베이스캠프 트레킹 12일</p>
-											<div class="slice_else_cols">
-												<ul class="btn_rego_list">
-													<li><a href="#" class="btn_rego">여행일정표보기</a></li>
-													<li><a href="#" class="btn_rego">1:1문의</a></li>
-													<!-- 250811 이름삭제 -->
-													<li><a href="#" class="btn_rego">02-766-5294</a></li>
-													<!-- // 250811 이름삭제 -->
-												</ul>
-											</div>
 										</div>
 										<div class="slice_summary_01_row">
 											<span class="slice_word">11박 12일</span>
@@ -1141,6 +1132,15 @@
 													</span>
 												</li>
 											</ul>
+											<div class="slice_else_cols">
+												<ul class="btn_rego_list">
+													<li><a href="#" class="btn_rego">여행일정표보기</a></li>
+													<li><a href="#" class="btn_rego">1:1문의</a></li>
+													<!-- 250811 이름삭제 -->
+													<li><a href="#" class="btn_rego">02-766-5294</a></li>
+													<!-- // 250811 이름삭제 -->
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1262,19 +1262,31 @@
 														<ul class="formdom_linked_list">
 															<li><input type="text" class="form_input" placeholder="한글성명(필수)" value="김동수(수정불가)" disabled /></li>
 															<li>
-																<input type="text" class="form_input" placeholder="법정 생년월일(필수)" value="1984.03.09(수정불가)" disabled />
+																<div class="formdom_inner_wrap">
+																	<input type="text" class="form_input long_type" placeholder="법정 생년월일(필수)" value="1984.03.09(수정불가)" disabled />
+																	<div class="box_props_group mb_group">
+																		<div class="box_props_cols">
+																			<input type="radio" class="box_props_form" name="gender_mb" id="man_mb" checked data-nameform="men_props" />
+																			<label for="man_mb" class="box_props_label">남</label>
+																		</div>
+																		<div class="box_props_cols">
+																			<input type="radio" class="box_props_form" name="gender_mb" id="woman_mb" data-nameform="woman_props" />
+																			<label for="woman_mb" class="box_props_label">여</label>
+																		</div>
+																	</div>
+																</div>
 															</li>
 															<li>
 																<div class="inline_ring_wrap">
 																	<ul class="inline_ring_list">
-																		<li class="short">
+																		<li class="short pc_item">
 																			<div class="box_props_group">
 																				<div class="box_props_cols">
-																					<input type="radio" class="box_props_form" name="gender" id="man" checked />
+																					<input type="radio" class="box_props_form" name="gender" id="man" checked data-nameform="men_props" />
 																					<label for="man" class="box_props_label">남</label>
 																				</div>
 																				<div class="box_props_cols">
-																					<input type="radio" class="box_props_form" name="gender" id="woman" />
+																					<input type="radio" class="box_props_form" name="gender" id="woman" data-nameform="woman_props" />
 																					<label for="woman" class="box_props_label">여</label>
 																				</div>
 																			</div>
@@ -1307,19 +1319,31 @@
 														<ul class="formdom_linked_list">
 															<li><input type="text" class="form_input" placeholder="한글성명(필수)" value="김동수" /></li>
 															<li>
-																<input type="text" class="form_input" placeholder="법정 생년월일(필수)" value="1984.03.09" />
+																<div class="formdom_inner_wrap">
+																	<input type="text" class="form_input long_type" placeholder="법정 생년월일(필수)" value="1984.03.09" />
+																	<div class="box_props_group mb_group">
+																		<div class="box_props_cols">
+																			<input type="radio" class="box_props_form" name="gender2_mb" id="man2_mb" checked data-nameform="men2_props" />
+																			<label for="man2_mb" class="box_props_label">남</label>
+																		</div>
+																		<div class="box_props_cols">
+																			<input type="radio" class="box_props_form" name="gender2_mb" id="woman2_mb" data-nameform="woman2_props" />
+																			<label for="woman2_mb" class="box_props_label">여</label>
+																		</div>
+																	</div>
+																</div>
 															</li>
 															<li>
 																<div class="inline_ring_wrap">
 																	<ul class="inline_ring_list">
-																		<li class="short">
+																		<li class="short pc_item">
 																			<div class="box_props_group">
 																				<div class="box_props_cols">
-																					<input type="radio" class="box_props_form" name="gender2" id="man2" />
+																					<input type="radio" class="box_props_form" name="gender2" id="man2" data-nameform="men2_props" />
 																					<label for="man2" class="box_props_label">남</label>
 																				</div>
 																				<div class="box_props_cols">
-																					<input type="radio" class="box_props_form" name="gender2" id="woman2" />
+																					<input type="radio" class="box_props_form" name="gender2" id="woman2" data-nameform="woman2_props" />
 																					<label for="woman2" class="box_props_label">여</label>
 																				</div>
 																			</div>
@@ -1648,6 +1672,12 @@
 						$toggleBoolean = !$toggleBoolean;
 					});
 				});
+
+				$("[data-nameform]").on("change", function() {
+					const value = $(this).attr("data-nameform");
+					// 같은 data-nameform을 가진 모든 라디오를 체크
+					$("[data-nameform='" + value + "']").prop("checked", true);
+				});
 			});
 		</script>
 		<footer class="footer_wrap">
@@ -1785,22 +1815,37 @@
 								<li><a href="#" class="foot_main_menu">여행약관</a></li>
 								<li><a href="#" class="foot_main_menu">이메일무단수집거부</a></li>
 								<li><a href="#" class="foot_main_menu">여행자보험</a></li>
-								<li class="mb_menu"><a href="#" class="foot_main_menu">대표이사 인사말</a></li>
-								<li class="mb_menu"><a href="#" class="foot_main_menu">회사소개</a></li>
-								<li class="mb_menu"><a href="#" class="foot_main_menu">임직원소개</a></li>
-								<li class="mb_menu"><a href="#" class="foot_main_menu">찾아오시는 길</a></li>
-								<li class="mb_menu"><a href="#" class="foot_main_menu">협력사</a></li>
+								<!-- <li class="mb_menu"><a href="#" class="foot_main_menu">대표이사 인사말</a></li>
+            <li class="mb_menu"><a href="#" class="foot_main_menu">회사소개</a></li>
+            <li class="mb_menu"><a href="#" class="foot_main_menu">임직원소개</a></li>
+            <li class="mb_menu"><a href="#" class="foot_main_menu">찾아오시는 길</a></li>
+            <li class="mb_menu"><a href="#" class="foot_main_menu">협력사</a></li> -->
 							</ul>
+							<div class="foot_main_menu2_wrap">
+								<p class="foot_main_menu2_key">회사소개</p>
+								<ul class="foot_main_menu_list">
+									<li><a href="#" class="foot_main_menu">대표이사 인사말</a></li>
+									<li><a href="#" class="foot_main_menu">회사소개</a></li>
+									<li><a href="#" class="foot_main_menu">임직원소개</a></li>
+									<li><a href="#" class="foot_main_menu">찾아오시는 길</a></li>
+									<li><a href="#" class="foot_main_menu">협력사</a></li>
+								</ul>
+							</div>
 						</div>
 						<div class="foot_copy_slice_wrap">
-							<ul class="footer_copy_slice_list">
-								<li><span class="foot_copy_slice">혜초여행개발㈜</span></li>
-								<li><span class="foot_copy_slice">대표이사 : 석채언</span></li>
-								<li><span class="foot_copy_slice">주소: 서울특별시 종로구 인사동5길 29 태화빌딩 12층</span></li>
-								<li><span class="foot_copy_slice">사업자등록번호 : 101-81-54642</span></li>
-								<li><span class="foot_copy_slice">통신판매업신고번호 : 제 2009-서울종로-0388호</span></li>
-								<li><span class="foot_copy_slice">개인정보관리책임자 : 주진국</span></li>
-							</ul>
+							<div class="foot_copy_toggle_row">
+								<a href="javascript:;" class="foot_copy_toggle"><span class="text_node">혜초여행개발㈜</span></a>
+							</div>
+							<div class="foot_copy_toggle_contents">
+								<ul class="footer_copy_slice_list">
+									<li class="pc_item"><span class="foot_copy_slice">혜초여행개발㈜</span></li>
+									<li class="mb_full"><span class="foot_copy_slice">대표이사 : 석채언</span></li>
+									<li><span class="foot_copy_slice">주소: 서울특별시 종로구 인사동5길 29 태화빌딩 12층</span></li>
+									<li><span class="foot_copy_slice">사업자등록번호 : 101-81-54642</span></li>
+									<li><span class="foot_copy_slice">통신판매업신고번호 : 제 2009-서울종로-0388호</span></li>
+									<li><span class="foot_copy_slice">개인정보관리책임자 : 주진국</span></li>
+								</ul>
+							</div>
 						</div>
 						<p class="foot_main_copyright">Copyright © HYECHO Adventure Travel. All Rights Reserved.</p>
 					</div>

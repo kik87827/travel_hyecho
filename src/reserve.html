@@ -73,7 +73,7 @@
                     <div class="label_row"><p class="tile_form_label">여행인원</p></div>
                     <div class="form_row">
                       <div class="formdom_linked_wrap">
-                        <ul class="formdom_linked_list">
+                        <ul class="formdom_linked_list no_break">
                           <li>
                             <div class="form_count_box">
                               <button class="btn_inde_control dec_control"></button>
@@ -128,15 +128,29 @@
                             <div class="formdom_linked_wrap">
                               <ul class="formdom_linked_list">
                                 <li><input type="text" class="form_input" placeholder="한글성명(필수)" /></li>
-                                <li><input type="text" class="form_input" placeholder="법정 생년월일(필수)" /></li>
                                 <li>
+                                  <div class="formdom_inner_wrap">
+                                    <input type="text" class="form_input long_type" placeholder="법정 생년월일(필수)" />
+                                    <div class="box_props_group mb_group">
+                                      <div class="box_props_cols">
+                                        <input type="radio" class="box_props_form" name="gender_mb" id="man_mb" data-nameform="men_props" />
+                                        <label for="man_mb" class="box_props_label">남</label>
+                                      </div>
+                                      <div class="box_props_cols">
+                                        <input type="radio" class="box_props_form" name="gender_mb" id="woman_mb" data-nameform="woman_props" />
+                                        <label for="woman_mb" class="box_props_label">여</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="pc_item">
                                   <div class="box_props_group">
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_form" name="gender" id="man" />
+                                      <input type="radio" class="box_props_form" name="gender" id="man" data-nameform="men_props" />
                                       <label for="man" class="box_props_label">남</label>
                                     </div>
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_form" name="gender" id="woman" />
+                                      <input type="radio" class="box_props_form" name="gender" id="woman" data-nameform="woman_props" />
                                       <label for="woman" class="box_props_label">여</label>
                                     </div>
                                   </div>
@@ -159,15 +173,29 @@
                             <div class="formdom_linked_wrap">
                               <ul class="formdom_linked_list">
                                 <li><input type="text" class="form_input" placeholder="한글성명(필수)" /></li>
-                                <li><input type="text" class="form_input" placeholder="법정 생년월일(필수)" /></li>
                                 <li>
+                                  <div class="formdom_inner_wrap">
+                                    <input type="text" class="form_input long_type" placeholder="법정 생년월일(필수)" />
+                                    <div class="box_props_group mb_group">
+                                      <div class="box_props_cols">
+                                        <input type="radio" class="box_props_form" name="gender2_mb" id="man2_mb" data-nameform="men2_props" />
+                                        <label for="man2_mb" class="box_props_label">남</label>
+                                      </div>
+                                      <div class="box_props_cols">
+                                        <input type="radio" class="box_props_form" name="gender2_mb" id="woman2_mb" data-nameform="woman2_props" />
+                                        <label for="woman2_mb" class="box_props_label">여</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="pc_item">
                                   <div class="box_props_group">
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_form" name="gender2" id="man2" />
+                                      <input type="radio" class="box_props_form" name="gender2" id="man2" data-nameform="men2_props" />
                                       <label for="man2" class="box_props_label">남</label>
                                     </div>
                                     <div class="box_props_cols">
-                                      <input type="radio" class="box_props_form" name="gender2" id="woman2" />
+                                      <input type="radio" class="box_props_form" name="gender2" id="woman2" data-nameform="woman2_props" />
                                       <label for="woman2" class="box_props_label">여</label>
                                     </div>
                                   </div>
@@ -615,6 +643,22 @@
             } else {
               $("#total_agree").prop("checked", false);
             }
+          });
+
+          // pc mobile 남여
+
+          /* $("[data-nameform]").each(function () {
+            const $this = $(this);
+            $this.on("click", function (e) {
+              if ($this.attr("data-nameform") === $(this).attr("data-nameform")) {
+                $this.not($(this)).prop("checked", true);
+              }
+            });
+          }); */
+          $("[data-nameform]").on("change", function () {
+            const value = $(this).attr("data-nameform");
+            // 같은 data-nameform을 가진 모든 라디오를 체크
+            $("[data-nameform='" + value + "']").prop("checked", true);
           });
         });
       </script>
