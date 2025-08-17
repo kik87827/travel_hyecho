@@ -898,7 +898,9 @@ select.system_calendar_select{
 .sc_combo_option_list{
     > li{}
 }
-.sc_combo_option{display:block;padding:5px 10px; @include font(14px,400,1.3,#6d6c6c);text-align: center; display:flex; justify-content: center; align-items: center; min-height:30px; box-sizing: border-box;}
+.sc_combo_option{display:block;padding:5px 10px; @include font(14px,400,1.3,#6d6c6c);text-align: center; display:flex; justify-content: center; align-items: center; min-height:30px; box-sizing: border-box;
+    &:hover{background-color:#f0f0f0;}
+}
 .system_calendar_content_row{}
 .system_calendar_table_wrap{margin-top:20px;}
 .system_calendar_table{width:100%; table-layout: fixed;

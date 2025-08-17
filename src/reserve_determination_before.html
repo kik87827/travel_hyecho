@@ -501,9 +501,30 @@
                         <div class="tile_sub_title_row">
                           <p class="tile_sub_title">결제상세내역</p>
                           <div class="tile_sub_else_wrap">
-                            <select class="form_word_select size2">
+                            <!-- <select class="form_word_select size2">
                               <option>전체보기</option>
-                            </select>
+                            </select> -->
+                            <div class="combo_box_wrap" data-comboparent=".tile_sub_title_row" id="combo_list_sort">
+                              <a href="javascript:;" class="combo_box_target"><span class="text_node">전체보기</span></a>
+                              <div class="combo_box_option_wrap">
+                                <ul class="combo_box_option_list">
+                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 0">전체보기</a></li>
+                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 1">옵션 1</a></li>
+                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 2">옵션 2</a></li>
+                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 3">옵션 3</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <script>
+                              $(function () {
+                                $("#combo_list_sort")
+                                  .find(".combo_box_option")
+                                  .on("click", function () {
+                                    // value
+                                    console.log($(this).text(), $(this).attr("data-option"));
+                                  });
+                              });
+                            </script>
                           </div>
                         </div>
                         <div class="tile_sub_contents">
@@ -740,6 +761,8 @@
             // 같은 data-nameform을 가진 모든 라디오를 체크
             $("[data-nameform='" + value + "']").prop("checked", true);
           });
+
+          comboFunc();
         });
       </script>
       @@include('./include/_footer.html')

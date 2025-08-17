@@ -1091,7 +1091,7 @@ function calendarCombo() {
     const $t_p = $this.closest(".system_calendar_combo_wrap");
     const $t_layer = $t_p.find(".sc_combo_option_layer");
     e.preventDefault();
-    $t_layer.show();
+    $t_layer.toggle();
   });
   $(document).on("click", ".sc_combo_option", function (e) {
     const $this = $(this);
@@ -1099,6 +1099,29 @@ function calendarCombo() {
     const $t_t = $t_p.find(".system_calendar_combo_target");
     const $t_layer = $t_p.find(".sc_combo_option_layer");
     e.preventDefault();
+    $t_layer.hide();
+    $t_t.find(".text_node").text($this.text());
+  });
+}
+
+function comboFunc() {
+  $(document).on("click", ".combo_box_target", function (e) {
+    const $this = $(this);
+    const $t_p = $this.closest(".combo_box_wrap");
+    const $t_layer = $t_p.find(".combo_box_option_wrap");
+    const $t_p_s = $($t_p.attr("data-comboparent"));
+    e.preventDefault();
+    $t_p_s.css("z-index", 5);
+    $t_layer.toggle();
+  });
+  $(document).on("click", ".combo_box_option", function (e) {
+    const $this = $(this);
+    const $t_p = $this.closest(".combo_box_wrap");
+    const $t_t = $t_p.find(".combo_box_target");
+    const $t_layer = $t_p.find(".combo_box_option_wrap");
+    const $t_p_s = $($t_p.attr("data-comboparent"));
+    e.preventDefault();
+    $t_p_s.css("z-index", "");
     $t_layer.hide();
     $t_t.find(".text_node").text($this.text());
   });
