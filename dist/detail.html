@@ -2762,14 +2762,58 @@
 								<div class="system_calendar_month_row">
 									<button class="btn_system_calendar prev"></button>
 									<!-- <p class="system_calendar_month">2025.09</p> -->
-									<select class="system_calendar_select">
-										<option>2025.09</option>
-										<option>2025.08</option>
-										<option>2025.07</option>
-										<option>2025.06</option>
-										<option>2025.05</option>
-										<option>2025.04</option>
-									</select>
+									<!--  <select class="system_calendar_select">
+                      <option>2025.09</option>
+                      <option>2025.08</option>
+                      <option>2025.07</option>
+                      <option>2025.06</option>
+                      <option>2025.05</option>
+                      <option>2025.04</option>
+                    </select> -->
+									<div class="system_calendar_combo_wrap" id="combo_calendar_wrap">
+										<a href="#" class="system_calendar_combo_target"><span class="text_node">2025.09</span></a>
+										<div class="sc_combo_option_layer">
+											<ul class="sc_combo_option_list">
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.09</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.08</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.07</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.06</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.05</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.04</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.03</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.02</a>
+												</li>
+												<li>
+													<a href="javascript:;" class="sc_combo_option">2025.01</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<script>
+										$(function() {
+											$("#combo_calendar_wrap")
+												.find(".sc_combo_option")
+												.on("click", function() {
+													// value
+													console.log($(this).text());
+												});
+										});
+									</script>
 									<button class="btn_system_calendar next"></button>
 								</div>
 								<div class="system_calendar_content_row">
@@ -3241,6 +3285,8 @@
 					e.preventDefault();
 					$(this).toggleClass("active");
 				});
+
+				calendarCombo();
 			});
 			var detailTopSwiper = new Swiper(".swiper-container.detail_top_img_swiper", {
 				loop: true, // 반복

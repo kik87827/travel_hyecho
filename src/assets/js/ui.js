@@ -1084,3 +1084,22 @@ function adjustRevisionDomWidths() {
   // 외부에서 action 호출 가능
   return action;
 }
+
+function calendarCombo() {
+  $(document).on("click", ".system_calendar_combo_target", function (e) {
+    const $this = $(this);
+    const $t_p = $this.closest(".system_calendar_combo_wrap");
+    const $t_layer = $t_p.find(".sc_combo_option_layer");
+    e.preventDefault();
+    $t_layer.show();
+  });
+  $(document).on("click", ".sc_combo_option", function (e) {
+    const $this = $(this);
+    const $t_p = $this.closest(".system_calendar_combo_wrap");
+    const $t_t = $t_p.find(".system_calendar_combo_target");
+    const $t_layer = $t_p.find(".sc_combo_option_layer");
+    e.preventDefault();
+    $t_layer.hide();
+    $t_t.find(".text_node").text($this.text());
+  });
+}
