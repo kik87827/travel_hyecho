@@ -248,6 +248,23 @@ input.box_props_form{
 .revision_tfoot_keytext{display:inline-block; @include font(19px,500,1,#2b2b2b);}
 .revision_value_node{ @include font(16px,400,1,#333);}
 
+.key_section_flex_wrap{
+    display:flex; justify-content: flex-end; gap:10px 30px; text-align: right;
+    .revision_keytext{white-space: nowrap;}
+}
+.key_secvalue_list{
+    display:flex; justify-content: flex-end; gap:10px 30px;
+    > li{
+        
+    }
+    .revision_price_dom{justify-content: flex-end;}
+    .value_number,
+    .value_unit{color:#4e4e4e;}
+    .value_number{font-size:16px; font-weight:400;}
+    .value_unit{font-size:14px;}
+}
+.secvalue{}
+
 .note_messge_wrap{
     display:flex; gap:25px; align-items: center;
     .ico{display:block;width:24px;height:24px; flex:0 0 24px; @include bgicon; background-image:url("../images/ico_import_24.png"); border-radius:100%; border:2px solid #767676;}
@@ -305,25 +322,68 @@ input.box_props_form{
 
 .field_grid_wrap{}
 .field_grid_list{
-    display:flex; flex-wrap:wrap; gap:10px 20px; margin-right:-20px;
+    display:flex; flex-wrap:wrap; gap:10px 20px; margin-right:-20px; align-items: flex-start;
     > li{
-        flex:0 0 calc(33.3333333% - 20px); display:flex; flex-direction: column;
+        display:flex; flex-direction: column;
+        flex:1;
+        &.long_type{flex:0 0 45%;}
     }
 }
+.field_grid_slice_wrap{ padding:17px 20px;background:#f9f9f9; 
+    &.tb_type{display:table;  padding:10px 20px;
+        .field_grid_slice{
+            display:table-row;
+            .key_cols{
+                .grid_keyword{}
+            }
+            .key_cols,
+            .value_cols{padding-bottom:10px;vertical-align: middle;}
+            .key_cols{display:table-cell; padding-right:10px;}
+            .value_cols{display:table-cell;}
+            &:last-of-type{
+                .key_cols,
+                .value_cols{padding-bottom:0;}
+            }
+        }
+    }
+}
+.field_keyitems_group{ display:flex; align-items: center; gap:10px;}
 .field_grid_slice{
-    background:#f9f9f9; flex:1;  border-radius: 5px; display:flex; justify-content: space-between; align-items: center; gap:20px; padding:17px 20px;
-    .key_cols{}
-    .value_cols{}
+    flex:1;  border-radius: 5px; display:flex; align-items: center; gap:20px;
+    .key_cols{flex:0; white-space: nowrap;}
+    .value_cols{flex:1; display:flex; justify-content: flex-end;}
+    &:last-of-type{margin-bottom:0;}
 }
 .grid_keyword{display:inline-block; @include font(16px,400,1.3,#333333); white-space: nowrap;}
+.amount_price_dom_wrap{
+    display:flex; justify-content: flex-end;
+}
 .amount_price_dom{
-    display:flex; align-items: center;
+    display:flex; align-items: center; justify-content: flex-end;
     .value_number{@include font(20px,500,1,#333333);}
-    .value_unit{@include font(16px,400,1,#333333);}
+    .value_unit{@include font(16px,400,1,#333333);min-width:14.73px;}
 }
 .amount_input_cols{flex:1; padding-right:5px;}
 input.amount_input{appearance: none; line-height:1; height:34px; background:#fff; border-radius:4px; @include font(18px,500,1,#333333); text-align: right; padding:0 10px; width:100%; box-sizing: border-box;} 
 
+@media (max-width:$tablet){
+    .field_grid_list{
+         gap:10px; margin-right:-10px;
+        > li{
+            &.long_type{flex:0 0 50%;}
+        }
+    }
+}
+
+@media (max-width:1150px){
+    .field_grid_list{
+        display:flex; flex-wrap:wrap; gap:5px 0; margin-right:0;
+        > li{
+            flex:0 0 100% !important; display:flex; flex-direction: column;
+        }
+    }
+    .amount_price_dom{max-width:50%;}
+}
 
 @media (max-width:$mobile_large){
     .product_slice_data_wrap{
@@ -388,7 +448,7 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
     }
     .revision_value_node,
     .revision_keytext{font-size:14px;}
-    .revision_detail_list{padding:15px;}
+    .revision_detail_list{padding:15px 10px;}
     .note_messge_wrap{flex-direction: column; align-items: normal; gap:15px;
         .ico{margin:0 auto;}
     }
@@ -446,14 +506,8 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
     }
 
     .field_grid_wrap{}
-    .field_grid_list{
-        display:flex; flex-wrap:wrap; gap:5px 0; margin-right:0;
-        > li{
-            flex:0 0 100%; display:flex; flex-direction: column;
-        }
-    }
     .field_grid_slice{
-        gap:10px; padding:15px 15px;
+        gap:10px;
     }
     .grid_keyword{font-size:14px;}
     .amount_price_dom{
@@ -461,5 +515,56 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
         .value_unit{font-size:14px;}
     }
     input.amount_input{ font-size:14px; } 
+    .field_keyitems_group{flex-direction: row; align-items: center; justify-content:space-between; gap:5px;}
 
+
+    .field_grid_slice_wrap{
+         padding:15px 15px;
+        &.tb_type{display:block;  padding:15px 15px;
+            .field_grid_slice{
+                display:block;
+                .key_cols{
+                    padding:0;
+                    .grid_keyword{}
+                }
+                .key_cols,
+                .value_cols{vertical-align: middle;}
+                .key_cols{display:block; padding-right:0;padding-bottom:8px;}
+                .value_cols{display:block;padding-bottom:15px;}
+                &:last-of-type{
+                    .key_cols{padding-bottom:8px;}
+                    .value_cols{padding-bottom:0;}
+                }
+                .grid_keyword{white-space: normal;}
+            }
+        }
+    }
+    .amount_price_dom_wrap{width:100%;
+        .amount_price_dom{max-width:100%;flex:1;}
+    }
+
+    .revision_detail_row{
+        &.type4{
+             .revision_detail_list{padding:15px 10px;}
+        }
+        &.type3{
+             .revision_detail_list{padding:10px;}
+        }
+    }
+    .revision_total_item{padding:15px 10px;}
+    .revision_tfoot_item, .revision_btn_row{padding:0 10px;}
+}
+@media (max-width:$mobile){
+    .key_section_flex_wrap{display:block; text-align: left;}
+    .key_secvalue_list{
+        gap:10px;
+        > li{}
+        .revision_price_dom{
+            justify-content: flex-start; width:auto !important;
+             .value_number,
+             .value_unit{font-size:12px;}
+             .value_number{}
+             .value_unit{}
+        }
+    }
 }

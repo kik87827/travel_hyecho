@@ -9,8 +9,8 @@
     .img_cols{flex:0 0 500px;width:500px;}
     .info_cols{flex:1;min-width:0;}
     .spec_flag_row{
-        display:flex; gap:20px; justify-content: space-between; align-items: center;
-        .flag_cols{}
+        display:flex; gap:20px; justify-content: space-between; align-items: center; flex-wrap:wrap;
+        .flag_cols{display:flex; gap:10px; align-items: center;}
         .util_cols{
         }
     }
@@ -25,7 +25,7 @@
     .spec_keyword_row{margin-top:25px;}
     .spec_summary_row{}
     .spec_price_row{
-        text-align: right; display:flex; justify-content: flex-end; margin-top:26px;
+        text-align: right; display:flex; justify-content: flex-end; margin-top:35px;
     }
 }
 .dflag_box_list{
@@ -58,16 +58,16 @@
         &:after{background-image:url("../images/ico_share_16x16.png"); width:16px;height:16px;}
     }
 }
-.keyword_tag_wrap{}
+.keyword_tag_wrap{margin-top:36px;}
 .keyword_tagbox_list{
-    display:flex; flex-wrap:wrap; gap:5px;
+    display:flex; flex-wrap:wrap; gap:10px 5px;
     > li{}
     .tagbox{
-        background:#eff5fc; border-radius:100px; padding:2px 15px 3px;  @include font(14px,400,1,#2b8bf2);
+        background:#eff5fc; border-radius:100px; padding:4px 15px 5px;  @include font(14px,400,1,#2b8bf2); display:inline-block;
         .text_node{@include font(14px,400,1,#5f5f5f);}
     }
 }
-.keyword_subtag_wrap{margin-top:17px;}
+.keyword_subtag_wrap{margin-top:50px;}
 .keyword_subtag_list{
     display:flex; flex-wrap:wrap; gap:5px;
     > li{
@@ -108,6 +108,23 @@
         &:after{transform: rotate(45deg);left:12px;}
     }
 }
+
+.info_control_container{
+    display:flex; justify-content: space-between; align-items: center; margin-top:8px;
+    .info_cols{}
+}
+.btn_chip_quad_list{
+    display:flex; justify-content: flex-end; align-items: center; gap:5px;
+    &.mb_type{
+        .btn_chip_quad{height:22px; line-height:20px;}
+    }
+    > li{}
+}
+.btn_chip_quad{
+    display:inline-block; box-sizing: border-box; border:1px solid #dcdcdc; height:26px; line-height:24px; min-width:40px; border-radius:4px; text-align: center; padding:0 6px; white-space: nowrap;
+    &.long{min-width:90px;}
+}
+
 .product_title_name{@include font(30px,500,1.3,#000); @include clamp(2);}
 .product_title_sub_copy{@include font(14px,400,1.4,#999); margin-top:10px; @include clamp(3);}
 .star_eval_text{
@@ -139,6 +156,8 @@
     .price_caption2{
         @include font(14px,350,1.4,#2b8bf2);
         .ico_point{position:relative;top:1px;}
+        position:relative; padding-right:12px;
+        &:after{border-top:1px solid #4b9df4; border-right:1px solid #4b9df4; display:block; content:''; width:7px; height:7px; position:absolute;top:7px;right:3px; transform: rotate(45deg);}
     }
     .price_dom{gap:2px;}
     .price_number{font-size:29px; font-weight:700;}
@@ -149,7 +168,7 @@
 .price_before{@include font(16px,300,1,#6d6c6c); text-decoration: line-through; padding-top:12px;}
 
 .detail_topinfo_row{
-    margin-top:30px; display:flex; gap:40px; align-items: center;
+    margin-top:13px; display:flex; gap:40px; align-items: center;
     .who_info_cols{flex:0 0 500px;}
     .note_info_cols{
         flex:1;
@@ -399,9 +418,8 @@
         > *{flex:0;}
     }
     .box_action_btn_list{justify-content: flex-end;}
-    .keyword_tag_wrap{}
+    .keyword_tag_wrap{margin:20px 20px 0;}
     .keyword_tagbox_list{
-        display:flex; flex-wrap:wrap; gap:5px;
         > li{}
         .tagbox{
              padding:2px 10px 3px;
@@ -462,6 +480,7 @@
         .price_caption2{
             font-size:12px;
             .ico_point{top:2px;}
+            &:after{width:6px; height:6px;top:6px;right:3px;}
         }
         .price_dom{gap:2px;}
         .price_number{font-size:24px;}

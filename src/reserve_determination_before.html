@@ -380,9 +380,27 @@
                           <ul class="revision_detail_list">
                             <li>
                               <div class="revision_detail_item">
-                                <div class="key_cols"><span class="revision_keytext">성인</span></div>
+                                <div class="key_cols">
+                                  <div class="key_section_flex_wrap">
+                                    <span class="revision_keytext">성인</span>
+                                    <ul class="key_secvalue_list">
+                                      <li>
+                                        <span class="revision_price_dom">
+                                          <span class="value_number">6,000,000</span>
+                                          <span class="value_unit">원</span>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <span class="revision_price_dom">
+                                          <span class="value_number">2</span>
+                                          <span class="value_unit">명</span>
+                                        </span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                                 <div class="value_cols">
-                                  <span class="revision_price_dom sm_type2">
+                                  <span class="revision_price_dom">
                                     <span class="value_number">105,000</span>
                                     <span class="value_unit">원</span>
                                   </span>
@@ -391,13 +409,49 @@
                             </li>
                             <li>
                               <div class="revision_detail_item">
-                                <div class="key_cols"><span class="revision_keytext">아동</span></div>
+                                <div class="key_cols">
+                                  <div class="key_section_flex_wrap">
+                                    <span class="revision_keytext">아동</span>
+                                    <ul class="key_secvalue_list">
+                                      <li>
+                                        <span class="revision_price_dom">
+                                          <span class="value_number">0</span>
+                                          <span class="value_unit">원</span>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <span class="revision_price_dom">
+                                          <span class="value_number">222</span>
+                                          <span class="value_unit">명</span>
+                                        </span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                                 <div class="value_cols"><p class="revision_value_node">별도안내</p></div>
                               </div>
                             </li>
                             <li>
                               <div class="revision_detail_item">
-                                <div class="key_cols"><span class="revision_keytext">유아</span></div>
+                                <div class="key_cols">
+                                  <div class="key_section_flex_wrap">
+                                    <span class="revision_keytext">유아</span>
+                                    <ul class="key_secvalue_list">
+                                      <li>
+                                        <span class="revision_price_dom">
+                                          <span class="value_number">0</span>
+                                          <span class="value_unit">원</span>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <span class="revision_price_dom">
+                                          <span class="value_number">2</span>
+                                          <span class="value_unit">명</span>
+                                        </span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                                 <div class="value_cols"><p class="revision_value_node">별도안내</p></div>
                               </div>
                             </li>
@@ -405,7 +459,7 @@
                               <div class="revision_detail_item">
                                 <div class="key_cols"><span class="revision_keytext">프로모션할인</span></div>
                                 <div class="value_cols">
-                                  <span class="revision_price_dom sm_type2">
+                                  <span class="revision_price_dom">
                                     <span class="value_number">-2,000,000</span>
                                     <span class="value_unit">원</span>
                                   </span>
@@ -574,38 +628,67 @@
                           <div class="field_grid_wrap">
                             <ul class="field_grid_list">
                               <li>
-                                <div class="field_grid_slice">
-                                  <!-- 250811 문구변경 -->
-                                  <div class="key_cols"><span class="grid_keyword">남은금액</span></div>
-                                  <!-- // 250811 문구변경 -->
-                                  <div class="value_cols">
-                                    <span class="amount_price_dom">
-                                      <span class="value_number">105,000</span>
-                                      <span class="value_unit">원</span>
-                                    </span>
+                                <div class="field_grid_slice_wrap">
+                                  <div class="field_grid_slice">
+                                    <!-- 250811 문구변경 -->
+                                    <div class="key_cols"><span class="grid_keyword">남은금액</span></div>
+                                    <!-- // 250811 문구변경 -->
+                                    <div class="value_cols">
+                                      <span class="amount_price_dom">
+                                        <span class="value_number">105,000</span>
+                                        <span class="value_unit">원</span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </li>
                               <li>
-                                <div class="field_grid_slice">
-                                  <div class="key_cols"><span class="grid_keyword">결제한 금액</span></div>
-                                  <div class="value_cols">
-                                    <span class="amount_price_dom">
-                                      <span class="value_number">105,000</span>
-                                      <span class="value_unit">원</span>
-                                    </span>
+                                <div class="field_grid_slice_wrap">
+                                  <div class="field_grid_slice">
+                                    <div class="key_cols"><span class="grid_keyword">결제한 금액</span></div>
+                                    <div class="value_cols">
+                                      <span class="amount_price_dom">
+                                        <span class="value_number">105,000</span>
+                                        <span class="value_unit">원</span>
+                                      </span>
+                                    </div>
                                   </div>
                                 </div>
                               </li>
-                              <li>
-                                <div class="field_grid_slice">
-                                  <div class="key_cols"><span class="grid_keyword">결제하실 금액</span></div>
-                                  <div class="value_cols">
-                                    <div class="amount_price_dom">
-                                      <div class="amount_input_cols">
-                                        <input type="text" class="amount_input" value="200,000,000" />
+                              <li class="long_type">
+                                <div class="field_grid_slice_wrap tb_type">
+                                  <div class="field_grid_slice">
+                                    <div class="key_cols">
+                                      <div class="field_keyitems_group">
+                                        <span class="grid_keyword">혜초포인트(143,000P 사용가능)</span>
+                                        <div class="props_item gap2">
+                                          <input type="checkbox" class="props_form" id="total_point" />
+                                          <label for="total_point" class="props_label">전체사용</label>
+                                        </div>
                                       </div>
-                                      <span class="value_unit">원</span>
+                                    </div>
+                                    <div class="value_cols">
+                                      <div class="amount_price_dom_wrap">
+                                        <div class="amount_price_dom">
+                                          <div class="amount_input_cols">
+                                            <input type="text" class="amount_input" value="0" />
+                                          </div>
+                                          <span class="value_unit">P</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="field_grid_slice">
+                                    <div class="key_cols"><span class="grid_keyword">결제하실 금액</span></div>
+                                    <div class="value_cols">
+                                      <div class="amount_price_dom_wrap">
+                                        <div class="amount_price_dom">
+                                          <div class="amount_input_cols">
+                                            <input type="text" class="amount_input" value="7,000,000" />
+                                          </div>
+                                          <span class="value_unit">원</span>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -627,6 +710,9 @@
         </div>
       </main>
       <script>
+        $(window).on("load", function () {
+          adjustRevisionDomWidths();
+        });
         $(function () {
           $(".btn_folding_box").each(function () {
             var $thisBtn = $(this);
@@ -644,6 +730,7 @@
               } else {
                 $thisEvent.find(".text_node").text("접기");
               }
+              adjustRevisionDomWidths();
               $toggleBoolean = !$toggleBoolean;
             });
           });

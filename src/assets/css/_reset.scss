@@ -79,6 +79,8 @@ i{display:flex;align-items: center;justify-content: center;font-size:0;line-heig
 }
 img.ico_img{max-width:100%;}
 .mb_br{display:none;}
+.mb2_br{display:none;}
+.pc_fitem{display:flex !important;}
 
 
 
@@ -89,4 +91,10 @@ img.ico_img{max-width:100%;}
 	.mb_img{display:inline-block !important;}
     .mb_item{display:block !important;}
     .mb_br{display:block;}
+    .pc_fitem{display:none !important;}
+}
+
+
+@media(max-width:500px){
+    .mb2_br{display:block;}
 }

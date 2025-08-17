@@ -354,7 +354,9 @@ select.cir_select{
         }
     }
     .props_label{font-size:14px;position:relative;top:-1px;}
-    .props_item{gap:7px;}
+    .props_item{gap:7px;
+        &.gap2{gap:5px;}
+    }
     
     select.form_select{height:40px;font-size:14px;padding-right:40px;background-size:auto 34px;}
     select.form_word_select{font-size:14px;}

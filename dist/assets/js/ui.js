@@ -867,6 +867,7 @@ function stickyPanel() {
 function mobileBottomLayer() {
   const footer_wrap = document.querySelector(".footer_wrap");
   const mb_bottom_layer = document.querySelector(".mb_bottom_layer");
+  const open_trigger = document.querySelectorAll(".open_trigger");
   const middle_wrap = document.querySelector(".middle_wrap");
   const domHtml = document.querySelector("html");
   let btn_mbb_toggle = null;
@@ -893,6 +894,21 @@ function mobileBottomLayer() {
     mb_bottom_content.classList.toggle("active");
     domHtml.classList.toggle("touchDis");
   });
+
+  if (open_trigger.length) {
+    open_trigger.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        openAction();
+      });
+    });
+  }
+
+  function openAction() {
+    btn_mbb_toggle.classList.add("active");
+    mb_bottom_content.classList.add("active");
+    domHtml.classList.add("touchDis");
+  }
 
   function action() {
     if (window.innerWidth < 1024) {
@@ -1047,4 +1063,39 @@ function dragScrollX(selector) {
       }
     });
   });
+}
+
+function adjustRevisionDomWidths() {
+  function action() {
+    var maxWidths = [];
+    $(".key_secvalue_list").each(function() {
+      $(this)
+        .find(".revision_price_dom")
+        .each(function(index) {
+          $(this).css("width", ""); // 초기화
+          var w = $(this).outerWidth();
+          if (!maxWidths[index] || w > maxWidths[index]) {
+            maxWidths[index] = w;
+          }
+        });
+    });
+
+    $(".key_secvalue_list").each(function() {
+      $(this)
+        .find(".revision_price_dom")
+        .each(function(index) {
+          $(this).css("width", maxWidths[index] + "px");
+        });
+    });
+  }
+
+  // 초기 실행
+  action();
+
+  // resize 이벤트 등록 (이벤트 네임스페이스 사용)
+  // 이렇게 하면 여러 번 호출해도 중복 등록 안 됨
+  $(window).off("resize.adjustRevision").on("resize.adjustRevision", action);
+
+  // 외부에서 action 호출 가능
+  return action;
 }

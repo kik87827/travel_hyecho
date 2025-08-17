@@ -1400,7 +1400,25 @@
 												<ul class="revision_detail_list">
 													<li>
 														<div class="revision_detail_item">
-															<div class="key_cols"><span class="revision_keytext">성인</span></div>
+															<div class="key_cols">
+																<div class="key_section_flex_wrap">
+																	<span class="revision_keytext">성인</span>
+																	<ul class="key_secvalue_list">
+																		<li>
+																			<span class="revision_price_dom">
+																				<span class="value_number">6,000,000</span>
+																				<span class="value_unit">원</span>
+																			</span>
+																		</li>
+																		<li>
+																			<span class="revision_price_dom">
+																				<span class="value_number">2</span>
+																				<span class="value_unit">명</span>
+																			</span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
 															<div class="value_cols">
 																<span class="revision_price_dom">
 																	<span class="value_number">105,000</span>
@@ -1411,7 +1429,25 @@
 													</li>
 													<li>
 														<div class="revision_detail_item">
-															<div class="key_cols"><span class="revision_keytext">아동</span></div>
+															<div class="key_cols">
+																<div class="key_section_flex_wrap">
+																	<span class="revision_keytext">아동</span>
+																	<ul class="key_secvalue_list">
+																		<li>
+																			<span class="revision_price_dom">
+																				<span class="value_number">0</span>
+																				<span class="value_unit">원</span>
+																			</span>
+																		</li>
+																		<li>
+																			<span class="revision_price_dom">
+																				<span class="value_number">222</span>
+																				<span class="value_unit">명</span>
+																			</span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
 															<div class="value_cols">
 																<p class="revision_value_node">별도안내</p>
 															</div>
@@ -1419,7 +1455,25 @@
 													</li>
 													<li>
 														<div class="revision_detail_item">
-															<div class="key_cols"><span class="revision_keytext">유아</span></div>
+															<div class="key_cols">
+																<div class="key_section_flex_wrap">
+																	<span class="revision_keytext">유아</span>
+																	<ul class="key_secvalue_list">
+																		<li>
+																			<span class="revision_price_dom">
+																				<span class="value_number">0</span>
+																				<span class="value_unit">원</span>
+																			</span>
+																		</li>
+																		<li>
+																			<span class="revision_price_dom">
+																				<span class="value_number">2</span>
+																				<span class="value_unit">명</span>
+																			</span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
 															<div class="value_cols">
 																<p class="revision_value_node">별도안내</p>
 															</div>
@@ -1666,6 +1720,10 @@
 				if (url_2 === "global") {
 					global_raw01_popup.popupShow();
 				}
+			});
+
+			$(window).on("load", function() {
+				adjustRevisionDomWidths();
 			});
 
 			$(function() {
