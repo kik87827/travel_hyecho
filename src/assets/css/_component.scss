@@ -290,6 +290,12 @@ input.props_form{
 .props_label{cursor: pointer; font-size:16px; color:#444444; line-height:1.3;}
 .props_item{}
 
+.props_item_label{
+    display:inline-flex; gap:8px; align-items: flex-start; cursor:pointer;
+    .props_dom{}
+    .text_node{@include font(16px,400,1.3,#444); display:inline-block; cursor:pointer;}   
+}
+
 
 select.form_select{
     border:1px solid #ccc; border-radius:5px; width:100%; font-size:15px;height:46px;color:#2d2d2d;padding: 0 45px 0 15px;box-sizing:border-box;font-family: 'Noto Sans KR';cursor: pointer;
@@ -329,6 +335,29 @@ select.cir_select{
     &:disabled{background-color:#f7f7f7;color:#333333;opacity:1;}
     &.size2{}
 }
+
+.multi_box{
+     position:relative;
+    .multi_target{
+        border:1px solid #ccc; border-radius:5px; width:100%; font-size:15px;height:46px;color:#2d2d2d;padding: 0 45px 0 15px;box-sizing:border-box;font-family: 'Noto Sans KR';cursor: pointer;
+        background: #fff url("../images/ico_select_44.png") no-repeat 100% 50%/auto 44px;line-height: 1; display:flex; align-items:center;
+    }
+    .multi_option_layer {
+        position: absolute;top: 100%;left: 0;margin-top: 10px;border: 1px solid #ccc;background: #fff;z-index: 10; border-radius:5px; overflow:hidden; width:100%; box-sizing:border-box;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);min-width: 200px;
+    }
+    .multi_option_head {
+        padding: 10px 15px;border-bottom: 1px solid #eee;background: #f9f9f9; @include font(15px,400,1.3,#2d2d2d); display:flex; min-height:46px; align-items:center; box-sizing:border-box;
+    }
+    .multi_option_list {
+        padding: 10px 15px;
+        > li{
+            margin-bottom:10px; font-size:0;line-height:0;
+            &:last-of-type{margin-bottom:0;}
+        }
+    }
+}
+
 
 .cir_combo{
     padding: 0 32px 0 0;box-sizing:border-box;font-family: 'Noto Sans KR';cursor: pointer;
@@ -389,6 +418,22 @@ select.cir_select{
     }
     
     select.form_select{height:40px;font-size:14px;padding-right:40px;background-size:auto 34px;}
+    .multi_box{}
+
+    .multi_box{
+        .multi_target{
+           height:40px;font-size:14px;padding-right:40px;background-size:auto 34px;
+        }
+        .multi_option_layer {
+            margin-top: 5px;
+        }
+        .multi_option_head {
+            padding: 5px 15px; font-size:14px; display:flex; min-height:40px;
+        }
+        .multi_option_list {
+        }
+    }
+
     select.form_word_select{font-size:14px;}
 
     .form_word_combo{
@@ -407,6 +452,10 @@ select.cir_select{
      .cir_combo{
         height:18px;background-size:18px auto;padding:0 22px 0 0;
         .text_node{font-size:14px; line-height:18px; position:relative;top:-1px;}
+    }
+
+    .props_item_label{
+        .text_node{font-size:14px; position:relative;top:-1px;}   
     }
 }
 
@@ -508,7 +557,7 @@ select.cir_select{
 }
 
 
-.multi_box{
+/* .multi_box{
     position: relative;display: inline-block;font-size: 13px;margin: 4px;
     .trigger{
         min-width: 160px;padding: 4px 6px; border: 1px solid #ccc;border-radius: 2px;cursor: pointer;background: #fff;text-align: left;
@@ -531,7 +580,7 @@ select.cir_select{
     .list label {
         cursor: pointer;
     }
-}
+ }*/
 
 /* 
 .multiBox {

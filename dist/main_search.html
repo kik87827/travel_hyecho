@@ -1133,9 +1133,30 @@
 					</div>
 					<div class="floor_data_render">
 						<div class="floor_sort_row">
-							<select class="form_word_select">
-								<option>출발일순</option>
-							</select>
+							<!--  <select class="form_word_select">
+                  <option>출발일순</option>
+                </select> -->
+							<div class="combo_box_wrap" data-comboparent=".floor_sort_row" id="combo_list_sort2">
+								<a href="javascript:;" class="combo_box_target"><span class="text_node">출발일순</span></a>
+								<div class="combo_box_option_wrap">
+									<ul class="combo_box_option_list">
+										<li><a href="javascript:;" class="combo_box_option" data-option="option 0">전체보기</a></li>
+										<li><a href="javascript:;" class="combo_box_option" data-option="option 1">옵션 1</a></li>
+										<li><a href="javascript:;" class="combo_box_option" data-option="option 2">출발일순</a></li>
+										<li><a href="javascript:;" class="combo_box_option" data-option="option 3">옵션 3</a></li>
+									</ul>
+								</div>
+							</div>
+							<script>
+								$(function() {
+									$("#combo_list_sort2")
+										.find(".combo_box_option")
+										.on("click", function() {
+											// value
+											console.log($(this).text(), $(this).attr("data-option"));
+										});
+								});
+							</script>
 						</div>
 						<div class="floor_data_wrap">
 							<ul class="floor_data_list">
@@ -1359,10 +1380,11 @@
 		<script>
 			$(function() {
 				datePicker();
+				comboFunc();
 			});
 			$(window).on("load", function() {
 				fieldboxGridFunc();
-			})
+			});
 
 			function datePicker() {
 				var $datepicker = $(".form_boxinput.calendar");

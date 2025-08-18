@@ -1031,144 +1031,51 @@
 		</header>
 
 		<main class="middle_wrap">
-			<style></style>
-
-			<!-- 첫 번째 예시 -->
-			<div class="multi_box">
-				<div class="trigger">상태 선택 ▾</div>
-				<div class="layer">
-					<div class="layerHead">총 4 중 0 선택</div>
-					<ul class="list">
-						<li>
-							<label>
-								<input type="checkbox" class="checkAll" />
-								[전체]
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="checkbox" class="optionItem" value="발권" />
-								발권
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="checkbox" class="optionItem" value="VOID" />
-								VOID
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="checkbox" class="optionItem" value="발권+VOID" />
-								발권+VOID
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="checkbox" class="optionItem" value="환불" />
-								환불
-							</label>
-						</li>
-					</ul>
+			<br />
+			<br />
+			<br />
+			<br />
+			<div style="margin: 30px">
+				<div class="multi_box">
+					<a href="javascript:;" class="multi_target">선택하세요</a>
+					<div class="multi_option_layer" style="display: none">
+						<!-- prettier-ignore -->
+						<div class="multi_option_head">총 <span class="multi_check_length"></span> 중 0 선택</div>
+						<ul class="multi_option_list">
+							<li>
+								<label class="props_item_label">
+									<input type="checkbox" class="props_form check_all" />
+									<span class="text_node">[전체]</span>
+								</label>
+							</li>
+							<li>
+								<label class="props_item_label">
+									<input type="checkbox" class="props_form option_item" value="option1" />
+									<span class="text_node">승인</span>
+								</label>
+							</li>
+							<li>
+								<label class="props_item_label">
+									<input type="checkbox" class="props_form option_item" value="option2" />
+									<span class="text_node">거절</span>
+								</label>
+							</li>
+							<li>
+								<label class="props_item_label">
+									<input type="checkbox" class="props_form option_item" value="option3" />
+									<span class="text_node">보류</span>
+								</label>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<input type="hidden" name="status" />
-			</div>
-
-			<!-- 두 번째 예시 -->
-			<div class="multi_box">
-				<div class="trigger">승인 상태 선택 ▾</div>
-				<div class="layer">
-					<div class="layerHead">총 3 중 0 선택</div>
-					<ul class="list">
-						<li>
-							<label>
-								<input type="checkbox" class="checkAll" />
-								[전체]
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="checkbox" class="optionItem" value="승인" />
-								승인
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="checkbox" class="optionItem" value="거절" />
-								거절
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="checkbox" class="optionItem" value="보류" />
-								보류
-							</label>
-						</li>
-					</ul>
-				</div>
-				<input type="hidden" name="approval" />
 			</div>
 
 			<script>
-				(function($) {
-					$.fn.multi_box = function() {
-						return this.each(function() {
-							var box = $(this);
-							var trigger = box.find(".trigger");
-							var layer = box.find(".layer");
-							var head = box.find(".layerHead");
-							var checkAll = box.find(".checkAll");
-							var items = box.find(".optionItem");
-							var hidden = box.find("input[type=hidden]");
-
-							// 열기/닫기
-							trigger.on("click", function() {
-								$(".multi_box .layer").not(layer).hide(); // 다른 컴포 닫기
-								layer.toggle();
-							});
-							$(document).on("mousedown", function(e) {
-								if (!box.is(e.target) && box.has(e.target).length === 0) {
-									layer.hide();
-								}
-							});
-
-							// 전체선택
-							checkAll.on("change", function() {
-								items.prop("checked", $(this).is(":checked"));
-								updateHead();
-							});
-
-							// 개별선택
-							items.on("change", function() {
-								var total = items.length;
-								var checked = items.filter(":checked").length;
-								checkAll.prop("checked", checked === total);
-								updateHead();
-							});
-
-							// 레이어 헤드 업데이트
-							function updateHead() {
-								var total = items.length;
-								var checked = items.filter(":checked").length;
-								head.text("총 " + total + " 중 " + checked + " 선택");
-
-								var values = items
-									.filter(":checked")
-									.map(function() {
-										return this.value;
-									})
-									.get();
-								hidden.val(values.join(","));
-							}
-
-							// 초기화
-							updateHead();
-						});
-					};
-				})(jQuery);
-
-				// 모든 컴포넌트 적용
-				$(".multi_box").multi_box();
+				$(function() {
+					// 모든 컴포넌트 적용
+					multi_box(".multi_box");
+				});
 			</script>
 		</main>
 	</div>

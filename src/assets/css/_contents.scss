@@ -3619,7 +3619,7 @@ input.props_box_form{
 
 .floor_data_render{margin-top:40px;}
 .floor_sort_row{
-    display:flex; justify-content: flex-end; align-items: center; margin-bottom:20px;
+    display:flex; justify-content: flex-end; align-items: center; margin-bottom:20px; position:relative;
     .form_word_select{}
 }
 .floor_data_list{

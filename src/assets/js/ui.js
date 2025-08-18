@@ -1145,6 +1145,13 @@ function localPopup() {
     $(this).closest(".local_popup_wrap").removeClass("active");
   });
 
+  $(document).on("click", function (e) {
+    if ($(e.target).closest(".local_popup_wrap,[data-localtarget]").length || $(e.target).attr("data-localtarget") !== undefined) {
+      return;
+    }
+    $(".local_popup_wrap").removeClass("active");
+  });
+
   $(window).on("resize", function () {
     posAction();
   });
@@ -1165,4 +1172,63 @@ function localPopup() {
       }
     });
   }
+}
+
+function multi_box(selector) {
+  $(selector).each(function () {
+    var box = $(this);
+    var multi_target = box.find(".multi_target");
+    var layer = box.find(".multi_option_layer");
+    var head = box.find(".multi_option_head");
+    var checkAll = box.find(".check_all");
+    var items = box.find(".option_item");
+    var multi_check_length = box.find(".multi_check_length");
+
+    // 초기 head에서 총 갯수 파싱
+    var total = items.length;
+    var headText = head.text();
+    multi_check_length.text(total);
+
+    // 열기/닫기
+    multi_target.on("click", function () {
+      $(".multi_box .multi_option_layer").not(layer).hide(); // 다른 컴포 닫기
+      layer.toggle();
+    });
+
+    $(document).on("mousedown", function (e) {
+      if (!box.is(e.target) && box.has(e.target).length === 0) {
+        layer.hide();
+      }
+    });
+
+    // 전체선택
+    checkAll.on("change", function () {
+      items.prop("checked", $(this).is(":checked"));
+      updateHead();
+    });
+
+    // 개별선택
+    items.on("change", function () {
+      var checked = items.filter(":checked").length;
+      checkAll.prop("checked", checked === total);
+      updateHead();
+    });
+
+    // 레이어 헤드 업데이트
+    function updateHead() {
+      var checked = items.filter(":checked").length;
+      head.text("총 " + total + " 중 " + checked + " 선택");
+
+      var values = items
+        .filter(":checked")
+        .map(function () {
+          return this.value;
+        })
+        .get();
+      //hidden.val(values.join(","));
+    }
+
+    // 초기화
+    updateHead();
+  });
 }
