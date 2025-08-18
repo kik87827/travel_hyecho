@@ -506,3 +506,76 @@ select.cir_select{
     .local_popup_contents{font-size:14px;padding:20px 20px 20px;}
     
 }
+
+
+.multi_box{
+    position: relative;display: inline-block;font-size: 13px;margin: 4px;
+    .trigger{
+        min-width: 160px;padding: 4px 6px; border: 1px solid #ccc;border-radius: 2px;cursor: pointer;background: #fff;text-align: left;
+    }
+    .layer {
+        position: absolute;top: 100%;left: 0;margin-top: 2px;border: 1px solid #ccc;background: #fff;z-index: 10;display: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);min-width: 200px;
+    }
+    .layerHead {
+        padding: 6px;font-weight: bold;border-bottom: 1px solid #eee;background: #f9f9f9;
+    }
+    .list {
+        list-style: none;
+        margin: 0;
+        padding: 6px;
+    }
+    .list li {
+        margin: 2px 0;
+    }
+    .list label {
+        cursor: pointer;
+    }
+}
+
+/* 
+.multiBox {
+            position: relative;
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 13px;
+            margin: 4px;
+          }
+          .multiBox .trigger {
+            min-width: 160px;
+            padding: 4px 6px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            cursor: pointer;
+            background: #fff;
+            text-align: left;
+          }
+          .multiBox .layer {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 2px;
+            border: 1px solid #ccc;
+            background: #fff;
+            z-index: 10;
+            display: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+          }
+          .multiBox .layerHead {
+            padding: 6px;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+            background: #f9f9f9;
+          }
+          .multiBox .list {
+            list-style: none;
+            margin: 0;
+            padding: 6px;
+          }
+          .multiBox .list li {
+            margin: 2px 0;
+          }
+          .multiBox .list label {
+            cursor: pointer;
+          } */
