@@ -89,7 +89,7 @@ function headerMenu() {
   const global_menu_layer = document.querySelector(".global_menu_layer");
   const gmenu_toggle = document.querySelectorAll(".gmenu_toggle");
   const tmenu_one = document.querySelectorAll(".tmenu_one");
-  const tmenu_one_text = document.querySelectorAll(".tmenu_one_text");
+  // const tmenu_one_text = document.querySelectorAll(".tmenu_one_text");
   const mobile_total_layer = document.querySelector(".mobile_total_layer");
   const gnb_twodepth_layer = document.querySelector(".gnb_twodepth_layer");
   const gnb_twodepth_layer_gnbtwocont = document.querySelectorAll(".gnb_twodepth_layer .gnb_two_cont");
@@ -214,7 +214,7 @@ function headerMenu() {
     });
   }
 
-  if (!!tmenu_one_text) {
+  /* if (!!tmenu_one_text) {
     tmenu_one_text.forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
@@ -222,7 +222,7 @@ function headerMenu() {
         thisTarget.closest(".tmenu_toggle_item").classList.toggle("active");
       });
     });
-  }
+  } */
 
   if (!!mobile_total_menu) {
     mobile_total_menu.forEach((item) => {
@@ -246,6 +246,48 @@ function headerMenu() {
     });
   }
 
+  mbTotalBoth();
+  function mbTotalBoth() {
+    const bo_menu = document.querySelectorAll(".bo_menu");
+    const bt_menu_li = document.querySelectorAll(".bt_menu_list > li");
+    const bt_menu_cont = document.querySelectorAll(".bt_menu_cont");
+    let bo_menu_active = document.querySelector(".bo_menu_list > li.active");
+    let bo_cont_active = document.querySelector(".bt_menu_cont.active");
+    let depth_bt_menu = null;
+
+    bo_menu.forEach((t_bo, menu_index) => {
+      t_bo.addEventListener("click", (e) => {
+        e.preventDefault();
+        const etarget = e.currentTarget;
+        const eparents = etarget.closest("li");
+
+        if (bo_menu_active || bo_cont_active) {
+          bo_menu_active.classList.remove("active");
+          bo_cont_active.classList.remove("active");
+        }
+        eparents.classList.add("active");
+        bo_menu_active = eparents;
+
+        bt_menu_cont[menu_index].classList.add("active");
+        bo_cont_active = bt_menu_cont[menu_index];
+      });
+    });
+
+    bt_menu_li.forEach((t_menu) => {
+      const t_depth_wrap = t_menu.querySelector(".bt_depth_wrap");
+      if (!!t_depth_wrap) {
+        t_menu.classList.add("has_depth");
+      }
+    });
+    depth_bt_menu = document.querySelectorAll(".bt_menu_list > li.has_depth .bt_menu");
+    depth_bt_menu.forEach((dt_menu) => {
+      dt_menu.addEventListener("click", (e) => {
+        e.preventDefault();
+        const etarget = e.currentTarget;
+        etarget.closest("li").classList.toggle("active");
+      });
+    });
+  }
   function mbQuickMenu() {
     if (mb_total_quick_slide.length > 1) {
       if (mbquickObj == null) {
