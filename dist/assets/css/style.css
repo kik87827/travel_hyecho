@@ -19225,6 +19225,9 @@ input.input_search_field {
   align-items: center;
   flex: 1;
 }
+.search_baquette_container .form_cols.long {
+  flex: 0 0 32%;
+}
 .search_baquette_container .form_cols:first-of-type {
   border-left: 0;
 }

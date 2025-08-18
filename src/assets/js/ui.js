@@ -1007,7 +1007,6 @@ function responThFunc(targets) {
         const $thisTb = $(this);
         const $thisThText = $thisTb.find(".d_label_text");
         const $thisThCols = $thisTb.find(".d_label_cols");
-        console.log($thisThText, $thisThCols);
         let $thisMaxArray = [];
         $thisThCols.css("flex-basis", "");
 
