@@ -1314,9 +1314,10 @@
 					<ul class="breadcrumb_list">
 						<li><span class="breadcrumb_item">네팔/히말라야</span></li>
 						<li>
-							<select class="cir_select">
-								<option>전체</option>
-							</select>
+							<!-- <select class="cir_select">
+                  <option>전체</option>
+                </select> -->
+							<a href="javascript:;" class="cir_combo" data-localtarget="#local_choice_popup"><span class="text_node">전체</span></a>
 						</li>
 					</ul>
 				</div>
@@ -1738,222 +1739,406 @@
 			</div>
 		</main>
 		<!-- popup -->
-		<div class="popup_wrap" id="local_select_popup">
-			<div class="bg_dim"></div>
-			<div class="popup_item size2">
-				<div class="popup_title_row define_text">
-					<h2 class="popup_primary_title">지역선택</h2>
-				</div>
-				<div class="popup_contents_row">
-					<div class="popup_contents_inner">
-						<div class="panel_menu_container">
-							<div class="one_panel_cols">
-								<ul class="one_panel_list">
-									<li>
-										<a href="#" class="one_panel_menu active"><span class="text_node">유럽</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">네팔 히말라야</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">티벳/신장/인도/파키스탄</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">중국</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">일본</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">미국/캐나다</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">중남미</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">몽골/키르키즈/카자흐</span></a>
-									</li>
-									<li>
-										<a href="#" class="one_panel_menu"><span class="text_node">동남아/홍콩/대만</span></a>
-									</li>
-								</ul>
-							</div>
-							<div class="two_panel_cols">
-								<div class="two_panel_cont active">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">알프스</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">돌로미테/티롤</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">서유럽/동유럽</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">북유럽</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 2</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 3</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 4</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 5</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 6</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 7</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 8</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-								<div class="two_panel_cont">
-									<ul class="two_panel_list">
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목 9</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-										<li>
-											<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
-										</li>
-									</ul>
-								</div>
-							</div>
+		<!-- 20250818 로컬팝업 변경 -->
+		<div class="local_popup_wrap" id="local_choice_popup">
+			<div class="local_popup_title_row">
+				<h2 class="local_popup_title">지역선택</h2>
+			</div>
+			<div class="local_popup_contents">
+				<div class="panel_menu_container">
+					<div class="one_panel_cols">
+						<ul class="one_panel_list">
+							<li>
+								<a href="#" class="one_panel_menu active"><span class="text_node">유럽</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">네팔 히말라야</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">티벳/신장/인도/파키스탄</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">중국</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">일본</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">미국/캐나다</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">중남미</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">몽골/키르키즈/카자흐</span></a>
+							</li>
+							<li>
+								<a href="#" class="one_panel_menu"><span class="text_node">동남아/홍콩/대만</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="two_panel_cols">
+						<div class="two_panel_cont active">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">알프스</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">돌로미테/티롤</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">서유럽/동유럽</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">북유럽</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 2</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 3</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 4</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 5</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 6</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 7</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 8</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="two_panel_cont">
+							<ul class="two_panel_list">
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목 9</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+								<li>
+									<a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
+			<a href="javascript:;" class="btn_local_popup_close"><span class="hdtext">팝업 닫기</span></a>
 		</div>
+		<!-- // 20250818 로컬팝업 변경 -->
+		<!-- <div class="popup_wrap" id="local_select_popup">
+        <div class="bg_dim"></div>
+        <div class="popup_item size2">
+          <div class="popup_title_row define_text">
+            <h2 class="popup_primary_title">지역선택</h2>
+          </div>
+          <div class="popup_contents_row">
+            <div class="popup_contents_inner">
+              <div class="panel_menu_container">
+                <div class="one_panel_cols">
+                  <ul class="one_panel_list">
+                    <li>
+                      <a href="#" class="one_panel_menu active"><span class="text_node">유럽</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">네팔 히말라야</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">티벳/신장/인도/파키스탄</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">중국</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">일본</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">미국/캐나다</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">중남미</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">몽골/키르키즈/카자흐</span></a>
+                    </li>
+                    <li>
+                      <a href="#" class="one_panel_menu"><span class="text_node">동남아/홍콩/대만</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="two_panel_cols">
+                  <div class="two_panel_cont active">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">알프스</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">돌로미테/티롤</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">서유럽/동유럽</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">북유럽</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 2</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 3</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 4</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 5</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 6</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 7</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 8</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="two_panel_cont">
+                    <ul class="two_panel_list">
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목 9</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                      <li>
+                        <a href="#" class="two_panel_menu"><span class="text_node">세부항목</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+        </div>
+      </div> -->
 		<!-- // popup -->
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
 				// 팝업 인스턴스
-				var local_select_popup = new DesignPopup({
-					selector: "#local_select_popup",
-					beforeCallback() {
-						console.log("beforeCallback");
-					},
-					callback() {
-						panelMenu();
-					},
-				});
-
+				/* var local_select_popup = new DesignPopup({
+				  selector: "#local_select_popup",
+				  beforeCallback() {
+				    console.log("beforeCallback");
+				  },
+				  callback() {
+				    panelMenu();
+				  },
+				}); */
 				// local_select_popup.popupShow(); // 호출
 				// local_select_popup.popupHide(); // 닫기
-
-				// 퍼블확인용
-				let url = window.location.href.split("?")[1];
-				let url_2 = url !== undefined ? url.split("#")[0] : null;
-				if (url_2 === "popup_local") {
-					local_select_popup.popupShow();
-				}
 			});
+			// 퍼블확인용
+			let url = window.location.href.split("?")[1];
+			let url_2 = url !== undefined ? url.split("#")[0] : null;
 
 			function panelMenu() {
 				const one_panel_menu = document.querySelectorAll(".one_panel_menu");
@@ -1978,6 +2163,12 @@
 
 			$(function() {
 				responWidFunc();
+				localPopup();
+				panelMenu();
+
+				if (url_2 === "popup_local") {
+					$("[data-localtarget='#local_choice_popup']").click();
+				}
 			});
 		</script>
 		<footer class="footer_wrap">

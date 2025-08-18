@@ -1411,7 +1411,7 @@
 									<span class="text_node d_label_text">출발일자</span>
 								</div>
 								<div class="baquette_value_cols">
-									<input type="text" class="form_boxinput calendar" readonly />
+									<input type="text" class="form_boxinput calendar" id="daterange" placeholder="선택하세요" readonly />
 								</div>
 							</div>
 						</div>
@@ -1570,22 +1570,22 @@
 			</div>
 		</main>
 		<script>
-			function datePicker() {
-				var $datepicker = $(".form_boxinput.calendar");
-				if ($datepicker.length) {
-					$datepicker.each(function() {
-						var $dateThis = $(this);
-						$dateThis.datepicker({
-							dateFormat: "yy-mm-dd",
-						});
-					});
-				}
-			}
+			/* function datePicker() {
+          var $datepicker = $(".form_boxinput.calendar");
+          if ($datepicker.length) {
+            $datepicker.each(function () {
+              var $dateThis = $(this);
+              $dateThis.datepicker({
+                dateFormat: "yy-mm-dd",
+              });
+            });
+          }
+        } */
 			$(window).on("load", function() {
 				responThFunc([".search_baquette_container"]);
 			});
 			$(function() {
-				datePicker();
+				// datePicker();
 				var mvSwiper = new Swiper(".swiper-container.mv_swiper", {
 					loop: true, // 반복
 					speed: 500,
@@ -1614,6 +1614,33 @@
 					mvSwiper.autoplay.start();
 					$(this).hide();
 				});
+				$("#daterange").daterangepicker({
+						autoUpdateInput: false, // 초기 값 비우기
+						singleDatePicker: false, // 기간 선택 가능
+						linkedCalendars: false, // 좌/우 달력 독립 (Next 버튼 정상)
+						alwaysShowCalendars: true,
+						opens: "right",
+						singleDateContainer: true,
+						elseMent: "출발일을 선택하세요",
+						locale: {
+							format: "YYYY-MM-DD",
+							separator: " ~ ",
+							applyLabel: "적용",
+							cancelLabel: "취소",
+							fromLabel: "시작",
+							toLabel: "종료",
+							customRangeLabel: "사용자 지정",
+							weekLabel: "주",
+							daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							firstDay: 0,
+						},
+					},
+					function(start, end) {
+						// 기간 선택 완료 시 input 값 채움
+						$("#daterange").val(start.format("YYYY-MM-DD") + " ~ " + end.format("YYYY-MM-DD"));
+					}
+				);
 			});
 		</script>
 		<footer class="footer_wrap">

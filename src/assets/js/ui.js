@@ -254,7 +254,9 @@ function headerMenu() {
     let bo_menu_active = document.querySelector(".bo_menu_list > li.active");
     let bo_cont_active = document.querySelector(".bt_menu_cont.active");
     let depth_bt_menu = null;
-
+    if (!bo_menu) {
+      return;
+    }
     bo_menu.forEach((t_bo, menu_index) => {
       t_bo.addEventListener("click", (e) => {
         e.preventDefault();
@@ -1216,25 +1218,28 @@ function localPopup() {
   }
 }
 
-function multi_box(selector) {
-  $(selector).each(function () {
+function multi_box() {
+  $(".multi_box").each(function () {
     var box = $(this);
     var multi_target = box.find(".multi_target");
     var layer = box.find(".multi_option_layer");
     var head = box.find(".multi_option_head");
     var checkAll = box.find(".check_all");
     var items = box.find(".option_item");
+    var layerclose = layer.find(".btn_multi_layer_close");
     var multi_check_length = box.find(".multi_check_length");
 
-    // 초기 head에서 총 갯수 파싱
+    // 총 갯수
     var total = items.length;
-    var headText = head.text();
     multi_check_length.text(total);
 
     // 열기/닫기
     multi_target.on("click", function () {
-      $(".multi_box .multi_option_layer").not(layer).hide(); // 다른 컴포 닫기
+      $(".multi_box .multi_option_layer").not(layer).hide(); // 다른 박스 닫기
       layer.toggle();
+    });
+    layerclose.on("click", function () {
+      layer.hide();
     });
 
     $(document).on("mousedown", function (e) {
@@ -1256,7 +1261,7 @@ function multi_box(selector) {
       updateHead();
     });
 
-    // 레이어 헤드 업데이트
+    // 업데이트
     function updateHead() {
       var checked = items.filter(":checked").length;
       head.text("총 " + total + " 중 " + checked + " 선택");
@@ -1264,10 +1269,12 @@ function multi_box(selector) {
       var values = items
         .filter(":checked")
         .map(function () {
-          return this.value;
+          return $(this).siblings(".text_node").text(); // 체크된 항목 텍스트
         })
         .get();
-      //hidden.val(values.join(","));
+
+      // 선택값이 없으면 기본 문구 유지
+      multi_target.text(values.length ? values.join(", ") : "선택하세요");
     }
 
     // 초기화

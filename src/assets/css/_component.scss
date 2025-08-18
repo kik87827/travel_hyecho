@@ -343,11 +343,11 @@ select.cir_select{
         background: #fff url("../images/ico_select_44.png") no-repeat 100% 50%/auto 44px;line-height: 1; display:flex; align-items:center;
     }
     .multi_option_layer {
-        position: absolute;top: 100%;left: 0;margin-top: 10px;border: 1px solid #ccc;background: #fff;z-index: 10; border-radius:5px; overflow:hidden; width:100%; box-sizing:border-box;
+        position: absolute;top: 100%;left: 0;margin-top: 10px;border: 1px solid #787878;background: #fff;z-index: 10; border-radius:5px; overflow:hidden; width:100%; box-sizing:border-box;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);min-width: 200px;
     }
     .multi_option_head {
-        padding: 10px 15px;border-bottom: 1px solid #eee;background: #f9f9f9; @include font(15px,400,1.3,#2d2d2d); display:flex; min-height:46px; align-items:center; box-sizing:border-box;
+        padding: 10px 45px 10px 15px;border-bottom: 1px solid #eee;background: #f9f9f9; @include font(15px,400,1.3,#2d2d2d); display:flex; min-height:46px; align-items:center; box-sizing:border-box;
     }
     .multi_option_list {
         padding: 10px 15px;
@@ -355,6 +355,14 @@ select.cir_select{
             margin-bottom:10px; font-size:0;line-height:0;
             &:last-of-type{margin-bottom:0;}
         }
+    }
+    .btn_multi_layer_close{display:block;width:45px;height:45px;position:absolute;top:0;right:0;font-size:0;line-height:0;
+        &:before,
+        &:after{width:16px;height:2px;display:block;content:'';position:absolute;top:50%;left:50%;background:#646464;margin:-1px 0 0 -8px;
+            transform: translateZ(0);-webkit-transform: translateZ(0);-ms-transform: translateZ(0);-moz-transform: translateZ(0);
+        }
+        &:before{transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+        &:after{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);}
     }
 }
 
@@ -428,10 +436,11 @@ select.cir_select{
             margin-top: 5px;
         }
         .multi_option_head {
-            padding: 5px 15px; font-size:14px; display:flex; min-height:40px;
+            padding: 5px 40px 5px 15px; font-size:14px; display:flex; min-height:40px;
         }
         .multi_option_list {
         }
+        .btn_multi_layer_close{width:40px;height:40px;}
     }
 
     select.form_word_select{font-size:14px;}

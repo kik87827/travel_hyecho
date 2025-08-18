@@ -1333,7 +1333,7 @@
 									<li>
 										<dl class="obj_form_item">
 											<dt><span class="keylabel">출발일</span></dt>
-											<dd><input type="text" class="form_boxinput calendar" placeholder="0000-00-00" /></dd>
+											<dd><input type="text" class="form_boxinput calendar" id="daterange" placeholder="0000-00-00" /></dd>
 										</dl>
 									</li>
 									<li>
@@ -1352,11 +1352,45 @@
 										<dl class="obj_form_item">
 											<dt><span class="keylabel">기간</span></dt>
 											<dd>
-												<select required class="form_select">
-													<option value="" disabled selected hidden>선택하세요</option>
-													<option value="1">옵션1</option>
-													<option value="2">옵션2</option>
-												</select>
+												<!--  <select required class="form_select">
+                            <option value="" disabled selected hidden>선택하세요</option>
+                            <option value="1">옵션1</option>
+                            <option value="2">옵션2</option>
+                          </select> -->
+												<div class="multi_box">
+													<a href="javascript:;" class="multi_target">선택하세요</a>
+													<div class="multi_option_layer" style="display: none">
+														<!-- prettier-ignore -->
+														<div class="multi_option_head">총 <span class="multi_check_length"></span> 중 0 선택</div>
+														<ul class="multi_option_list">
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form check_all" />
+																	<span class="text_node">[전체]</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option1" />
+																	<span class="text_node">옵션1</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option2" />
+																	<span class="text_node">옵션2</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option3" />
+																	<span class="text_node">옵션3</span>
+																</label>
+															</li>
+														</ul>
+														<a href="javascript:;" class="btn_multi_layer_close"></a>
+													</div>
+												</div>
 											</dd>
 										</dl>
 									</li>
@@ -1364,11 +1398,45 @@
 										<dl class="obj_form_item">
 											<dt><span class="keylabel">테마</span></dt>
 											<dd>
-												<select required class="form_select">
-													<option value="" disabled selected hidden>선택하세요</option>
-													<option value="1">옵션1</option>
-													<option value="2">옵션2</option>
-												</select>
+												<!--  <select required class="form_select">
+                            <option value="" disabled selected hidden>선택하세요</option>
+                            <option value="1">옵션1</option>
+                            <option value="2">옵션2</option>
+                          </select> -->
+												<div class="multi_box">
+													<a href="javascript:;" class="multi_target">선택하세요</a>
+													<div class="multi_option_layer" style="display: none">
+														<!-- prettier-ignore -->
+														<div class="multi_option_head">총 <span class="multi_check_length"></span> 중 0 선택</div>
+														<ul class="multi_option_list">
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form check_all" />
+																	<span class="text_node">[전체]</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option1" />
+																	<span class="text_node">옵션1</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option2" />
+																	<span class="text_node">옵션2</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option3" />
+																	<span class="text_node">옵션3</span>
+																</label>
+															</li>
+														</ul>
+														<a href="javascript:;" class="btn_multi_layer_close"></a>
+													</div>
+												</div>
 											</dd>
 										</dl>
 									</li>
@@ -1376,11 +1444,45 @@
 										<dl class="obj_form_item">
 											<dt><span class="keylabel">난이도</span></dt>
 											<dd>
-												<select required class="form_select">
-													<option value="" disabled selected hidden>선택하세요</option>
-													<option value="1">옵션1</option>
-													<option value="2">옵션2</option>
-												</select>
+												<!--  <select required class="form_select">
+                            <option value="" disabled selected hidden>선택하세요</option>
+                            <option value="1">옵션1</option>
+                            <option value="2">옵션2</option>
+                          </select> -->
+												<div class="multi_box">
+													<a href="javascript:;" class="multi_target">선택하세요</a>
+													<div class="multi_option_layer" style="display: none">
+														<!-- prettier-ignore -->
+														<div class="multi_option_head">총 <span class="multi_check_length"></span> 중 0 선택</div>
+														<ul class="multi_option_list">
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form check_all" />
+																	<span class="text_node">[전체]</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option1" />
+																	<span class="text_node">옵션1</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option2" />
+																	<span class="text_node">옵션2</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option3" />
+																	<span class="text_node">옵션3</span>
+																</label>
+															</li>
+														</ul>
+														<a href="javascript:;" class="btn_multi_layer_close"></a>
+													</div>
+												</div>
 											</dd>
 										</dl>
 									</li>
@@ -1388,11 +1490,45 @@
 										<dl class="obj_form_item">
 											<dt><span class="keylabel">예약상태</span></dt>
 											<dd>
-												<select required class="form_select">
-													<option value="" disabled selected hidden>선택하세요</option>
-													<option value="1">옵션1</option>
-													<option value="2">옵션2</option>
-												</select>
+												<!-- <select required class="form_select">
+                            <option value="" disabled selected hidden>선택하세요</option>
+                            <option value="1">옵션1</option>
+                            <option value="2">옵션2</option>
+                          </select> -->
+												<div class="multi_box">
+													<a href="javascript:;" class="multi_target">선택하세요</a>
+													<div class="multi_option_layer" style="display: none">
+														<!-- prettier-ignore -->
+														<div class="multi_option_head">총 <span class="multi_check_length"></span> 중 0 선택</div>
+														<ul class="multi_option_list">
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form check_all" />
+																	<span class="text_node">[전체]</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option1" />
+																	<span class="text_node">옵션1</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option2" />
+																	<span class="text_node">옵션2</span>
+																</label>
+															</li>
+															<li>
+																<label class="props_item_label">
+																	<input type="checkbox" class="props_form option_item" value="option3" />
+																	<span class="text_node">옵션3</span>
+																</label>
+															</li>
+														</ul>
+														<a href="javascript:;" class="btn_multi_layer_close"></a>
+													</div>
+												</div>
 											</dd>
 										</dl>
 									</li>
@@ -1657,24 +1793,51 @@
 		</main>
 		<script>
 			$(function() {
-				datePicker();
+				//datePicker();
+				$("#daterange").daterangepicker({
+						autoUpdateInput: false, // 초기 값 비우기
+						singleDatePicker: false, // 기간 선택 가능
+						linkedCalendars: false, // 좌/우 달력 독립 (Next 버튼 정상)
+						alwaysShowCalendars: true,
+						opens: "right",
+						singleDateContainer: true,
+						elseMent: "출발일을 선택하세요",
+						locale: {
+							format: "YYYY-MM-DD",
+							separator: " ~ ",
+							applyLabel: "적용",
+							cancelLabel: "취소",
+							fromLabel: "시작",
+							toLabel: "종료",
+							customRangeLabel: "사용자 지정",
+							weekLabel: "주",
+							daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							firstDay: 0,
+						},
+					},
+					function(start, end) {
+						// 기간 선택 완료 시 input 값 채움
+						$("#daterange").val(start.format("YYYY-MM-DD") + " ~ " + end.format("YYYY-MM-DD"));
+					}
+				);
 				comboFunc();
+				multi_box();
 			});
 			$(window).on("load", function() {
 				fieldboxGridFunc();
 			});
-
-			function datePicker() {
-				var $datepicker = $(".form_boxinput.calendar");
-				if ($datepicker.length) {
-					$datepicker.each(function() {
-						var $dateThis = $(this);
-						$dateThis.datepicker({
-							dateFormat: "yy-mm-dd",
-						});
-					});
-				}
-			}
+			/* function datePicker() {
+			  var $datepicker = $(".form_boxinput.calendar");
+			  if ($datepicker.length) {
+			    $datepicker.each(function () {
+			      var $dateThis = $(this);
+			      $dateThis.datepicker({
+			        dateFormat: "yy-mm-dd",
+			      });
+			    });
+			  }
+			} */
 		</script>
 		<footer class="footer_wrap">
 			<div class="btn_pagetop_wrap">

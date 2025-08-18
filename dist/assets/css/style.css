@@ -3796,7 +3796,7 @@ span.ui-datepicker-month {
   width: 278px;
   max-width: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 10px;
   top: 100px;
   left: 20px;
   z-index: 90;
@@ -3807,6 +3807,12 @@ span.ui-datepicker-month {
   -webkit-box-shadow: 3px 2px 13px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 3px 2px 13px 0px rgba(0, 0, 0, 0.3);
   min-width: 240px;
+}
+.daterangepicker.single_container .drp-calendar.right {
+  display: none;
+}
+.daterangepicker.single_container .drp-calendar.left {
+  border-right: none;
 }
 
 .daterangepicker-inner {
@@ -4320,7 +4326,7 @@ span.ui-datepicker-month {
   .daterangepicker {
     width: auto;
     border-radius: 7px;
-    margin-top: 0 !important;
+    margin-top: 10px !important;
     left: 20px !important;
     width: calc(100% - 40px) !important;
   }
@@ -5145,7 +5151,7 @@ select.cir_select:disabled {
   top: 100%;
   left: 0;
   margin-top: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #787878;
   background: #fff;
   z-index: 10;
   border-radius: 5px;
@@ -5156,7 +5162,7 @@ select.cir_select:disabled {
   min-width: 200px;
 }
 .multi_box .multi_option_head {
-  padding: 10px 15px;
+  padding: 10px 45px 10px 15px;
   border-bottom: 1px solid #eee;
   background: #f9f9f9;
   font-size: 15px;
@@ -5178,6 +5184,41 @@ select.cir_select:disabled {
 }
 .multi_box .multi_option_list > li:last-of-type {
   margin-bottom: 0;
+}
+.multi_box .btn_multi_layer_close {
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.multi_box .btn_multi_layer_close:before, .multi_box .btn_multi_layer_close:after {
+  width: 16px;
+  height: 2px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #646464;
+  margin: -1px 0 0 -8px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+}
+.multi_box .btn_multi_layer_close:before {
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.multi_box .btn_multi_layer_close:after {
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 
 .cir_combo {
@@ -5325,10 +5366,14 @@ select.cir_select:disabled {
     margin-top: 5px;
   }
   .multi_box .multi_option_head {
-    padding: 5px 15px;
+    padding: 5px 40px 5px 15px;
     font-size: 14px;
     display: flex;
     min-height: 40px;
+  }
+  .multi_box .btn_multi_layer_close {
+    width: 40px;
+    height: 40px;
   }
   select.form_word_select {
     font-size: 14px;
@@ -11173,6 +11218,12 @@ input.form_boxinput {
 input.form_boxinput.calendar {
   background: #fff url("../images/ico_calendar_44x44.png") no-repeat calc(100% - 14px) 50%/22px auto;
   padding-right: 50px;
+}
+input.form_boxinput.calendar::-moz-placeholder {
+  color: #2d2d2d;
+}
+input.form_boxinput.calendar::placeholder {
+  color: #2d2d2d;
 }
 
 .field_each_para {
