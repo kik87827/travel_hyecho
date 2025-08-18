@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/_head.html')
+
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/_header.html')
+      <main class="middle_wrap">
+        <div class="single_page">
+          <div class="single_breadcrumb_row breadcrumb_row">
+            <ul class="breadcrumb_list">
+              <li><span class="breadcrumb_item">네팔/히말라야</span></li>
+              <li>
+                <!-- <select class="cir_select">
+                  <option>전체</option>
+                </select> -->
+                <a href="javascript:;" class="cir_combo" data-localtarget="#local_choice_popup"><span class="text_node">전체</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="local_popup_wrap" id="local_choice_popup">
+            <div class="local_popup_title_row">
+              <h2 class="local_popup_title">지역선택</h2>
+            </div>
+            <div class="local_popup_contents">내용이 들어갑니다.</div>
+            <a href="javascript:;" class="btn_local_popup_close"><span class="hdtext">팝업 닫기</span></a>
+          </div>
+        </div>
+      </main>
+      <script>
+        $(window).on("load", function () {
+          localPopup();
+        });
+      </script>
+    </div>
+  </body>
+</html>

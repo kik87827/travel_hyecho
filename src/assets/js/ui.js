@@ -73,11 +73,13 @@ const uiBase = {
     const foot_copy_toggle = document.querySelector(".foot_copy_toggle");
     const foot_copy_toggle_contents = document.querySelector(".foot_copy_toggle_contents");
 
-    foot_copy_toggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.currentTarget.classList.toggle("active");
-      foot_copy_toggle_contents.classList.toggle("active");
-    });
+    if (!!foot_copy_toggle) {
+      foot_copy_toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.currentTarget.classList.toggle("active");
+        foot_copy_toggle_contents.classList.toggle("active");
+      });
+    }
   },
 };
 
@@ -1125,4 +1127,42 @@ function comboFunc() {
     $t_layer.hide();
     $t_t.find(".text_node").text($this.text());
   });
+}
+
+function localPopup() {
+  const $eventTarget = $("[data-localtarget]");
+  let $localpopup = null;
+
+  $eventTarget.on("click", function () {
+    const $this = $(this);
+    const $thisTarget = $($this.attr("data-localtarget"));
+    $thisTarget.addClass("active");
+    $localpopup = $(".local_popup_wrap.active");
+    posAction();
+  });
+
+  $(document).on("click", ".btn_local_popup_close", function () {
+    $(this).closest(".local_popup_wrap").removeClass("active");
+  });
+
+  $(window).on("resize", function () {
+    posAction();
+  });
+  function posAction() {
+    const posMargin = $(window).width() > 1023 ? 17 : 9;
+    $localpopup.removeClass("local_left local_right").css({ top: "", left: "" });
+    $localpopup.each(function () {
+      const $this = $(this);
+      const $call = $("[data-localtarget='#" + $this.attr("id") + "']");
+      if ($call.length) {
+        $this.css({ top: $call.offset().top + $call.outerHeight() + posMargin, left: $call.offset().left + $call.outerWidth() / 2 - $this.outerWidth() / 2 });
+      }
+      if ($this.offset().left < 0) {
+        $this.addClass("local_left");
+      }
+      if ($this.offset().left + $this.outerWidth() > $(window).width()) {
+        $this.addClass("local_right");
+      }
+    });
+  }
 }
