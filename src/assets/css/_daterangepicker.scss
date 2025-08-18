@@ -168,16 +168,19 @@
     border-radius: 0;
     display: inline-block;
     padding: 3px;
+    position: relative; top:-2px;
   }
   
   .daterangepicker .calendar-table .next span {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+     left:-1px;
   }
   
   .daterangepicker .calendar-table .prev span {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+     left:1px;
   }
   
   .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
@@ -193,11 +196,14 @@
   .daterangepicker td{position:relative;}
   .daterangepicker td:after{display:block;content:'';width:100%;height:100%;position:absolute;top:0;left:0;}
   .calendar-table th:first-of-type,
-  .calendar-table th:last-of-type,
   .calendar-table td.weekend:first-of-type,
-  .calendar-table td:first-of-type,
-  .calendar-table td:last-of-type{color:#d13249;}
-  .calendar-table td.weekend:first-of-type:hover{color:#d13249 !important;}.daterangepicker td.off{visibility: hidden;}
+  .calendar-table td:first-of-type{color:#d13249;}
+  .calendar-table td.weekend:first-of-type:hover{color:#d13249 !important;}
+  .calendar-table th:last-of-type,
+  .calendar-table td.weekend:last-of-type,
+  .calendar-table td:last-of-type{color:#5855f5;}
+  .calendar-table td.weekend:last-of-type:hover{color:#5855f5 !important;}
+  .daterangepicker td.off{visibility: hidden;}
   .calendar-table td.weekend.start-date{color:#fff !important;}
   .calendar-table td.weekend.end-date{color:#fff !important;}
   .calendar-table td.weekend.start-date:hover{color:#fff !important;}
@@ -210,14 +216,13 @@
   
   .daterangepicker .calendar-table table {
     width: 100%;
-    margin: 0 auto;
+    table-layout: fixed;
     border-spacing: 0;
     border-collapse: inherit;
-    max-width:300px; 
   }
   .indate{border-radius:100%;}
   .daterangepicker td.available:hover, .daterangepicker th.available:hover {
-    background-color: #eee;
+    background-color: #e0edfb;
     border-color: transparent;
     color: inherit;
   }
@@ -234,7 +239,7 @@
   }
   
   .daterangepicker td.in-range {
-    background-color: #fff3f5;
+    background-color: #f0f7ff;
     border-color: transparent;
     color: #000;
     border-radius: 0;
@@ -253,7 +258,7 @@
   }
   
   .daterangepicker td.active, .daterangepicker td.active:hover {
-    background-color: #13479b;
+    background-color: #006de1;
     border-color: transparent;
     color: #fff;
   }
@@ -468,7 +473,7 @@
   }
   
   @media (max-width:1023px){
-    .daterangepicker{width:auto;border-radius:7px;margin-top:0 !important;left:20px !important;width:calc(100% - 40px) !important;position:fixed !important;top:20px !important;height:calc(100% - 40px) !important;}
+    .daterangepicker{width:auto;border-radius:7px;margin-top:0 !important;left:20px !important;width:calc(100% - 40px) !important;}
     .daterangepicker .drp-calendar.left{padding:15px;}
     .daterangepicker.show-calendar .ranges{margin:0}
     .daterangepicker .drp-buttons .btn{font-size:14px;}
