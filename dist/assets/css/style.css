@@ -3918,8 +3918,14 @@ span.ui-datepicker-month {
   border-radius: 100%;
 }
 
-.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+.daterangepicker td.available:hover {
   background-color: #e0edfb;
+  border-color: transparent;
+  color: inherit;
+}
+
+.daterangepicker th.available:hover {
+  background-color: #eee;
   border-color: transparent;
   color: inherit;
 }
