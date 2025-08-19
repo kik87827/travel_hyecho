@@ -1200,6 +1200,9 @@ function localPopup() {
   });
   function posAction() {
     const posMargin = $(window).width() > 1023 ? 17 : 9;
+    if (!$localpopup) {
+      return;
+    }
     $localpopup.removeClass("local_left local_right").css({ top: "", left: "" });
     $localpopup.each(function () {
       const $this = $(this);
