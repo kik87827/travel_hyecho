@@ -7114,6 +7114,9 @@ input.box_props_form:checked + .box_props_label {
   padding: 17px 20px;
   background: #f9f9f9;
 }
+.field_grid_slice_wrap.ptype2 {
+  padding: 11px 20px 10px;
+}
 .field_grid_slice_wrap.tb_type {
   display: table;
   padding: 10px 20px;
@@ -7481,6 +7484,9 @@ input.amount_input {
   }
   .field_grid_slice_wrap {
     padding: 15px 15px;
+  }
+  .field_grid_slice_wrap.ptype2 {
+    padding: 15px;
   }
   .field_grid_slice_wrap.tb_type {
     display: block;

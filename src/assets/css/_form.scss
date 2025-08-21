@@ -330,6 +330,7 @@ input.box_props_form{
     }
 }
 .field_grid_slice_wrap{ padding:17px 20px;background:#f9f9f9; 
+    &.ptype2{padding:11px 20px 10px;}
     &.tb_type{display:table;  padding:10px 20px;
         .field_grid_slice{
             display:table-row;
@@ -520,6 +521,7 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
 
     .field_grid_slice_wrap{
          padding:15px 15px;
+         &.ptype2{padding:15px;}
         &.tb_type{display:block;  padding:15px 15px;
             .field_grid_slice{
                 display:block;
