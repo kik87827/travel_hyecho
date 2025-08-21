@@ -322,11 +322,11 @@ input.box_props_form{
 
 .field_grid_wrap{}
 .field_grid_list{
-    display:flex; flex-wrap:wrap; gap:10px 20px; margin-right:-20px; align-items: flex-start;
+    display:flex; flex-wrap:wrap; gap:10px 20px;/*  margin-right:-20px; */ align-items: flex-start;
     > li{
         display:flex; flex-direction: column;
         flex:1;
-        &.long_type{flex:0 0 45%;}
+        &.long_type{flex:0 0 48%;}
     }
 }
 .field_grid_slice_wrap{ padding:17px 20px;background:#f9f9f9; 
@@ -368,7 +368,7 @@ input.amount_input{appearance: none; line-height:1; height:34px; background:#fff
 
 @media (max-width:$tablet){
     .field_grid_list{
-         gap:10px; margin-right:-10px;
+         gap:10px;/*  margin-right:-10px; */
         > li{
             &.long_type{flex:0 0 50%;}
         }

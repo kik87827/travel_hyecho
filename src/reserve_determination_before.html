@@ -501,33 +501,13 @@
                         <div class="tile_sub_title_row">
                           <p class="tile_sub_title">결제상세내역</p>
                           <div class="tile_sub_else_wrap">
-                            <!-- <select class="form_word_select size2">
-                              <option>전체보기</option>
-                            </select> -->
-                            <div class="combo_box_wrap" data-comboparent=".tile_sub_title_row" id="combo_list_sort">
-                              <a href="javascript:;" class="combo_box_target"><span class="text_node">전체보기</span></a>
-                              <div class="combo_box_option_wrap">
-                                <ul class="combo_box_option_list">
-                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 0">전체보기</a></li>
-                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 1">옵션 1</a></li>
-                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 2">옵션 2</a></li>
-                                  <li><a href="javascript:;" class="combo_box_option" data-option="option 3">옵션 3</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                            <script>
-                              $(function () {
-                                $("#combo_list_sort")
-                                  .find(".combo_box_option")
-                                  .on("click", function () {
-                                    // value
-                                    console.log($(this).text(), $(this).attr("data-option"));
-                                  });
-                              });
-                            </script>
+                            <a href="javascript:;" data-target="#pay_detail_zone" class="btn_toggle_node">
+                              <span class="text_node">상세보기</span>
+                              <i class="ico"></i>
+                            </a>
                           </div>
                         </div>
-                        <div class="tile_sub_contents">
+                        <div class="tile_sub_contents" id="pay_detail_zone" style="display: none">
                           <div class="respond_tb_wrap">
                             <table class="respond_tb">
                               <thead>
@@ -736,6 +716,26 @@
         });
         $(function () {
           $(".btn_folding_box").each(function () {
+            var $thisBtn = $(this);
+            var $toggleBoolean = false;
+            $thisBtn.on("click", function (e) {
+              e.preventDefault();
+              var $thisEvent = $(this);
+              var $thisTarget = $($thisEvent.attr("data-target"));
+              $thisEvent.toggleClass("active");
+              if (!!$thisTarget) {
+                $thisTarget.toggle();
+              }
+              if ($toggleBoolean) {
+                $thisEvent.find(".text_node").text("상세보기");
+              } else {
+                $thisEvent.find(".text_node").text("접기");
+              }
+              adjustRevisionDomWidths();
+              $toggleBoolean = !$toggleBoolean;
+            });
+          });
+          $(".btn_toggle_node").each(function () {
             var $thisBtn = $(this);
             var $toggleBoolean = false;
             $thisBtn.on("click", function (e) {
