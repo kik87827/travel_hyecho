@@ -3561,6 +3561,61 @@ input.props_box_form{
 .roof_data_sub_wrap{margin-top:15px;}
 .roof_data_sub1{@include font(14px,350,1,#999);}
 .roof_data_sub2{@include font(14px,350,1,#5f5f5f);margin-top:5px;}
+
+.air_brick_container{}
+.air_brick_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.air_brick{}
+.air_brick_title_row{}
+.air_brick_title{}
+.air_brick_contents{}
+.airline_tape_box{}
+.airline_item_list{
+    > li{
+        &:after{}
+        &:last-of-type{
+            &:after{}
+        }
+    }
+}
+.airline_item{}
+.air_history_wrap{
+
+}
+.air_history_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.air_history_item{
+    .key_cols{}
+    .map_cols{}
+    .value_cols{}
+    .anchor_line{
+        &.dashed{}
+    }
+    .anchor_shape{}
+}
+.air_hiskey_group{}
+.air_hiskey_main{}
+.air_hiskey_sub{}
+.air_hisvalue_group{}
+.air_hisvalue_main{}
+.air_company_row{
+    .company_text_item{}
+    .company_logo_cols{
+        img{}
+    }
+    .company_spec_cols{}
+    .company_text_spec{}
+    .company_text_spec2{}
+}
+.air_take_fraction_row{}
+.air_take_fraction{}
+
 @media (max-width:1023px){
     .air_contents{border-radius:10px; padding:8px 0 15px;}
     .air_main_title{font-size:14px;}
