@@ -3782,6 +3782,44 @@ input.props_box_form{
         .price_number{font-size:18px;}
         .price_unit{font-size:14px;}
     }
+
+
+    
+    .air_brick_title{font-size:14px;}
+    .air_brick_contents{}
+    .airline_tape_box{padding:10px 15px;}
+    .airline_item_list{
+        display:flex; gap:28px;
+        > li{
+            &:after{width:7px; height:7px;top:7px;right:-16px;}
+        }
+    }
+    .airline_item{font-size:14px;}
+    .air_history_wrap{
+        margin-top:15px;
+    }
+    .air_history_item{
+        .key_cols{flex:0 0 90px;}
+        .map_cols{flex:0 0 12px;position:relative;margin:0 10px 0 10px;}
+        .value_cols{flex:1; padding-bottom:45px;}
+        .anchor_line{
+            top:8px; height: calc(100% + 4px);
+        }
+        .anchor_shape{top:4px;
+        }
+    }
+    .air_hiskey_group{}
+    .air_hiskey_main{font-size:14px;}
+    .air_hiskey_sub{font-size:12px;}
+    .air_hisvalue_group{min-height:85px;}
+    .air_hisvalue_main{font-size:14px;}
+    .air_company_row{
+        .company_text_item{vertical-align:top;}
+        .company_text_spec2{color:#999;font-size:14px; line-height:1; font-weight:400; position:relative; top:-1px;}
+    }
+    .air_take_fraction_row{margin-top:8px;}
+    .air_take_fraction{font-size:12px;}
+    .anchor_keybox{padding:0 10px;font-size:11px;}
 }
 
 

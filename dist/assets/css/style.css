@@ -16289,6 +16289,80 @@ input.props_box_form:checked {
   .summary_emp_row .price_unit {
     font-size: 14px;
   }
+  .air_brick_title {
+    font-size: 14px;
+  }
+  .airline_tape_box {
+    padding: 10px 15px;
+  }
+  .airline_item_list {
+    display: flex;
+    gap: 28px;
+  }
+  .airline_item_list > li:after {
+    width: 7px;
+    height: 7px;
+    top: 7px;
+    right: -16px;
+  }
+  .airline_item {
+    font-size: 14px;
+  }
+  .air_history_wrap {
+    margin-top: 15px;
+  }
+  .air_history_item .key_cols {
+    flex: 0 0 90px;
+  }
+  .air_history_item .map_cols {
+    flex: 0 0 12px;
+    position: relative;
+    margin: 0 10px 0 10px;
+  }
+  .air_history_item .value_cols {
+    flex: 1;
+    padding-bottom: 45px;
+  }
+  .air_history_item .anchor_line {
+    top: 8px;
+    height: calc(100% + 4px);
+  }
+  .air_history_item .anchor_shape {
+    top: 4px;
+  }
+  .air_hiskey_main {
+    font-size: 14px;
+  }
+  .air_hiskey_sub {
+    font-size: 12px;
+  }
+  .air_hisvalue_group {
+    min-height: 85px;
+  }
+  .air_hisvalue_main {
+    font-size: 14px;
+  }
+  .air_company_row .company_text_item {
+    vertical-align: top;
+  }
+  .air_company_row .company_text_spec2 {
+    color: #999;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    position: relative;
+    top: -1px;
+  }
+  .air_take_fraction_row {
+    margin-top: 8px;
+  }
+  .air_take_fraction {
+    font-size: 12px;
+  }
+  .anchor_keybox {
+    padding: 0 10px;
+    font-size: 11px;
+  }
 }
 /* 약관 */
 .terms_brick {
