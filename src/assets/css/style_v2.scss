@@ -164,3 +164,90 @@
     .md_title{font-size:20px;}
     .md_title_row{padding-bottom:15px;margin-bottom:20px;}
 }
+
+
+
+/* 인사말 */
+.tape_title_row{}
+.tape_inner{}
+.tape_title_item{}
+.tape_title_main{}
+.tape_title_sub{}
+
+.greeting_container{}
+.greeting_container .thum_cols{}
+.greeting_container .thum_cols img{}
+.greeting_container .spec_cols{}
+.greeting_main_copy{}
+.greeting_sub_copy_group{}
+.greeting_sub_copy{}
+.greeting_sub_copy strong{}
+
+.ceo_history_container{}
+.ceo_history_inner{}
+.ceo_history_inner .thum_cols{}
+.ceo_history_inner .thum_cols img{}
+.ceo_history_inner .spec_cols{}
+.ceo_name{}
+
+.ceo_history_title{}
+.ceo_history_wrap{}
+
+.ceo_history_list{}
+.ceo_history_list > li{}
+.ceo_history_list .year_cols{}
+.ceo_history_list .value_cols{}
+.year_text_node{}
+.value_text_node{}
+.value_text_node:last-of-type{}
+.ceo_history_list > li:last-of-type{}
+.ceo_history_sign{}
+
+@media (max-width:1023px){
+
+}
+
+@media (max-width:767px){
+}
+
+
+/* board */
+.surface_container{}
+.surface_inner{}
+.surface_title{}
+.surface_list_row{}
+.surface_list_row + .paging_wrap{}
+.surface_list_wrap{}
+.surface_list_tb{}
+.surface_list_tb thead{}
+.surface_list_tb thead th{}
+.surface_list_tb thead th.liquid_wid{}
+.surface_list_tb thead th:last-of-type{}
+.surface_thtext{}
+.surface_list_tb tbody{}
+.surface_list_tb tbody td{}
+.surface_list_tb tbody td.liquid_wid{}
+.surface_list_tb tbody td.nodata_td{}
+.surface_list_tb tbody td.nodata_td .nodata_para{}
+.surface_list_tb tbody td:last-of-type{}
+.surface_tdtext{}
+.surface_tdlink{}
+
+.surpace_view_container{}
+.sur_title_row{}
+.sur_view_title{}
+.sur_view_else_list{}
+.sur_view_else_list dt{}
+.sur_view_else_list dd{}
+.sur_contents{}
+.sur_contents img{}
+.sur_contents *{}
+.sur_btn_row{}
+.btn_surbox{}
+
+@media (max-width:1023px){
+
+}
+
+@media (max-width:767px){
+}
