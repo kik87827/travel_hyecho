@@ -315,3 +315,78 @@
 
 @media (max-width:767px){
 }
+
+
+/* tab */
+.liner_tabmenu_wrap{}
+.liner_tabmenu_list{
+    > li{
+        &:last-of-type{}
+        &.active{
+            .liner_tabmenu{
+                &:after{}
+                .text_node{}
+            }
+        }
+    }
+}
+.liner_tabmenu{
+    &:after{}
+    .text_node{}
+}
+.liner_tabmenu{}
+.liner_tabcont_wrap{}
+.liner_tabcont{}
+
+@media (max-width:1023px){
+
+}
+
+@media (max-width:767px){
+}
+
+
+/* info */
+.keyword_info_wrap{}
+.keyword_info_list{
+    > li{
+        &:last-of-type{}
+        .key_cols{}
+        .value_cols{}
+    }
+}
+.keyword_node_group{
+    .ico{
+        &.shape_address{}
+        &.shape_mike{}
+        &.shape_car{}
+    }
+    .text_node{}
+}
+.keyword_value_list{
+    > li{
+        &:last-of-type{}
+    }
+    &.grid_type{
+        > li{
+            .keyword_value_item{}
+        }
+    }
+}
+.keyword_value_item{}
+
+.indent_typing_list{
+    > li{
+        .keyword_value_item{}
+    }
+}
+.indent_bullet_typing{}
+.indent_liquid_typing{}
+.keyword_note_wrap{}
+.keyword_note_para{}
+@media (max-width:1023px){
+
+}
+
+@media (max-width:767px){
+}
