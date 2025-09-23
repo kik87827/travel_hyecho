@@ -219,31 +219,95 @@
 .surface_list_row + .paging_wrap{}
 .surface_list_wrap{}
 .surface_list_tb{}
-.surface_list_tb thead{}
-.surface_list_tb thead th{}
-.surface_list_tb thead th.liquid_wid{}
-.surface_list_tb thead th:last-of-type{}
+.surface_list_tb thead{
+     th{
+        &.liquid_wid{}
+        &:last-of-type{}
+     }
+}
+
 .surface_thtext{}
-.surface_list_tb tbody{}
-.surface_list_tb tbody td{}
-.surface_list_tb tbody td.liquid_wid{}
-.surface_list_tb tbody td.nodata_td{}
-.surface_list_tb tbody td.nodata_td .nodata_para{}
-.surface_list_tb tbody td:last-of-type{}
+.surface_list_tb tbody{
+    td{
+        &.liquid_wid{}
+        &.nodata_td{}
+        &.nodata_td .nodata_para{}
+        &:last-of-type{}
+    }
+}
 .surface_tdtext{}
 .surface_tdlink{}
 
 .surpace_view_container{}
 .sur_title_row{}
 .sur_view_title{}
-.sur_view_else_list{}
-.sur_view_else_list dt{}
-.sur_view_else_list dd{}
-.sur_contents{}
-.sur_contents img{}
-.sur_contents *{}
+.sur_view_else_list{    
+    dt{}
+    dd{}
+}
+.sur_contents{
+    img{}
+    *{}
+}
+
 .sur_btn_row{}
 .btn_surbox{}
+
+@media (max-width:1023px){
+
+}
+
+@media (max-width:767px){
+}
+
+
+
+/* list */
+.photo_gallery_wrap{}
+.photo_gallery_list > li{}
+.photo_gallery_item{
+    .img_row{}
+    .spec_row{}
+}
+.pg_thum{
+    img{}
+}
+.pg_main_para{}
+.pg_sub_para{}
+.btn_detail_viewer{
+    .ico{}
+    .text_node{}
+}
+@media (max-width:1023px){
+
+}
+
+@media (max-width:767px){
+}
+
+/* profile */
+.profile_caption_wrap{
+    .img_cols{}
+    .spec_cols{}
+}
+.pf_img_wrap{
+    img{}
+}
+.pf_main_para{}
+.pf_sub_para{}
+.profile_detail_wrap{}
+.profile_detail_title_row{}
+.profile_detail_title{}
+.profile_detail_contents{}
+.pd_block{
+    &:last-of-type{}
+}
+.pd_btitle_row{}
+.pd_btitle{}
+.pd_bcont{}
+.info_note_box_wrap{}
+.info_note_box{}
+
 
 @media (max-width:1023px){
 
