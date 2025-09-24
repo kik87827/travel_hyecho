@@ -287,7 +287,33 @@
 .logo_chip{
     img{}
 }
-
+.respon_tb_wrap{}
+.respon_tb{
+    thead{
+        tr{
+            th{
+                
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                &.nodata_td{
+                    .nodata_para{}
+                }
+            }
+        }
+    }
+}
+.respon_thtext{}
+.respon_tditem{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.respon_keytext{}
+.respon_valuetext{}
 @media (max-width:1023px){
 
 }
