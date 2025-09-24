@@ -278,6 +278,16 @@
     .ico{}
     .text_node{}
 }
+.logo_chip_wrap{}
+.logo_chip_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.logo_chip{
+    img{}
+}
+
 @media (max-width:1023px){
 
 }
