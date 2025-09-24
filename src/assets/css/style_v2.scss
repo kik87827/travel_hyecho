@@ -251,7 +251,9 @@
 }
 
 .sur_btn_row{}
-.btn_surbox{}
+.btn_surbox{
+    &.primary{}
+}
 
 @media (max-width:1023px){
 
@@ -314,6 +316,84 @@
 }
 .respon_keytext{}
 .respon_valuetext{}
+
+.info_legend_wrap{}
+.info_legend_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.info_legend_item{
+    .shape_box{}
+    .text_node{}
+}
+
+.capsule_exhibit_wrap{}
+.capsule_exhibit_list{
+    > li{
+        &.nodata_li{
+            .nodata_para{}
+        }
+    }
+}
+.capsule_exhibit_item{
+    .img_row{}
+    .spec_row{}
+    .img_row{}
+
+    
+}
+.capsule_imgthum{
+    img{}
+}
+.notice_flag_group{}
+.notice_flag_item{
+    .text_node{}
+}
+.capsule_name_group{}
+.capsule_sub_copy{}
+.capsule_main_copy{}
+.asto_price_group{}
+.asis_price_item{
+    &:after{}
+}
+.obj_price_list{
+    dt,dd{}
+    dt{
+        .key_node{}
+    }
+    dd{}
+}
+.with_unit_item{
+    .price_node{}
+    .unit_node{}
+}
+.tobe_price_item{
+    .obj_price_list{
+        dt,dd{}
+        dt{
+            .key_node{}
+        }
+        dd{}
+    }
+    .with_unit_item{
+        .price_node{}
+        .unit_node{}
+    }
+}
+
+.capsule_flag_wrap{}
+.capsule_flag_list{ 
+    > li{
+        &:last-of-type{}
+    }
+}
+.capsule_flag_item{
+    &.theme_2{}
+    &.theme_3{}
+    &.theme_4{}
+}
+
 @media (max-width:1023px){
 
 }
