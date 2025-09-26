@@ -299,7 +299,262 @@
   }
 }
 /* 인사말 */
+.middle_wrap.xscroll_rock {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.tape_title_row {
+  position: relative;
+  min-height: 400px;
+  box-sizing: border-box;
+  padding: 50px;
+  margin-bottom: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tape_title_row:before {
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images/bg_greeting.jpg") no-repeat 50% 50%/cover;
+}
+
+.tape_inner {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.tape_title_item {
+  color: #fff;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.tape_title_main {
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.tape_title_sub {
+  font-size: 33px;
+  font-weight: 350;
+}
+
+.tape_title_main + .tape_title_sub {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.greeting_container {
+  display: flex;
+  gap: 55px;
+  margin-bottom: 130px;
+}
+.greeting_container .thum_cols {
+  flex: 0 0 250px;
+}
+.greeting_container .thum_cols img {
+  vertical-align: top;
+}
+.greeting_container .spec_cols {
+  flex: 1;
+  position: relative;
+  top: -5px;
+}
+
+.greeting_main_copy {
+  font-size: 30px;
+  color: #2b2b2b;
+  margin-bottom: 30px;
+}
+
+.greeting_sub_copy {
+  font-size: 16px;
+  color: #5f5f5f;
+  line-height: 2;
+  margin-bottom: 35px;
+}
+.greeting_sub_copy:last-of-type {
+  margin-bottom: 0;
+}
+.greeting_sub_copy strong {
+  font-weight: 400;
+  color: #333333;
+}
+
+.ceo_history_container {
+  position: relative;
+  margin-bottom: 100px;
+}
+.ceo_history_container:before {
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images/bg_greeting2.jpg") no-repeat 50% 50%/cover;
+}
+
+.ceo_history_inner {
+  display: flex;
+  gap: 55px;
+  position: relative;
+  padding: 83px 0 93px;
+}
+.ceo_history_inner .thum_cols {
+  flex: 0 0 250px;
+  text-align: center;
+}
+.ceo_history_inner .thum_cols img {
+  vertical-align: top;
+}
+.ceo_history_inner .spec_cols {
+  color: #fff;
+  position: relative;
+  top: -5px;
+}
+
+.ceo_name {
+  font-size: 15px;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.ceo_history_title {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.ceo_history_wrap {
+  margin-top: 30px;
+}
+
+.ceo_history_list {
+  position: relative;
+  display: table;
+}
+.ceo_history_list > li {
+  display: table-row;
+}
+.ceo_history_list .year_cols,
+.ceo_history_list .value_cols {
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 20px;
+}
+.ceo_history_list .year_cols {
+  white-space: nowrap;
+  width: 1px;
+  padding-right: 23px;
+}
+.ceo_history_list .value_cols {
+  padding-top: 2px;
+}
+
+.year_text_node {
+  font-size: 17px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.value_text_node {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.value_text_node:last-of-type {
+  margin-bottom: 0;
+}
+
+.ceo_history_sign {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+}
+.ceo_history_sign .hanja {
+  font-family: initial;
+}
+
+.indent_text_para {
+  display: flex;
+  gap: 5px;
+}
+
+.indent_text_bullet {
+  flex: 0;
+  white-space: nowrap;
+}
+
+.indent_text_liquid {
+  flex: 1;
+}
+
 /* board */
+.surface_title {
+  font-size: 28px;
+  color: #2b2b2b;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.surface_list_tb {
+  width: 100%;
+  table-layout: fixed;
+}
+.surface_list_tb thead th {
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 14px 15px 13px;
+}
+.surface_list_tb thead th.liquid_wid {
+  width: auto;
+}
+.surface_list_tb tbody td {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 13px;
+}
+.surface_list_tb tbody td.liquid_wid {
+  text-align: left;
+}
+.surface_thtext,
+.surface_tdtext {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.surface_thtext {
+  font-size: 16px;
+  color: #2b2b2b;
+  line-height: 1.3;
+}
+
+.surface_tdlink,
+.surface_tdtext {
+  font-size: 15px;
+  color: #4e4e4e;
+  line-height: 1.3;
+}
+
+.surface_tdlink {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
 .sur_title_row {
   border-top: 2px solid #000000;
   border-bottom: 1px solid #000;
