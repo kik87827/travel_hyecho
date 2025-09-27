@@ -449,6 +449,10 @@
 .ceo_history_list > li {
   display: table-row;
 }
+.ceo_history_list > li:last-of-type .year_cols,
+.ceo_history_list > li:last-of-type .value_cols {
+  padding-bottom: 0;
+}
 .ceo_history_list .year_cols,
 .ceo_history_list .value_cols {
   display: table-cell;
@@ -482,6 +486,7 @@
   font-size: 17px;
   color: #fff;
   font-weight: 500;
+  margin-top: 20px;
 }
 .ceo_history_sign .hanja {
   font-family: initial;
@@ -501,6 +506,95 @@
   flex: 1;
 }
 
+@media (max-width: 1023px) {
+  .tape_title_row {
+    min-height: 200px;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  .tape_title_main {
+    font-size: 22px;
+  }
+  .tape_title_sub {
+    font-size: 16px;
+  }
+  .greeting_container {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .greeting_container .thum_cols {
+    flex-basis: 80px;
+  }
+  .greeting_container .spec_cols {
+    top: 0;
+  }
+  .greeting_main_copy {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+  }
+  /* .greeting_sub_copy_group{margin-left:-95px} */
+  .greeting_sub_copy {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .ceo_history_container {
+    margin-bottom: 40px;
+  }
+  .ceo_history_inner {
+    gap: 25px;
+    padding: 40px 0 50px;
+  }
+  .ceo_history_inner .thum_cols {
+    flex: 0 0 80px;
+  }
+  .ceo_history_inner .spec_cols {
+    top: 0;
+  }
+  .ceo_name {
+    font-size: 12px;
+  }
+  .ceo_history_title {
+    font-size: 15px;
+  }
+  .ceo_history_wrap {
+    margin-top: 20px;
+  }
+  .ceo_history_list {
+    display: block;
+  }
+  .ceo_history_list > li {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .ceo_history_list > li:last-of-type {
+    margin-bottom: 0;
+  }
+  .ceo_history_list .year_cols,
+.ceo_history_list .value_cols {
+    padding-bottom: 0;
+    display: block;
+  }
+  .ceo_history_list .year_cols {
+    padding: 0 0 5px;
+  }
+  .ceo_history_list .value_cols {
+    padding-top: 0;
+  }
+  .year_text_node {
+    font-size: 14px;
+  }
+  .value_text_node {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .ceo_history_sign {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  .indent_text_para {
+    gap: 5px;
+  }
+}
 /* board */
 .surface_title {
   font-size: 28px;
@@ -511,7 +605,6 @@
 
 .surface_list_tb {
   width: 100%;
-  table-layout: fixed;
 }
 .surface_list_tb thead th {
   border-top: 2px solid #000;
@@ -630,6 +723,26 @@
 }
 
 @media (max-width: 1023px) {
+  .surface_title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .surface_list_tb colgroup {
+    display: none;
+  }
+  .surface_list_tb thead th.mb_hidden {
+    display: none;
+  }
+  .surface_list_tb tbody td.mb_hidden {
+    display: none;
+  }
+  .surface_thtext {
+    font-size: 14px;
+  }
+  .surface_tdlink,
+.surface_tdtext {
+    font-size: 14px;
+  }
   .sur_title_row {
     gap: 15px;
     padding: 20px 15px;
