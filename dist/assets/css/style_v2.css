@@ -1180,6 +1180,63 @@
   .tobe_price_item .with_unit_item .unit_node {
     font-size: 13px;
   }
+  .respon_tb {
+    width: auto;
+    display: block;
+    border-top: 2px solid #000;
+  }
+  .respon_tb thead {
+    display: none;
+  }
+  .respon_tb tbody {
+    display: block;
+  }
+  .respon_tb tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: left;
+    padding: 15px;
+  }
+  .respon_tb tbody tr td {
+    flex: 0 0 calc(33.3333% - 10px);
+    display: block;
+    border: 0;
+    padding: 0;
+    text-align: left;
+  }
+  .respon_tb tbody tr td.mb_hidden {
+    display: none;
+  }
+  .respon_tb tbody tr td.nodata_td {
+    flex: 0 0 calc(100% - 10px);
+  }
+  .respon_keytext,
+.respon_thtext {
+    font-size: 14px;
+  }
+  .respon_keytext {
+    white-space: nowrap;
+  }
+  .respon_tditem {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .respon_tditem dt {
+    display: block;
+  }
+  .respon_valuetext {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .respon_tb tbody tr {
+    gap: 10px 10px;
+  }
+  .respon_tb tbody tr td {
+    flex: 0 0 calc(50% - 10px);
+  }
 }
 @media (max-width: 374px) {
   .capsule_exhibit_list {
@@ -1195,6 +1252,16 @@
   .obj_price_list {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .respon_tb tbody tr {
+    gap: 20px 10px;
+  }
+  .respon_tditem {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .respon_tditem dt {
+    display: block;
   }
 }
 /* profile */

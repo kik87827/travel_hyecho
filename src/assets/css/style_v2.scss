@@ -632,6 +632,53 @@
              .unit_node{font-size:13px;}
         }
     }
+
+
+    .respon_tb_wrap{}
+    .respon_tb{
+        width:auto; display:block; border-top:2px solid #000;
+        thead{
+            display:none;
+        }
+        tbody{
+            display:block;
+            tr{
+                display:flex; flex-wrap:wrap; gap:10px 10px;  border-bottom:1px solid #d9d9d9; text-align:left; padding:15px;
+                td{
+                    flex:0 0 calc(33.3333% - 10px); display:block; border:0;
+                     padding:0; text-align:left;
+                     &.mb_hidden{display:none;}
+                    &.nodata_td{
+                        flex:0 0 calc(100% - 10px);
+                        .nodata_para{}
+                    }
+                }
+            }
+        }
+    }
+    .respon_keytext,
+    .respon_thtext{font-size:14px;}
+    .respon_keytext{white-space: nowrap;}
+    .respon_tditem{
+       gap:10px; justify-content: flex-start;
+        dt,dd{}
+        dt{display:block;}
+        dd{}
+    }
+    .respon_valuetext{font-size:14px;}
+
+}
+@media (max-width:600px){
+    .respon_tb{
+        tbody{
+            tr{
+                gap:10px 10px;
+                td{
+                    flex:0 0 calc(50% - 10px);
+                }
+            }
+        }
+    }
 }
 @media (max-width:374px){
     .capsule_exhibit_list{
@@ -644,6 +691,20 @@
         > li{flex-basis: calc(50% - 5px);}
     }
     .obj_price_list{flex-direction: column; align-items: flex-start;}
+
+    .respon_tb{
+        tbody{
+            tr{
+                gap:20px 10px;
+            }
+        }
+    }
+    .respon_tditem{
+       flex-direction: column; gap:5px;
+        dt,dd{}
+        dt{display:block;}
+        dd{}
+    }
 }
 
 /* profile */
