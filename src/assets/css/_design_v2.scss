@@ -1,0 +1,145 @@
+.unique_structure{}
+.unique_title_row{}
+.unique_title{}
+.unique_contents{}
+.unique_block_wrap{}
+.unique_block{
+    &:last-of-type{}
+}
+.unique_block_title_row{}
+.unique_block_title{}
+.unique_block_contents{}
+.unique_main_copy{}
+.linked_diagram_wrap{
+
+}
+.linked_diagram_list{
+    > li{
+        &.theme_02{
+            .linked_diagram_title{}
+            .linked_diagram_shape{}
+        }
+        &.theme_03{
+            .linked_diagram_title{}
+            .linked_diagram_shape{}
+        }
+    }
+}
+.linked_diagram_title_row{}
+.linked_diagram_title{}
+.linked_diagram_shape_row{}
+.linked_diagram_shape{}
+.ld_shape_inner{}
+.ld_shape_copy_block{
+    &.has_ico{
+        .ico{
+            &.shape_01{}
+            &.shape_02{}
+            &.shape_03{}
+        }
+    }
+    .text_main_node{}
+    .text_sub_node{}
+}
+.brand_diagram_container{}
+.bd_toplogo{
+    img{}
+}
+.bd_diagram_wrap{
+    &:before{}
+    .bd_cols{
+        .bd_line_wrap{
+            &:before{}
+            &:after{}
+        }
+        &.skin2{
+            .bd_line_wrap{
+                &:before{}
+                &:after{}     
+            }
+        }
+    }
+}
+.bd_card{
+    
+}
+.bd_layer{
+    img{}
+}
+.bd_title_row{}
+.bd_title_copy{}
+.bd_main_copy_row{}
+.bd_main_copy{}
+.bd_sub_copy_row{}
+.bd_sub_copy{
+    &:last-of-type{}
+}
+
+.timeline_container{}
+.timeline_tree_wrap{
+    &:before{}
+}
+.timeline_tree_list{
+    > li{
+        &:before{}
+        &:after{}
+        &:nth-of-type(2n-1){
+             &:before{}
+            &:after{}
+            .timeline_item{
+                &:after{}
+            }
+        }
+    }
+}
+.timeline_item{
+    &:after{}
+    .timeline_inner{}
+}
+.timeline_main_title{}
+.timeline_sub_copy_wrap{}
+.timeline_sub_copy{}
+
+.style_wordbox_wrap{}
+.style_wordbox_list{
+    > li{}
+}
+.style_wordbox{}
+.sw_ca_para{}
+.sw_para_wrap{}
+.sw_main_copy{
+    strong{}
+}
+.sw_sub_copy{}
+
+.history_info_wrap{}
+.history_info_inner{}
+.tabcard_wrap{}
+.tabcard_list{
+    > li{}
+}
+.tabcard_item{
+    &.active{}
+}
+.history_cont_group{
+
+}
+.history_cont{
+    &.active{}
+}
+.history_tree_wrap{}
+.history_tree_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.history_tree_item{
+}
+.ht_key_cols{}
+.ht_value_cols{}
+.ht_key_node{}
+.ht_value_list{
+    > li{
+        &:before{}
+    }
+}
