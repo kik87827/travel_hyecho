@@ -104,7 +104,9 @@
 .style_wordbox_list{
     > li{}
 }
-.style_wordbox{}
+.style_wordbox{
+    &:before{}
+}
 .sw_ca_para{}
 .sw_para_wrap{}
 .sw_main_copy{
