@@ -191,6 +191,9 @@
 .sv_board_title_row{}
 .sv_board_title{}
 
+.sv_note_copy_wrap{}
+.sv_note_copy{}
+
 .board_card_wrap{
     & + .paging_wrap{}
 }
@@ -336,3 +339,73 @@
 }
 .prompt_dt_node{}
 .prompt_dd_node{}
+
+.explan_wrap{}
+.explan_block{
+    &:last-of-type{}
+}
+.explan_title_row{}
+.explan_title{}
+.explan_else_wrap{
+ .btn_inline_func{}   
+}
+.btn_inline_func{}
+.explan_contents{}
+.post_tb_wrap{}
+.post_tb{
+    thead{
+        tr{
+            th{
+                &:last-of-type{}
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                &.accent{}
+                &:last-of-type{}
+            }
+        }
+    }
+}
+.post_thtext{}
+.post_tdtext{}
+
+.post_note_wrap{}
+.pn_block{
+    &:last-of-type{}
+}
+.pn_title_row{}
+.pn_title{}
+.pn_contents{}
+
+.deco_info_container{
+    .img_cols{
+        img{}
+    }
+    .spec_cols{}
+}
+
+.bullet_node_list{
+    > li{
+        &:before{}
+    }
+}
+.main_node_para{}
+.sub_node_para{
+    br{}
+}
+.award_banner_wrap{}
+.award_banner{
+    &:before,
+    &:after{}
+    &:before{}
+    &:after{}
+    .img_king{}
+    .img_trophy{}
+}
+.award_para_wrap{
+    .text_sub_node{}
+    .text_main_node{}
+}
