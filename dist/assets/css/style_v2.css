@@ -325,7 +325,6 @@
   transform: translateX(-50%);
   background: url("../images/bg_greeting.jpg") no-repeat 50% 50%/cover;
 }
-
 .tape_inner {
   position: relative;
   text-align: center;
@@ -1774,4 +1773,5 @@
     margin-top: 40px;
   }
 }
+/* customer */
 /*# sourceMappingURL=style_v2.css.map */

@@ -120,7 +120,7 @@
 .tabcard_list{
     > li{}
 }
-.tabcard_item{
+.tabcard_element{
     &.active{}
 }
 .history_cont_group{
@@ -146,5 +146,193 @@
     }
 }
 
+/* customer */
+.unique_gate_group{}
+.gate_block{
+    &:last-of-type{}
+}
+.sv_container{}
+.sv_box_only_wrap{
+    .sv_box{}
+}
+.sv_box_wrap{
+    .sv_box{}
+}
+.sv_box{
+    .bg{
+        &.customer{}
+        &.traveling{}
+    }
+}
+.sv_title_wrap{}
+.sv_title_item{
+    .ico{
+        &.men2{}
+        &.men3{}
+    }
+}
+.sv_title{}
+.sv_tape{}
+.sv_info_list{
+    > li{}
+}
+.sv_item{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.sv_dt_node{}
+.sv_dd_node{}
 
-/* sub visual */
+.sv_board_container{
+    .bg{}
+    .tabcard_item_wrap{}
+}
+.sv_board_title_row{}
+.sv_board_title{}
+
+.board_card_wrap{
+    & + .paging_wrap{}
+}
+.board_card_list{
+    > li{}
+}
+.board_card{}
+.board_indent_wrap{
+    &.skin2{
+        .board_indent_bullet{}
+        .board_indent_liquid{}
+    }
+}
+.board_indent_bullet{}
+.board_indent_liquid{}
+
+.banner_card_container{}
+.banner_card_block{}
+.bc_box_grid{}
+.bc_box{
+    &:last-of-type{}
+    .copy_cols{}
+    .btn_cols{}
+}
+.bc_main_copy_group{
+    .ico{
+        &.shape_mike{}
+        &.shape_docu{}
+    }
+}
+.bc_copy_group{}
+.bc_main_copy{}
+.bc_sub_copy{}
+
+.btn_shape_box{
+    .text_node{}
+}
+
+.voucher_box_grid{
+    .liquid_cols{}
+    .fixed_cols{}
+}
+.voucher_board_box{
+    .title_row{}
+    .contents_row{}
+}
+.vb_title{
+    .ico{
+        &.shape_mike{}
+    }
+    .text_node{}
+}
+.btn_shape_more{}
+.linkage_data_list{
+    > li{}
+}
+.lk_data{}
+.lk_title{}
+.lk_else{}
+
+.look_box{
+    &.skin2{}
+}
+.look_title_row{}
+.look_title{}
+.look_contents{}
+.lc_copy_group{}
+.lc_main_copy{}
+.lc_sub_copy{}
+
+.lc_ico_group{
+    .ico{
+        &.shape_marker{}
+        &.shape_building{}
+    }
+}
+
+
+
+.copy_plate_wrap{}
+.copy_main_plate{}
+.copy_sub_plate{}
+
+
+.involve_diagram_container{
+    .linked_diagram_wrap{}
+}
+
+.quote_word_wrap{
+
+}
+.quote_word{
+    &:before,
+    &:after{}
+    &:before{}
+    &:after{}
+    .text_node{}
+}
+
+.accent_bar_wrap{}
+.accent_bar{}
+
+.feature_block_wrap{}
+.feature_block_list{
+    > li{}
+}
+.feature_block{
+    .img_cols{
+        img{}
+    }
+    .copy_cols{}
+}
+.feature_copy_wrap{}
+.feature_copy{
+    &.accent{}
+    &:last-of-type{}
+}
+.btn_feature_group{}
+.btn_frame{
+    .text_node{}
+    &.full{}
+    &.primary{}
+}
+
+.info_outline_wrap{
+    .fixed_cols{}
+    .liquid_cols{}
+}
+
+.info_node_obj{
+    .ico{
+        &.shape_call{}
+    }
+    .text_node{}
+}
+.prompt_info_list{
+    > li{}
+}
+.prompt_item{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.prompt_dt_node{}
+.prompt_dd_node{}

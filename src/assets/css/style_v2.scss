@@ -192,6 +192,8 @@
 .tape_title_row{
     position:relative; min-height:400px; box-sizing: border-box;padding:50px; margin-bottom:85px; display:flex; justify-content: center; align-items: center;
     &:before{display:block;content:'';width:100vw; height:100%;position:absolute;top:0;left:50%; transform: translateX(-50%);background:url("../images/bg_greeting.jpg") no-repeat 50% 50%/cover;}
+    &.skin2{}
+    &.bg_img2{}
 }
 .tape_inner{position:relative; text-align:center;width:100%;}
 .tape_title_item{color:#fff;max-width:740px; margin:0 auto;}
@@ -991,3 +993,4 @@
 
 
 @import '_design_v2';
+@import '_data_v2';

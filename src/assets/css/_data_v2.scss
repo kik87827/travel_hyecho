@@ -1,0 +1,56 @@
+.sort_title_wrap{}
+.sort_title_list{
+    > li{}
+}
+.inline_form_wrap{
+    .inline_cols{
+        &.liquid{}
+        &.auto{}
+        input.form_input{}
+    }
+    select.form_select{}
+    .btn_inline_role{}
+}
+.inline_form_wrap{}
+.btn_inline_role{}
+
+.sort_form_container{
+    .props_cols{}
+    .legend_cols{}
+}
+.props_item_list{
+    > li{}
+    .props_item{}
+}
+.legend_element_list{
+    > li{}
+}
+.legend_element{}
+
+.dataset_block_wrap{}
+.dataset_block{
+    &:last-of-type{}
+}
+.dataset_title_row{}
+.dataset_title{}
+.dataset_contents{}
+
+.ds_slice_block{
+    &:last-of-type{}
+}
+.ds_slice_title_row{}
+.ds_slice_title{}
+.ds_slice_contents{}
+.data_dp_wrap{}
+.data_dp_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.data_dp_item{
+    dt,dd{}
+    dt{}
+    dd{}
+}
+.data_dp_key{}
+.data_dp_value{}
