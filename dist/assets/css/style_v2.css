@@ -1794,6 +1794,9 @@
 .unique_contents {
   position: relative;
 }
+.unique_contents > .sv_box_only_wrap {
+  margin-top: 0;
+}
 
 .unique_block {
   margin-bottom: 130px;
@@ -2509,6 +2512,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.sv_box .bg.live {
+  background-image: url("../images/bg_sv_img3.jpg");
+}
 .sv_box .bg.customer {
   background-image: url("../images/bg_sv_img2.jpg");
 }
@@ -2535,6 +2541,9 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 100% auto;
+}
+.sv_title_item .ico.monitor {
+  background-image: url("../images/ico_sv_monitor.png");
 }
 .sv_title_item .ico.men2 {
   background-image: url("../images/ico_sv_men2.png");
@@ -2972,5 +2981,153 @@
 }
 .lc_ico_group .ico.shape_building {
   background-image: url("../images/ico_colored_build_42.png");
+}
+
+/* 공통 추가 */
+input.form_input.htype2 {
+  height: 42px;
+}
+
+select.form_select.htype2 {
+  height: 42px;
+}
+
+.sort_title_wrap {
+  margin-top: 40px;
+  border-bottom: 1px solid #a3a3a3;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.sort_title_list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.inline_form_wrap {
+  display: flex;
+  gap: 10px;
+}
+.inline_form_wrap .inline_cols {
+  flex: 1;
+}
+.inline_form_wrap .inline_cols.auto {
+  flex: none;
+}
+.btn_inline_role {
+  display: inline-block;
+  background: #455267;
+  line-height: 42px;
+  height: 42px;
+  border-radius: 100px;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  padding: 0 30px;
+}
+
+.sort_form_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.props_item_list {
+  display: flex;
+  gap: 10px 24px;
+  flex-wrap: wrap;
+}
+.legend_element_list {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.legend_element {
+  padding: 0 12px;
+  display: inline-block;
+  border-radius: 100px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.dataset_block_wrap {
+  margin-top: 35px;
+}
+
+.dataset_block {
+  margin-bottom: 40px;
+}
+.dataset_block:last-of-type {
+  margin-bottom: 0;
+}
+
+.dataset_title_row {
+  margin-bottom: 20px;
+}
+
+.dataset_title {
+  font-size: 20px;
+  color: #333333;
+}
+
+.dataset_contents {
+  background-color: rgb(249, 251, 255);
+  border-radius: 10px;
+  border: 1px solid rgb(223, 223, 223);
+  padding: 20px 40px 35px;
+}
+
+.ds_slice_block {
+  margin-bottom: 25px;
+}
+.ds_slice_block:last-of-type {
+  margin-bottom: 0;
+}
+
+.ds_slice_title_row {
+  margin-bottom: 13px;
+}
+
+.ds_slice_title {
+  font-size: 18px;
+  color: #333333;
+}
+
+.data_dp_list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  white-space: nowrap;
+}
+.data_dp_list > li {
+  border-right: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  flex: 0 0 10%;
+  box-sizing: border-box;
+}
+.data_dp_list > li:last-of-type {
+  border-right: 0;
+}
+
+.data_dp_item {
+  background: #fff;
+}
+.data_dp_item dt, .data_dp_item dd {
+  padding: 15px;
+}
+.data_dp_item dt {
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #7e889a;
+}
+.data_dp_key,
+.data_dp_value {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.data_dp_value {
+  color: #4e4e4e;
 }
 /*# sourceMappingURL=style_v2.css.map */
