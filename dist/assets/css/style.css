@@ -383,7 +383,7 @@ img.ico_img {
   font-weight: 500;
   font-style: normal;
 }
-/* mixin */ /* layout */
+/* layout */
 html:not(.touchmode) ::-webkit-scrollbar {
   width: 10px;
 }

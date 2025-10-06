@@ -96,7 +96,7 @@
     }
 }
 .tabcard_item{
-    flex:1;display:flex; min-height:48px; padding:5px; box-sizing: border-box; justify-content: center; align-items: center; text-align: center; border:1px solid #cecece; border-right:0;
+    flex:1;display:flex; min-height:48px; padding:5px; box-sizing: border-box; justify-content: center; align-items: center; text-align: center; border:1px solid #cecece; border-right:0; background:#fff;
     .text_node{font-size:15px; word-break: keep-all; color:#4e4e4e; line-height:1.2; display:inline-block;}
 }
 .tabcont_title_row{margin-bottom:50px;
