@@ -3,6 +3,9 @@
 @charset "utf-8";
 @import '_mixin';
 
+/* layout */
+.middle_wrap{position:relative;overflow-x:hidden;}
+
 /* popup */
 .popup_contents_row{
     &.ptype3{
@@ -189,20 +192,20 @@
 
 /* 인사말 */
 .middle_wrap.xscroll_rock{overflow-x:hidden;position:relative;}
-.tape_title_row{
+.tape_global_title_row{
     position:relative; min-height:400px; box-sizing: border-box;padding:50px; margin-bottom:85px; display:flex; justify-content: center; align-items: center;
-    &:before{display:block;content:'';width:calc(100vw - 10px); height:100%;position:absolute;top:0;left:50%; transform: translateX(-50%);background:url("../images/bg_greeting.jpg") no-repeat 50% 50%/cover;}
+    &:before{display:block;content:'';width:100vw; height:100%;position:absolute;top:0;left:50%; transform: translateX(-50%);background:url("../images/bg_greeting.jpg") no-repeat 50% 50%/cover;}
     &.skin2{}
     &.mbtype{margin-bottom:0;}
     &.bg_img2{
         &:before{background-image:url("../images/bg_service_tape.jpg")}
     }
 }
-.touchmode {
-    .tape_title_row{
+/* .touchmode {
+    .tape_global_title_row{
         &:before{width:100vw;}
     }
-}
+} */
 .tape_inner{position:relative; text-align:center;width:100%;}
 .tape_title_item{color:#fff;max-width:740px; margin:0 auto;}
 .tape_title_main{font-size:36px; font-weight: 200;}
@@ -270,8 +273,9 @@
 .indent_text_liquid{flex:1;}
 
 @media (max-width:1023px){
-    .tape_title_row{
-        min-height:200px; padding:30px; margin-bottom:30px;
+    .tape_global_title_row{
+        min-height:200px; padding:30px; margin-bottom:30px; 
+        &:before{}
     }
     .tape_title_main{font-size:22px;}
     .tape_title_sub{font-size:16px;}
@@ -319,6 +323,7 @@
 }
 
 @media (max-width:767px){
+    .tape_global_title_row{min-height:150px;}
 }
 
 

@@ -23,13 +23,13 @@
 }
 .linked_diagram_wrap{
     position:relative; padding:0 30px;
-    &:before{display:block;content:''; position:absolute;top:0;left:50%;transform: translateX(-50%); width:calc(100vw - 10px);height:100%;background:url("../images/intro_company_info_bg.png") no-repeat 50% 50%/cover;}
+    &:before{display:block;content:''; position:absolute;top:0;left:50%;transform: translateX(-50%); width:100vw;height:100%;background:url("../images/intro_company_info_bg.png") no-repeat 50% 50%/cover;}
 }
-.touchmode {
+/* .touchmode {
     .linked_diagram_wrap{
         &:before{width:100vw;}
     }
-}
+} */
 .linked_diagram_list{
     position:relative; display:flex; justify-content: center; gap:120px; text-align: center; padding:90px 0 100px;
     > li{
@@ -146,11 +146,11 @@
 .timeline_zone{
     position:relative; padding:0 0 100px 0;
     .unique_main_copy{margin-bottom:50px;}
-    &:before{display:block;content:'';width:calc(100vw - 10px);height:100%; position:absolute;top:0;left:50%; transform: translateX(-50%); background:#f7faff;}
+    &:before{display:block;content:'';width:100vw;height:100%; position:absolute;top:0;left:50%; transform: translateX(-50%); background:#f7faff;}
 }
-.touchmode .timeline_zone{
+/* .touchmode .timeline_zone{
     &:before{width:100vw;}
-}
+} */
 .timeline_container{position:relative;}
 .timeline_tree_wrap{
     position:relative;
@@ -582,7 +582,7 @@
 
 .sv_board_container{
     padding-bottom:65px;
-    .bg{position:absolute;top:200px;left:50%; transform: translateX(-50%); width:calc(100vw - 10px);height:calc(100% - 200px); background:url("../images/bg_customer_faq.png") no-repeat 50% 50%/cover;}
+    .bg{position:absolute;top:200px;left:50%; transform: translateX(-50%); width:100vw;height:calc(100% - 200px); background:url("../images/bg_customer_faq.png") no-repeat 50% 50%/cover;}
     > *{position:relative;}
     .tabcard_item_wrap{
         .tabcard_item{}
@@ -590,11 +590,11 @@
     .btn_paging_control,
     .paging_num:not(.active){background-color:#fff;}
 }
-.touchmode {
+/* .touchmode {
     .sv_board_container{
         .bg{width:100vw;}
     }
-}
+} */
 .sv_board_title_row{margin-bottom:20px;}
 .sv_board_title{font-size:18px; color:#333333;}
 
