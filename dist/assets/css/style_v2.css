@@ -4019,6 +4019,8 @@
   background-repeat: no-repeat;
   width: 32px;
   height: 52px;
+  flex-basis: 32px;
+  flex-shrink: 0;
 }
 .award_banner:before {
   background-image: url("../images/obj_king_left_feather.png");
@@ -4034,17 +4036,20 @@
   background-position: 0 0;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  flex-shrink: 0;
 }
 .award_banner .img_king {
   background-image: url("../images/obj_king_hat.png");
   width: 40px;
   height: 21px;
   margin-right: 10px;
+  flex-basis: 40px;
 }
 .award_banner .img_trophy {
   background-image: url("../images/obj_king_trophy.png");
   width: 50px;
   height: 43px;
+  flex-basis: 50px;
   margin-left: 10px;
 }
 
@@ -4059,6 +4064,7 @@
 .award_para_wrap .text_sub_node,
 .award_para_wrap .text_main_node {
   display: inline-block;
+  word-break: keep-all;
 }
 .award_para_wrap .text_sub_node {
   font-size: 20px;
@@ -4434,36 +4440,91 @@
     gap: 0;
   }
   .award_banner_wrap {
-    margin-top: 9.13vw;
+    margin-top: 70px;
   }
   .award_banner {
-    border-radius: 1.3vw;
+    border-radius: 10px;
   }
   .award_banner:before, .award_banner:after {
-    width: 4.17vw;
-    height: 6.78vw;
+    width: 21px;
+    height: 35px;
+    flex-basis: 21px;
+    margin-right: 7px;
+    margin-left: 7px;
   }
   .award_banner:before {
-    margin-right: 1.96vw;
+    margin-right: 10px;
   }
   .award_banner:after {
-    margin-left: 1.96vw;
+    margin-left: 10px;
   }
   .award_banner .img_king {
-    width: 5.22vw;
-    height: 2.74vw;
-    margin-right: 1.3vw;
+    width: 27px;
+    height: 14px;
+    margin-right: 10px;
+    flex-basis: 27px;
   }
   .award_banner .img_trophy {
-    width: 6.52vw;
-    height: 5.61vw;
-    margin-left: 1.3vw;
+    width: 33px;
+    height: 29px;
+    flex-basis: 33px;
+    margin-left: 10px;
   }
   .award_para_wrap .text_sub_node {
-    font-size: 2.09vw;
+    font-size: 13px;
   }
   .award_para_wrap .text_main_node {
-    font-size: 2.61vw;
+    font-size: 17px;
+  }
+}
+@media (max-width: 374px) {
+  /* .award_banner{
+      border-radius: 10px;
+
+     &:before,
+      &:after{width:21px;height:35px; flex-basis:21px; margin-right:7px; margin-left:7px;}
+      &:before{margin-right:10px;}
+      &:after{margin-left:10px;}
+      .img_king{width:27px; height:14px; margin-right:10px; flex-basis:27px;}
+      .img_trophy{width:33px; height:29px; flex-basis:33px; margin-left:10px;}
+  }
+  .award_para_wrap{
+      .text_sub_node{font-size:13px;}
+      .text_main_node{font-size:17px;}
+  } */
+  .award_banner {
+    border-radius: 2.67vw;
+  }
+  .award_banner:before, .award_banner:after {
+    width: 5.61vw;
+    height: 9.36vw;
+    flex-basis: 5.61vw;
+    margin-right: 1.87vw;
+    margin-left: 1.87vw;
+  }
+  .award_banner:before {
+    margin-right: 2.67vw;
+  }
+  .award_banner:after {
+    margin-left: 2.67vw;
+  }
+  .award_banner .img_king {
+    width: 7.22vw;
+    height: 3.74vw;
+    margin-right: 2.67vw;
+    flex-basis: 7.22vw;
+  }
+  .award_banner .img_trophy {
+    width: 8.82vw;
+    height: 7.75vw;
+    flex-basis: 8.82vw;
+    margin-left: 2.67vw;
+  }
+  .award_para_wrap .text_sub_node {
+    font-size: 3.48vw;
+  }
+  .award_para_wrap .text_main_node {
+    font-size: 4.55vw;
   }
 }
 /* 공통 추가 */
