@@ -36,7 +36,7 @@ select.form_select{
     .props_item{}
 }
 .legend_element_list{
-    display:flex; gap:4px; flex-wrap:wrap;
+    display:flex; gap:4px; flex-wrap:wrap; justify-content: flex-end;
     > li{}
 }
 .legend_element{padding:0 12px; display:inline-block; border-radius:100px; height:24px; line-height:24px; color:#fff; font-size:13px;}
@@ -64,7 +64,8 @@ select.form_select{
         border-right:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; flex:0 0 10%; box-sizing: border-box; 
         position:relative;
         &:after{display:block;content:'';height:1px;width:calc(100% + 1px);background:#7e889a; position:absolute;top:0;left:-1px;}
-        &:last-of-type{border-right:0;}
+        &:nth-of-type(10n),
+        &:last-of-type{border-right-width:0;}
     }
 }
 .data_dp_item{
@@ -77,3 +78,68 @@ select.form_select{
 .data_dp_value{font-size:16px; font-weight:500;}
 .data_dp_key{}
 .data_dp_value{color:#4e4e4e;}
+
+@media (max-width:1023px){
+    .sort_title_wrap{margin-top:30px;}
+    .btn_inline_role{line-height:42px; height:42px; padding: 0 20px;}
+    .sort_title_list{
+        align-items: normal;
+        > li{flex:1;}
+    }
+    .dataset_title{font-size:16px;}
+    .dataset_contents{padding:20px 30px;}
+
+    .ds_slice_title_row{margin-bottom:10px;}
+    .ds_slice_title{font-size:14px;}
+    .data_dp_list{
+        > li{
+        }
+    }
+    .data_dp_item{
+        dt,dd{ padding:7px 10px;}
+        dt{}
+        dd{}
+    }
+    .data_dp_key,
+    .data_dp_value{font-size:14px;}
+    .data_dp_key{}
+    .data_dp_value{}
+
+    .dataset_title_row{margin-bottom:15px;}
+}
+
+@media (max-width:767px){
+    .sort_title_list{
+        flex-direction: column; 
+    }
+    
+    .sort_form_container{
+        flex-direction: column; align-items: normal; gap:10px;
+        .props_cols{}
+        .legend_cols{display:flex; justify-content: flex-end;}
+    }
+    .legend_element_list{
+        display:flex; gap:4px;
+    }
+    .legend_element{font-size:12px;}
+
+    .data_dp_list{
+        > li{
+            &:last-of-type{border-right-width:0}
+            &:nth-of-type(5n){border-right-width:0;}
+            flex-basis: 20%;
+        }
+    }
+    .dataset_contents{padding:15px 20px;}
+}
+
+@media (max-width:767px){
+    .data_dp_list{
+        > li{
+            &:last-of-type{border-right-width:0}
+            &:nth-of-type(5n):not(&:last-of-type){border-right-width:1px;}
+            &:nth-of-type(3n){border-right-width:0;}
+            flex-basis: 33.33333%;
+        }
+    }
+}

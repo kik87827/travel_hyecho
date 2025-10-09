@@ -659,7 +659,7 @@
 .sv_board_title{font-size:18px; color:#333333;}
 
 .sv_note_copy_wrap{text-align: center; margin-top:30px;}
-.sv_note_copy{font-size:18px; color:#333333;}
+.sv_note_copy{font-size:18px; color:#333333; word-break: keep-all;}
 
 .board_card_wrap{
     & + .paging_wrap{}
@@ -1101,6 +1101,63 @@
         .fixed_cols,
         .liquid_cols{flex-basis: calc(50% - 15px);}
     }
+
+    .sv_note_copy_wrap{margin-top:20px;}
+    .sv_note_copy{font-size:16px;}
+    .explan_wrap{margin-top:30px;}
+    .explan_block{margin-bottom:50px;}
+    .explan_title{font-size:16px;}
+    .explan_title_row{align-items: flex-end;}
+    .btn_inline_func{padding:0 15px;}
+
+    .post_tb{
+         thead{
+             tr{
+                th{padding:10px 5px 12px;}
+             }
+         }
+         tbody{
+             tr{
+                td{padding:10px 5px 12px;}
+             }
+         }
+    }
+    .post_tdtext,
+    .post_thtext{font-size:14px;}
+    .pn_title_row{margin-bottom:20px;}
+    .pn_title{font-size:16px;padding-left:12px;
+        &:before{width:5px;height:5px;top:11px}
+    }
+    .pn_contents{padding-left:12px;}
+    .deco_info_container{gap:20px;
+        .img_cols{width:60px;height:60px; flex-basis: 60px;}
+    }
+    .main_node_para{font-size:14px;
+        &:before{top:11px;}
+    }
+    .sub_node_para{font-size:12px;}
+
+    .bullet_node_list{
+         > li{
+            margin-bottom:15px;
+            &:last-of-type{margin-bottom:0;}
+         }
+    }
+
+    .award_banner_wrap{margin-top:70px;}
+    .award_banner{
+        border-radius: 10px;
+        /* &:before,
+        &:after{width:21px;height:35px;}
+        &:before{margin-right:10px;}
+        &:after{margin-left:10px;}
+        .img_king{width:27px; height:14px; margin-right:7px;}
+        .img_trophy{width:33px; height:29px; margin-left:7px;} */
+    }
+    .award_para_wrap{
+        .text_sub_node{font-size:16px;}
+        .text_main_node{font-size:20px;}
+    }
 }
 
 @media (max-width:767px){
@@ -1130,36 +1187,6 @@
         .text_node{font-size:12px; position:relative; top:2px;}
     }
     .bc_main_copy_group{gap:15px;}
-    /* 
-        .banner_card_container{margin-top:60px;}
-        .banner_card_block{
-            margin-bottom:50px;
-            &:last-of-type{margin-bottom:0}
-        }
-        .bc_box_grid{display:flex; flex-wrap:wrap; gap:20px; margin-right:-20px;}
-        .bc_box{
-            flex:0 0 calc(50% - 20px); border-radius: 10px; gap:20px; background-color: rgb(245, 246, 248); box-sizing: border-box; padding:20px 35px; display:flex; align-items: center;
-            &:last-of-type{}
-            .copy_cols{flex:1;}
-            .btn_cols{flex:0 0 70px;}
-        }
-        .bc_main_copy_group{
-            display:flex; align-items: center; gap:30px;
-            .ico{
-                background-repeat:no-repeat; background-size:100% auto; background-position: 0 0;
-                &.shape_mike{background-image:url("../images/ico_mike_big.png"); width:28px; height:39px; flex:0 0 28px;}
-                &.shape_docu{background-image:url("../images/ico_docu_big.png"); width:32px; height:38px; flex:0 0 32px;}
-            }
-        }
-        .bc_copy_group{}
-        .bc_main_copy{font-size:17px; color:#4e4e4e; font-weight:500;}
-        .bc_sub_copy{font-size:14px; color:#6d6c6c; line-height:1.4; margin-top:5px;}
-
-        .btn_shape_box{
-            display:flex; justify-content: center; align-items: center; box-sizing: border-box; border:1px solid #176bdd; border-radius: 100%; width:70px;height:70px; text-align: center; line-height:1.3;
-            .text_node{display:inline-block; font-size:14px; color:#176bdd}
-        }
-    */
 
     .voucher_box_grid{flex-direction: column; margin-right:0;}
     .voucher_board_box{padding:0 20px;
@@ -1193,6 +1220,30 @@
         .ico{
             width:23px; height:26px; flex:0 0 23px;
         }
+    }
+
+    
+    .sv_note_copy{font-size:14px;}
+
+    .award_para_wrap{
+        flex-direction: column; align-items: normal; gap:0;
+    }
+    .award_banner_wrap{margin-top:9.13vw;}
+    .award_banner{
+        border-radius:1.30vw;
+
+        &:before,
+        &:after{width:4.17vw;height:6.78vw;}
+        &:before{margin-right:1.96vw;}
+        &:after{margin-left:1.96vw;}
+
+        .img_king{width:5.22vw; height:2.74vw; margin-right:1.30vw;}
+        .img_trophy{width:6.52vw; height:5.61vw; margin-left:1.30vw;}
+    }
+
+    .award_para_wrap{
+        .text_sub_node{font-size:2.09vw;}
+        .text_main_node{font-size:2.61vw;}
     }
 }
 
