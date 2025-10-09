@@ -3912,6 +3912,7 @@
   font-size: 16px;
   color: #fff;
   font-weight: 350;
+  word-break: keep-all;
 }
 
 .post_tdtext {
@@ -3919,6 +3920,7 @@
   font-size: 15px;
   color: #4e4e4e;
   font-weight: 350;
+  word-break: keep-all;
 }
 
 .post_note_wrap {
@@ -4476,6 +4478,10 @@
   .award_para_wrap .text_main_node {
     font-size: 17px;
   }
+  .post_tdtext,
+.post_thtext {
+    font-size: 12px;
+  }
 }
 @media (max-width: 374px) {
   /* .award_banner{
@@ -4525,6 +4531,11 @@
   }
   .award_para_wrap .text_main_node {
     font-size: 4.55vw;
+  }
+  .post_tdtext,
+.post_thtext {
+    font-size: 11px;
+    word-break: break-all;
   }
 }
 /* 공통 추가 */
