@@ -3247,7 +3247,7 @@
   background: #fff;
   border: 1px solid rgb(218, 218, 218);
   border-radius: 20px;
-  padding: 20px 30px;
+  padding: 22px 28px;
 }
 
 .board_indent_wrap {
@@ -3261,6 +3261,9 @@
 }
 .board_indent_wrap.skin2 .board_indent_bullet {
   background-color: #c3c3c3;
+}
+.board_indent_wrap.skin2 .board_indent_liquid {
+  color: #6d6c6c;
 }
 .board_indent_wrap:last-of-type {
   margin-bottom: 0;
@@ -3403,7 +3406,7 @@
   padding: 0 30px;
 }
 .voucher_board_box .title_row {
-  padding: 20px 0 15px;
+  padding: 20px 0 11px;
   border-bottom: 1px solid #e7e7e7;
   display: flex;
   justify-content: space-between;
@@ -3461,7 +3464,7 @@
 }
 
 .linkage_data_list > li {
-  margin-bottom: 13px;
+  margin-bottom: 8px;
   padding-left: 10px;
   position: relative;
 }
@@ -3524,7 +3527,7 @@
   flex-direction: column;
   border-radius: 10px;
   background: #ddf2f9;
-  padding: 24px 20px;
+  padding: 19px 20px 14px;
 }
 .look_box.skin2 {
   background: #eee7f7;
@@ -3542,7 +3545,7 @@
 }
 
 .look_contents {
-  padding-top: 17px;
+  padding-top: 15px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -3566,11 +3569,14 @@
 .lc_ico_group {
   display: flex;
   justify-content: flex-end;
+  padding: 0 5px 0 0;
+  position: relative;
+  top: -10px;
 }
 .lc_ico_group .ico {
-  width: 41px;
+  width: 42px;
   height: 46px;
-  flex: 0 0 41px;
+  flex: 0 0 42px;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 0 0;
@@ -4434,6 +4440,10 @@
   .lc_sub_copy {
     font-size: 12px;
   }
+  .lc_ico_group {
+    top: 0;
+    padding: 0;
+  }
   .lc_ico_group .ico {
     width: 23px;
     height: 26px;
@@ -4635,9 +4645,9 @@ select.form_select.htype2 {
 }
 
 .dataset_contents {
-  background-color: rgb(249, 251, 255);
+  background-color: #fdfdfd;
   border-radius: 10px;
-  border: 1px solid rgb(223, 223, 223);
+  border: 1px solid #dfdfdf;
   padding: 20px 40px 35px;
 }
 
@@ -4662,6 +4672,7 @@ select.form_select.htype2 {
   flex-wrap: wrap;
   text-align: center;
   white-space: nowrap;
+  gap: 6px 0;
 }
 .data_dp_list > li {
   border-right: 1px solid #d9d9d9;

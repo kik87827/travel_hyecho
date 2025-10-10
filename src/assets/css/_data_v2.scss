@@ -48,7 +48,7 @@ select.form_select{
 }
 .dataset_title_row{margin-bottom:20px;}
 .dataset_title{font-size:20px; color:#333333;}
-.dataset_contents{background-color: rgb(249, 251, 255); border-radius: 10px; border:1px solid rgb(223, 223, 223); padding:20px 40px 35px;}
+.dataset_contents{background-color: #fdfdfd; border-radius: 10px; border:1px solid #dfdfdf; padding:20px 40px 35px;}
 
 .ds_slice_block{
     margin-bottom:25px;
@@ -59,7 +59,7 @@ select.form_select{
 .ds_slice_contents{}
 .data_dp_wrap{}
 .data_dp_list{
-    display:flex; flex-wrap:wrap; text-align: center; white-space: nowrap;
+    display:flex; flex-wrap:wrap; text-align: center; white-space: nowrap;gap:6px 0;
     > li{
         border-right:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; flex:0 0 10%; box-sizing: border-box; 
         position:relative;
