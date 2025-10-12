@@ -464,6 +464,20 @@
             font-size: 1.9vw;
         }
     }
+    .kakao{
+        .ld_shape_copy_block {
+        &.has_ico {
+                .ico {
+                    width: 4.0vw;
+                    height: 4.0vw;
+                }
+            }
+            .text_sub_node {
+                margin:0;
+                transform: scale(0.82);
+            }
+        }
+    }
     .bd_diagram_wrap{
          .bd_cols{
              .bd_line_wrap{margin-bottom:25px;}
@@ -912,6 +926,22 @@
 }
 .post_tb{
     width:100%; table-layout: fixed;
+    &.type2{table-layout: auto;
+        thead{
+            tr{
+                th{
+                    padding-left:20px;padding-right:20px;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    padding-left:20px;padding-right:20px;
+                }
+            }
+        }
+    }
     thead{
         tr{
             th{
@@ -922,6 +952,7 @@
                 &.radius_top{border-radius:0 8px 0 0;}
                 &.radius_bottom{border-radius:0 0 8px 0;}
                 &[colspan]{border-bottom:1px solid #707989;}
+                &.nobreak{white-space: nowrap;width:1px;padding-left:20px;padding-right:20px;}
             }
         }
     }
@@ -931,6 +962,8 @@
                 border-bottom:1px solid #e7e7e7; padding:18px 10px;
                 &.accent{background:#fafcff;}
                 &:last-of-type{}
+                &.nobreak{white-space: nowrap;width:1px;padding-left:20px;padding-right:20px;}
+                &.dleft{text-align: left;}
             }
         }
     }
@@ -1111,6 +1144,22 @@
     .btn_inline_func{padding:0 15px; height:30px; line-height:29px; font-size:12px;}
 
     .post_tb{
+        &.type2{
+            thead{
+                tr{
+                    th{
+                        padding-left:10px;padding-right:10px;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        padding-left:10px;padding-right:10px;
+                    }
+                }
+            }
+        }
          thead{
              tr{
                 th{padding:10px 5px 12px;}
@@ -1246,6 +1295,25 @@
     }
     .post_tdtext,
     .post_thtext{font-size:12px;}
+    .post_tb{
+        &.type2{
+
+        }
+        thead{
+            tr{
+                th{
+                    &.nobreak{white-space: normal;width:auto;}
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    &.nobreak{white-space: normal;width:auto;}
+                }
+            }
+        }
+    }
 }
 
 @media (max-width:374px){
@@ -1278,6 +1346,7 @@
         .text_sub_node{font-size:3.48vw;}
         .text_main_node{font-size:4.55vw;}
     }
+    
     .post_tdtext,
     .post_thtext{font-size:11px; word-break: break-all;}
 }

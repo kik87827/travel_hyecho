@@ -8,6 +8,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="./assets/css/style.css" rel="stylesheet" />
+	<link href="./assets/css/style_v2.css" rel="stylesheet" /><!-- 251012 추가 -->
 	<script src="./assets/js/moment.min.js"></script>
 	<script src="./assets/js/jquery-3.4.1.min.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
@@ -3628,6 +3629,54 @@
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
 		</div>
+		<!-- 251012 추가 -->
+		<div class="popup_wrap" id="popup_datelevel">
+			<div class="bg_dim"></div>
+			<div class="popup_item">
+				<div class="popup_title_row define_text">
+					<h2 class="popup_primary_title">일차별난이도</h2>
+				</div>
+				<div class="popup_contents_row">
+					<div class="popup_contents_inner">
+						<div class="post_tb_wrap">
+							<table class="post_tb type2">
+								<thead>
+									<tr>
+										<th class="nobreak"><span class="post_thtext">일차</span></th>
+										<th class="nobreak"><span class="post_thtext">난이도</span></th>
+										<th class="liquid"><span class="post_thtext">설명</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="accent nobreak"><span class="post_tdtext">1~2일차</span></td>
+										<td class="nobreak"><span class="post_tdtext">1단계</span></td>
+										<td class="liquid dleft"><span class="post_tdtext">2일차 까지는 초심자도 편하게 가능합니다.</span></td>
+									</tr>
+									<tr>
+										<td class="accent nobreak"><span class="post_tdtext">3일차</span></td>
+										<td class="nobreak"><span class="post_tdtext">2단계 ~ 3단계</span></td>
+										<td class="liquid dleft"><span class="post_tdtext">3일차 부터는 체력소모가 있습니다.</span></td>
+									</tr>
+									<tr>
+										<td class="accent nobreak"><span class="post_tdtext">지누단다 코스</span></td>
+										<td class="nobreak"><span class="post_tdtext">8단계</span></td>
+										<td class="liquid dleft"><span class="post_tdtext">지누단다 코스는 매우 험난한 구간이므로 주의를 요합니다.</span></td>
+									</tr>
+									<tr>
+										<td class="accent nobreak"><span class="post_tdtext">4~8일차</span></td>
+										<td class="nobreak"><span class="post_tdtext">4단계 ~ 6단계</span></td>
+										<td class="liquid dleft"><span class="post_tdtext">안전한 산행 되세요</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<!-- // 251012 추가 -->
 		<!-- // popup -->
 		<!-- mobile bottom layer -->
 		<div class="mb_bottom_layer">
@@ -3849,6 +3898,13 @@
 					photoSwiperFunc();
 				},
 			});
+			var popup_datelevel = new DesignPopup({
+				selector: "#popup_datelevel",
+				beforeCallback() {
+					console.log("beforeCallback");
+				},
+				callback() {},
+			});
 
 			// 상세 비쥬얼 슬라이더
 			let photo_mv_obj = null;
@@ -3934,6 +3990,9 @@
 			}
 			if (url_2 === "popup4") {
 				popup_other_date.popupShow();
+			}
+			if (url_2 === "popup5") {
+				popup_datelevel.popupShow();
 			}
 		</script>
 		<footer class="footer_wrap">

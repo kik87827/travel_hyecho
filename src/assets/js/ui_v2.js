@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  browserCheck(); // ui.js 추가했는데 개발에서 반영안할 경우 대비
+});
+
 function tabUI(option) {
   const options = option;
   options.forEach((item) => {
@@ -30,4 +34,15 @@ function tabUI(option) {
       });
     });
   });
+}
+
+// ui.js 추가했는데 개발에서 반영안할 경우 대비
+function browserCheck() {
+  function isKakaoWebBrowser() {
+    const ua = navigator.userAgent.toLowerCase();
+    return ua.includes("kakaotalk") || ua.includes("kakaobrowser");
+  }
+  if (isKakaoWebBrowser()) {
+    document.querySelector("html").classList.add("kakao");
+  }
 }

@@ -2837,6 +2837,14 @@
   .ld_shape_copy_block .text_secondary_node {
     font-size: 1.9vw;
   }
+  .kakao .ld_shape_copy_block.has_ico .ico {
+    width: 4vw;
+    height: 4vw;
+  }
+  .kakao .ld_shape_copy_block .text_sub_node {
+    margin: 0;
+    transform: scale(0.82);
+  }
   .bd_diagram_wrap .bd_cols .bd_line_wrap {
     margin-bottom: 25px;
   }
@@ -3885,6 +3893,17 @@
   width: 100%;
   table-layout: fixed;
 }
+.post_tb.type2 {
+  table-layout: auto;
+}
+.post_tb.type2 thead tr th {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.post_tb.type2 tbody tr td {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .post_tb thead tr th {
   background: #4c586c;
   padding: 13px 10px 15px;
@@ -3909,6 +3928,12 @@
 .post_tb thead tr th[colspan] {
   border-bottom: 1px solid #707989;
 }
+.post_tb thead tr th.nobreak {
+  white-space: nowrap;
+  width: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .post_tb tbody tr td {
   border-bottom: 1px solid #e7e7e7;
   padding: 18px 10px;
@@ -3916,6 +3941,16 @@
 .post_tb tbody tr td.accent {
   background: #fafcff;
 }
+.post_tb tbody tr td.nobreak {
+  white-space: nowrap;
+  width: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.post_tb tbody tr td.dleft {
+  text-align: left;
+}
+
 .post_thtext {
   display: inline-block;
   font-size: 16px;
@@ -4276,6 +4311,14 @@
     line-height: 29px;
     font-size: 12px;
   }
+  .post_tb.type2 thead tr th {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .post_tb.type2 tbody tr td {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .post_tb thead tr th {
     padding: 10px 5px 12px;
   }
@@ -4497,6 +4540,14 @@
   .post_tdtext,
 .post_thtext {
     font-size: 12px;
+  }
+  .post_tb thead tr th.nobreak {
+    white-space: normal;
+    width: auto;
+  }
+  .post_tb tbody tr td.nobreak {
+    white-space: normal;
+    width: auto;
   }
 }
 @media (max-width: 374px) {

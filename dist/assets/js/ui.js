@@ -30,6 +30,15 @@ const uiBase = {
       browserAdd("window");
     }
 
+    // 251012 추가
+    function isKakaoWebBrowser() {
+      const ua = navigator.userAgent.toLowerCase();
+      return ua.includes("kakaotalk") || ua.includes("kakaobrowser");
+    }
+    if (isKakaoWebBrowser()) {
+      browserAdd("kakao");
+    }
+
     if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
       // iPad or iPhone
       browserAdd("ios");
