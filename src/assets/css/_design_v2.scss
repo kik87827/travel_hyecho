@@ -701,7 +701,7 @@
     &:last-of-type{margin-bottom:0;}
 }
 .board_indent_bullet{flex:0 0 30px; width:30px; height:30px; border-radius: 100%; line-height:27px; text-align: center; font-size:16px; font-weight:500; background:#176bdd; color:#fff;}
-.board_indent_liquid{font-size:15px; color:#333333; line-height:1.4; padding-bottom:1px;}
+.board_indent_liquid{font-size:15px; color:#333333; line-height:1.4; padding-bottom:1px; @include clamp(3);}
 
 .banner_card_container{margin-top:60px;}
 .banner_card_block{
@@ -1107,7 +1107,7 @@
    /*  .board_indent_bullet{} */
     .board_indent_bullet{flex:0 0 25px; width:25px; height:25px; line-height:23px; font-size:14px; /* position:relative; top:3px; */}
 
-    .board_indent_liquid{font-size:14px;}
+    .board_indent_liquid{font-size:14px;-webkit-line-clamp:2;}
 
     .banner_card_container{margin-top:30px;}
     .banner_card_block{

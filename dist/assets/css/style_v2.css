@@ -3303,6 +3303,11 @@
   color: #333333;
   line-height: 1.4;
   padding-bottom: 1px;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .banner_card_container {
@@ -4261,6 +4266,7 @@
   }
   .board_indent_liquid {
     font-size: 14px;
+    -webkit-line-clamp: 2;
   }
   .banner_card_container {
     margin-top: 30px;
