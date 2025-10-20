@@ -4383,11 +4383,11 @@
     align-items: center;
   }
   .pn_title_row .img_cols {
-    flex: 0 0 30px;
+    flex: 0 0 40px;
     background: #f8fcff;
     border-radius: 100%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: block;
   }
   .pn_title {
