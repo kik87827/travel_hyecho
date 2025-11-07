@@ -574,6 +574,7 @@
     display:flex; min-height:200px; justify-content: center; align-items: center; position:relative; overflow:hidden; border-radius:27px 27px 0 27px; padding:15px; box-sizing: border-box;
     .bg{
         position:absolute;top:0;left:0;width:100%;height:100%;background-position: 50% 50%; background-repeat:no-repeat; background-size:cover;
+        &.trekking{background-image:url("../images/bg_sv_img5.jpg");}
         &.vip{background-image:url("../images/bg_sv_img4.jpg");}
         &.live{background-image:url("../images/bg_sv_img3.jpg");}
         &.customer{background-image:url("../images/bg_sv_img2.jpg");}
@@ -589,9 +590,12 @@
         &.men2{background-image:url("../images/ico_sv_men2.png");}
         &.men3{background-image:url("../images/ico_sv_men3.png");}
         &.vip{background-image:url("../images/ico_sv_king.png");}
+        &.trekking{background-image:url("../images/ico_sv_trekking.png");}
     }
 }
-.sv_title{font-size:24px; line-height:1.3; color:#fff; position:relative; top:-2px; word-break: keep-all; text-align: left;}
+.sv_title{font-size:24px; line-height:1.3; color:#fff; position:relative; top:-2px; word-break: keep-all; text-align: left;
+    &.size_large{font-size:34px;}
+}
 .sv_tape{padding:15px; min-height:60px; box-sizing: border-box; }
 .sv_info_list{
     display:flex; justify-content: center; gap:10px 80px;
@@ -620,7 +624,9 @@
     .sv_title_item{
          .ico{width:50px;height:50px; flex-basis: 50px;}
     }
-    .sv_title{font-size:20px;}
+    .sv_title{font-size:20px;
+        &.size_large{font-size:24px;}
+    }
     .sv_tape{min-height:40px;padding:10px;}
     .sv_info_list{
         gap:10px 40px;
@@ -635,7 +641,9 @@
          .ico{width:40px;height:40px; flex-basis: 40px;}
     }
     .sv_title_item{gap:8px;}
-    .sv_title{font-size:16px;}
+    .sv_title{font-size:16px;
+        &.size_large{font-size:20px;}
+    }
 
     .sv_info_list{
         gap:10px 20px;
@@ -650,7 +658,9 @@
          .ico{width:35px;height:35px; flex-basis: 35px;}
     }
     .sv_title_item{gap:5px;}
-    .sv_title{font-size:14px;}
+    .sv_title{font-size:14px;
+        &.size_large{font-size:16px;}
+    }
 }
 
 
