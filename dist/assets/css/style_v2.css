@@ -4677,6 +4677,7 @@
     word-break: break-all;
   }
 }
+/* 트레킹 난이도 */
 /* 공통 추가 */
 input.form_input.htype2 {
   height: 42px;

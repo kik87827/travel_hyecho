@@ -1364,3 +1364,173 @@
     .post_tdtext,
     .post_thtext{font-size:11px; word-break: break-all;}
 }
+
+
+/* 트레킹 난이도 */
+.sv_note_wrap{}
+.sv_note_item{}
+.sv_note_main{}
+.sv_note_sub{}
+.info_slab_wrap{}
+.info_slab_block{
+    .gate_row{
+        .img_cols{}
+        .spec_cols{}
+    }
+    .list_row{
+
+    }
+    .copy_row{
+
+    }
+    .btn_row{
+
+    }
+
+    &.level_2{
+        .trekking_img{}
+        .outline_box{
+            .ico{}
+            .text_node_obj{
+                dd{}
+            }
+        }
+        .product_display_item{
+            .caption_layer{
+                .flag_dom{}
+            }
+        }
+        .btn_postbox{}
+    }
+    
+    &.level_3{
+        .trekking_img{}
+        .outline_box{
+            .ico{}
+            .text_node_obj{
+                dd{}
+            }
+        }
+        .product_display_item{
+            .caption_layer{
+                .flag_dom{}
+            }
+        }
+        .btn_postbox{}
+    }
+    
+    &.level_4{
+        .trekking_img{}
+        .outline_box{
+            .ico{}
+            .text_node_obj{
+                dd{}
+            }
+        }
+        .product_display_item{
+            .caption_layer{
+                .flag_dom{}
+            }
+        }
+        .btn_postbox{}
+    }
+
+    &.level_5{
+        .trekking_img{}
+        .outline_box{
+            .ico{}
+            .text_node_obj{
+                dd{}
+            }
+        }
+        .product_display_item{
+            .caption_layer{
+                .flag_dom{}
+            }
+        }
+        .btn_postbox{}
+    }
+
+    &.level_6{
+        .trekking_img{}
+        .outline_box{
+            .ico{}
+            .text_node_obj{
+                dd{}
+            }
+        }
+        .product_display_item{
+            .caption_layer{
+                .flag_dom{}
+            }
+        }
+        .btn_postbox{}
+    }
+
+    &.level_7{
+        .trekking_img{}
+        .outline_box{
+            .ico{}
+            .text_node_obj{
+                dd{}
+            }
+        }
+        .product_display_item{
+            .caption_layer{
+                .flag_dom{}
+            }
+        }
+        .btn_postbox{}
+    }
+}
+.trekking_img_wrap{}
+.trekking_img{}
+.outline_box_wrap{}
+.outline_box_list{
+    > li{
+
+    }
+}
+.outline_box{
+    .ico{
+        &.shape_time{}
+        &.shape_camp{}
+        &.shape_high{}
+    }
+    .text_node_obj{
+        dt,dd{}
+        dt{}
+        dd{}
+    }
+}
+.product_display_wrap{}
+.product_display_list{
+    > li{
+
+    }
+}
+.product_display_item{
+    .thumnail_tile{
+        img{}
+    }
+    .caption_layer{
+        .flag_group{}
+        .flag_dom{}
+    }
+    .caption_node{
+        br{}
+    }
+}
+.style_quote_wrap{}
+.style_quote_para{
+    &:before,
+    &:after{}
+    &:before{}
+    &:after{}
+}
+.btn_postbox{
+    .ico{
+        &.shape_search{}
+    }
+    .text_node{}
+}

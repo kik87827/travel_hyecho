@@ -45,6 +45,9 @@ function browserCheck() {
   if (isKakaoWebBrowser()) {
     document.querySelector("html").classList.add("kakao");
   }
+  /* 251109 추가 */
+  const isRatio = window.devicePixelRatio;
+  document.querySelector("html").classList.toggle("ratio", isRatio > 1);
 }
 
 /* dragg */
