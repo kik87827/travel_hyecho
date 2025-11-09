@@ -1369,8 +1369,8 @@
 /* 트레킹 난이도 */
 .sv_note_wrap{text-align: center;}
 .sv_note_item{padding:50px 30px;}
-.sv_note_main{font-size:27px; color:#2b2b2b; margin-bottom:20px;}
-.sv_note_sub{font-size:15px; color:#5f5f5f; line-height:1.8;}
+.sv_note_main{font-size:27px; color:#2b2b2b; margin-bottom:20px; word-break: keep-all;}
+.sv_note_sub{font-size:15px; color:#5f5f5f; line-height:1.8; word-break: keep-all;}
 .info_slab_wrap{}
 .info_slab_block{
     position:relative; padding:83px 0 70px;
@@ -1523,7 +1523,7 @@
     }
 }
 .trekking_img_wrap{}
-.trekking_img{width:247px; height:130px; position:relative; background:url("../images/trek_level_01x2.png") no-repeat 0 0/100% auto;
+.trekking_img{width:247px; height:130px; margin:0 auto; position:relative; background:url("../images/trek_level_01x2.png") no-repeat 0 0/100% auto;
     .state_flag{position:absolute;top:-20px;left:0;}
 }
 .state_flag{
@@ -1534,11 +1534,11 @@
 .outline_box_list{
     display:flex; flex-wrap:wrap; justify-content: flex-end; gap:7px 10px; margin-left:-10px;
     > li{
-        width:calc(50% - 10px);
+        width:calc(50% - 10px); display:flex; flex-direction: column;
     }
 }
 .outline_box{
-    display:flex; gap:8px; padding:6px; border:1px solid #d5e1fb; border-radius: 100px; background:#fcfdff;
+    flex:1;display:flex; gap:8px; padding:6px; border:1px solid #d5e1fb; border-radius: 100px; background:#fcfdff; align-items: center;
     .ico{
         display:block; width:44px; height:44px; flex-basis:44px; background-color:#55a2f5; @include bgicon; border-radius: 100%;
         &.shape_time{background-image:url("../images/ico_trekking_level_01.png");}
@@ -1546,8 +1546,8 @@
         &.shape_high{background-image:url("../images/ico_trekking_level_03.png");}
     }
     .text_node_obj{
-        flex:1; display:flex; align-items: center; gap:10px;
-        dt,dd{}
+        flex:1; display:flex; align-items: center; gap:2px 10px;
+        dt,dd{word-break: break-all;}
         dt{font-size:16px; color:#4e4e4e;}
         dd{flex:1; font-size:18px; color:#2074e5; font-weight:500;}
     }
@@ -1586,7 +1586,7 @@
 }
 .style_quote_wrap{padding:50px 0 0 0;}
 .style_quote_para{
-    font-size:17px; color:#4e4e4e; text-align: center; line-height:1.6;
+    font-size:17px; color:#4e4e4e; text-align: center; line-height:1.6; word-break: keep-all;
     &:before,
     &:after{display:inline-block; font-size:44px; font-weight:500; color:#176bdd;line-height:0; position:relative; top:18px;}
     &:before{ content:'“'}
@@ -1599,4 +1599,119 @@
         &.shape_search{background-image:url("../images/ico_search_21.png")}
     }
     .text_node{font-size:18px; line-height:1.3; position:relative; top:0px; color:#fff; font-weight:500; display:inline-block;}
+}
+
+@media (max-width:1260px){
+    .info_slab_block{
+         .gate_row{gap:80px;}
+    }
+    .outline_box{
+         .text_node_obj{}
+    }
+}
+
+@media (max-width:1190px){
+    .info_slab_block{
+         .gate_row{gap:40px;}
+    }
+    .outline_box{
+         .text_node_obj{
+            dt{font-size:15px;}
+            dd{font-size:17px; position:relative; top:-1px;}
+         }
+    }
+}
+
+@media (max-width:1023px){
+    .sv_note_item{padding:30px 0;}
+    .sv_note_main{font-size:20px;margin-bottom:10px;}
+    .sv_note_sub{font-size:14px;}
+
+    .info_slab_block{
+        padding:40px 0 60px;
+        &:first-of-type{padding-top:30px;}
+        .gate_row{
+            flex-direction: column; gap:30px; align-items: normal; justify-content: center;
+            .img_cols,
+            .spec_cols{}
+        }
+        .list_row{
+            margin-top:30px;
+        }
+        .btn_row{
+           padding:30px 0 0 0;
+        }
+    }
+
+    .outline_box_wrap{}
+    .outline_box_list{}
+    .outline_box{
+        padding-top:4px;padding-bottom:4px;
+        .ico{
+            width:34px; height:34px; flex-basis:34px;
+        }
+        .text_node_obj{
+            display:block;
+            dt,dd{}
+            dt{font-size:12px;}
+            dd{font-size:14px;}
+        }
+    }
+
+    .product_display_wrap{}
+    .product_display_list{
+        gap:10px; margin-right:-10px;
+        > li{
+            flex:0 0 calc(50% - 10px);
+        }
+    }
+
+    .product_display_item{
+        padding-bottom:10px;
+        .thumnail_tile{
+            height:0; border-radius: 10px; padding-bottom:98%; 
+        }
+        .caption_layer{
+            border-radius:10px 0 10px 10px; padding:17px 15px 14px; min-height:70px;
+            width : calc(100% - 20px);
+            .flag_group{left:15px;}
+        }
+        .caption_node{
+            font-size:14px;
+            br{}
+        }
+
+        &:hover{
+            .thumnail_tile{
+                img{transform: scale(1.3);}
+            }
+        }
+    }
+    .trekking_img{
+         .state_flag{top:-17px;}
+    }
+
+    .style_quote_wrap{padding:40px 0 0 0;}
+    .style_quote_para{
+        font-size:14px;
+        &:before,
+        &:after{font-size:24px; top:8px;}
+    }
+    .btn_postbox{
+        min-height:50px; padding:10px 25px;
+        .ico{
+            flex:0 0 22px; width:22px; height:22px;
+        }
+        .text_node{font-size:16px;}
+    }
+}
+
+@media (max-width:500px){
+    
+}
+
+@media (max-width:374px){
+    .outline_box{
+        border-radius: 10px;
+    }
 }
