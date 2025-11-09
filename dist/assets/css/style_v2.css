@@ -5177,7 +5177,7 @@
     font-size: 12px;
   }
   .outline_box .text_node_obj dd {
-    font-size: 14px;
+    font-size: 13px;
   }
   .product_display_list {
     gap: 10px;
@@ -5205,6 +5205,9 @@
   }
   .product_display_item .caption_node {
     font-size: 14px;
+  }
+  .product_display_item .caption_node br {
+    display: none;
   }
   .product_display_item:hover .thumnail_tile img {
     transform: scale(1.3);

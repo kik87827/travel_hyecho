@@ -1654,7 +1654,7 @@
             display:block;
             dt,dd{}
             dt{font-size:12px;}
-            dd{font-size:14px;}
+            dd{font-size:13px;}
         }
     }
 
@@ -1678,7 +1678,7 @@
         }
         .caption_node{
             font-size:14px;
-            br{}
+            br{display:none;}
         }
 
         &:hover{
